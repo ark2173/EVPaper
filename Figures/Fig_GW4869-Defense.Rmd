@@ -1,0 +1,154 @@
+
+```{r setup, include=FALSE}
+remove(list=ls())
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(rstatix)
+library(ggpubr)
+library(tidyverse)
+library(ggsignif)
+library(broom)
+library(rstatix)
+library(ggpmisc)
+library(viridis)
+library(Seurat)
+library(cowplot)
+library(ComplexHeatmap)
+library(RColorBrewer)
+library("AnnotationDbi")
+library("org.Mm.eg.db")
+source("/Users/alinakline-schoder/Documents/Papers/Blood/Blood Paper/AKS_EVGO.R")
+source("/Users/alinakline-schoder/Documents/Papers/Blood/Blood Paper/AKS_ScatterPlot.R")
+
+setwd("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/Part2-BBBRestoration/")
+MRIs<-read.csv('MRISize-Table 1.csv')
+Info<-read.csv('Animals-Table 1.csv')
+rownames(Info)<-Info$Mouse.Code.1
+Info<-Info[!(Info$Exclude=="TRUE"),]
+Info<-Info[Info$Group %in% c("CC","CG"),]
+
+Colors_Drug<-c("black","#F0BDAF","#877BC8","#6A954F")
+
+Th<-theme(legend.position="none",
+        panel.background = element_blank(),
+        legend.title = element_blank(),
+        plot.title=element_blank(),
+        legend.text = element_text(size=8),
+        legend.key.size = unit(0.75,"line"),
+        axis.line = element_line(size=0.5),
+        axis.text = element_text(size=8),
+        axis.title = element_text(size=10),
+        panel.grid = element_blank(),
+        strip.background = element_rect(fill=NA,color=NA))
+ThLeg<-Th+theme(legend.title = element_text(size=8),
+                legend.text = element_text(size = 8),
+                legend.key.height = unit(0.3,"cm"),
+                legend.key.size = unit(3,"mm"),
+                legend.spacing = unit(0,"mm"))
+```
+
+# Values across dif time points
+```{r}
+MRIs$Day.1.Norm<-MRIs$Day.1/MRIs$Day.0
+MRIs$Day.3.Norm<-MRIs$Day.3/MRIs$Day.0
+MRIs$Day.5.Norm<-MRIs$Day.5/MRIs$Day.0
+MRIs$Group<-Info[MRIs$Mouse,]$Group
+MRIs<-MRIs[!is.na(MRIs$Group),]
+
+MRIs$Group<-recode(factor(MRIs$Group,levels=c("CC","CG")),"CC"="FUS-BBBO","CG"="FUS-BBBO+\nGW4869")
+  
+PlotA<-ggplot(MRIs,aes(x=Group,y=Day.0,fill=Group))+stat_summary(fun="mean",geom="bar")+stat_summary(geom="errorbar",width=0.2)+stat_compare_means(method="anova",label="p.format",label.x.npc = 0.4,label.y.npc = 0.75)+ylab(bquote('Day 1 BBBO Volume '(mm^3)))+Th+scale_fill_manual(values=Colors_Drug[3:4])+scale_y_continuous(expand=c(0,0),limits=c(0,30))+stat_summary(geom = "point",fun = "mean",position = position_dodge(width=0.8))
+
+
+MRIs_Long<-pivot_longer(MRIs,cols = c("Day.1.Norm","Day.3.Norm"))
+MRIs_Long$name<-recode(MRIs_Long$name,
+                       "Day.1.Norm"="Day 1",
+                       "Day.3.Norm"="Day 3")
+PlotB<-ggplot(MRIs,aes(x=Group,y=Day.1.Norm,color=Group))+stat_summary(geom="errorbar",position=position_dodge(width=0.8))+stat_compare_means(method="anova",label="p.format",show.legend = FALSE)+ylab("Opening Volume (% Relative to Day 0)")+xlab("Days after treatment")+Th+stat_summary(geom = "point",fun = "mean",position = position_dodge(width=0.8))+scale_color_manual(values=Colors_Drug[3:4])
+
+
+
+MRIs_Long<-pivot_longer(MRIs,cols = c("Day.0","Day.1","Day.3","Day.5"))
+MRIs_Long$name<-recode(MRIs_Long$name,
+                       "Day.0"="0",
+                       "Day.1"="1",
+                       "Day.3"="3",
+                       "Day.5"="5")
+Plot_MRILong<-ggplot(MRIs_Long,aes(x=name,y=value,color=Group))+
+  stat_summary(geom="errorbar",position=position_dodge(width=0.8))+
+  ylab(bquote('BBBO Volume '(mm^3)))+
+  xlab("Days after treatment")+
+  Th+
+  stat_summary(geom = "point",fun = "mean",position = position_dodge(width=0.8))+
+  stat_summary(aes(group=Group),geom="line",fun=mean,position=position_dodge(width=0.8),alpha=0.5)+
+  scale_color_manual(values=Colors_Drug[3:4])
+```
+
+
+```{r}
+EVs<-read.csv("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/EV Concentration GW4869/EV Data Run 1-Table 1.csv")
+EVs<-EVs[!(EVs$Mouse%in%c("CC1","CC2")),]
+EVs$Group<-recode(factor(EVs$Group,levels=c("Naive","GW4869","FUS-BBBO","FUS-BBBO+GW4869")),"FUS-BBBO+GW4869"="FUS-BBBO+GW4869")
+Long<-pivot_longer(EVs,cols = c("Baseline","h1","H24"))
+Long<-Long[Long$Group%in%c("FUS-BBBO","FUS-BBBO+GW4869"),]
+Long<-Long[Long$name%in%c("Baseline","h1"),]
+Long$name<-recode(factor(Long$name,levels=c("Baseline","h1")),
+                  "h1"="1h")
+
+Sub<-Long[Long$Group=="FUS-BBBO",]
+PlotDa<-ggplot(Sub,aes(x=name,y=value))+geom_point(aes(group=Group,color=Group))+geom_line(aes(group=Mouse,color=Group))+stat_compare_means(paired=TRUE,method="t.test",label = "p.signif",label.x.npc = 0.4,label.y.npc = 0.75,hide.ns=TRUE)+ylab("EV Concentration (EVs/mL)")+scale_y_continuous(limits=c(0,2e10))+Th+scale_color_manual(values=Colors_Drug[3])+theme(axis.title.x = element_blank())+facet_grid(.~Group)+theme(legend.position = "none")
+
+Sub<-Long[Long$Group=="FUS-BBBO+GW4869",]
+PlotDb<-ggplot(Sub,aes(x=name,y=value))+geom_point(aes(group=Group,color=Group))+geom_line(aes(group=Mouse,color=Group))+stat_compare_means(paired=TRUE,method="t.test",label = "p.signif",label.x.npc = 0.4,label.y.npc = 0.75,hide.ns=TRUE)+ylab("EV Concentration (EVs/mL)")+scale_y_continuous(limits=c(0,2e10))+Th+scale_color_manual(values=Colors_Drug[4])+theme(axis.title.x = element_blank())+facet_grid(.~Group)+theme(legend.position = "none")
+Long$Group<-recode(Long$Group,"FUS-BBBO+GW4869"="FUS-BBBO+\nGW4869")
+PlotPaired<-ggplot(Long,aes(x=name,y=value))+geom_point(aes(group=Group,color=Group))+geom_line(aes(group=Mouse,color=Group))+stat_compare_means(paired=TRUE,method="t.test",label = "p.signif",label.x.npc = 0.4,label.y.npc = 0.75,hide.ns=TRUE)+ylab("EV Concentration (EVs/mL)")+scale_y_continuous(limits=c(0,2e10))+Th+scale_color_manual(values=c(Colors_Drug[3],Colors_Drug[4]))+theme(axis.title.x = element_blank())+facet_grid(.~Group)+theme(legend.position = "none")
+
+
+
+
+EVs$h1.norm<-(EVs$h1-EVs$Baseline)/EVs$Baseline
+EVs$h24.norm<-(EVs$H24-EVs$Baseline)/EVs$Baseline
+Long<-pivot_longer(EVs,cols = c("h1.norm","h24.norm"))
+Long$name<-recode(factor(Long$name,levels=c("h1.norm","h24.norm")),
+                  "h1.norm"="1h",
+                  "h24.norm"="24h")
+PlotE<-ggplot(Long,aes(x=name,y=value,color=Group))+geom_boxplot()+geom_point(position=position_dodge(width=0.75))+scale_color_manual(values=Colors_Drug)+Th
+Long$Group<-recode(Long$Group,
+                   "FUS-BBBO+GW4869"="FUS-BBBO+\nGW4869")
+my_comparisons <- list(c("Naive", "GW4869"), 
+                       c("Naive", "FUS-BBBO"), 
+                       c("FUS-BBBO","FUS-BBBO+\nGW4869"),
+                       c("GW4869","FUS-BBBO+\nGW4869"))
+
+
+PlotF<-ggplot(Long,aes(x=Group,y=value*100,color=Group))+geom_point(position = position_dodge(width=0.75))+stat_summary(geom = "errorbar",position = position_dodge(width=0.75))+
+  stat_compare_means(comparisons = my_comparisons,method = "t.test",hide.ns = FALSE,label = "p.signif",label.y = 300,step.increase = 0.1)+ylab("EV Concentration Change (%)")+scale_color_manual(values=Colors_Drug)+xlab("Time")+ylim(-100,500)+Th+facet_grid(.~name,scales = "free",drop=T)+theme(axis.title.x = element_blank())+theme(legend.position = "none")
+
+Sub<-Long[Long$name=="1h",]
+
+
+```
+
+
+
+```{r}
+Sub$Group<-recode(Sub$Group,
+                  "FUS-BBBO+\nGW4869"="FUS-BBBO+\nDepleted EVs",
+                  "GW4869"="Naive")
+my_comparisons <- list(c("Naive", "FUS-BBBO"), 
+                       c("FUS-BBBO","FUS-BBBO+\nDepleted EVs"),
+                       c("Naive","FUS-BBBO+\nDepleted EVs"))
+
+Colors<-Colors_Drug
+PlotFsub<-ggplot(Sub,aes(x=Group,y=value*100,color=Group))+geom_point(position = position_dodge(width=0.75))+stat_summary(geom = "errorbar",position = position_dodge(width=0.75))+
+  stat_compare_means(comparisons = my_comparisons,hide.ns = FALSE,label = "p.signif",label.y = 400,step.increase = 0.1)+ylab("EV Concentration Change (%)")+scale_color_manual(values=Colors_Drug[c(1,3:4)])+xlab("Time")+ylim(-100,500)+Th+facet_grid(.~name,scales = "free",drop=T)+theme(axis.ticks.x = element_blank())+theme(legend.position = "none",axis.title.x = element_blank())
+
+MRIs$Group<-recode(MRIs$Group,
+                  "FUS-BBBO+\nGW4869"="FUS-BBBO+\nDepleted EVs")
+Plot_Day0Norm<-ggplot(MRIs,aes(x=Group,y=Day.1.Norm,fill=Group))+stat_summary(fun="mean",geom="bar")+stat_summary(geom="errorbar",width=0.2)+stat_compare_means(method="anova",label="p.format",label.x.npc = 0.4,label.y.npc = 0.75,size=3)+ylab(bquote('Day 1 Opening Volume'))+Th+scale_fill_manual(values=Colors_Drug[3:4])+theme(axis.title.x = element_blank())+scale_y_continuous(expand=c(0,0),limits=c(0,1))+theme(legend.position = "none")
+
+plot_grid(PlotFsub,Plot_Day0Norm,align = "v",nrow=1)
+ggsave("/Users/alinakline-schoder/Desktop/DefenseFigures/Defense_GWDeplention.png",width=7,height=3,units="in")
+```

@@ -1,0 +1,643 @@
+---
+title: "EVAnalysis"
+author: "Alina Kline-Schoder"
+date: "2022-07-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl)
+LogP<-bquote(-~Log[10]~italic(P))
+library(topGO)
+library("DESeq2")
+library(ggplot2)
+library(ggrepel)
+library(tidyr)
+source("AKS_EVGO.R")
+library(UniprotR)
+library("pmartR")
+library(dplyr)
+library(ComplexHeatmap)
+library(circlize)
+library(pander)
+library(stringr)
+library(viridis)
+library(cowplot)
+library(scales)
+Stat_Summary_Size<-1
+stat_compare_means_star_size<-4
+stat_compare_means_text_size<-3
+Geom_size<-0.75
+Geom_size_line<-1
+Geom_size_bp<-0.5
+Colors<-hue_pal()(6)
+Colors_NoP1007<-Colors[c(1:2,4:6)]
+LogFC_Cols<-viridis(3)
+EVPaperTheme<-theme_classic()+
+  theme(axis.text = element_text(size=8),
+        axis.title = element_text(size=8),
+        panel.grid = element_blank(),
+        strip.text = element_text(size=8),
+        plot.margin = margin(0.25,0.25,0.25,0.5,"cm"),
+        strip.background =element_rect(fill="white",color="white"),
+        axis.line = element_line(size=0.5),
+        legend.key.width = unit(1,"mm"),
+        legend.key.height = unit(0.25,"cm"))
+ComplexHeatmap_AnnoLabel<-gpar(fontfamily="Arial",fontsize=8,col="gray30")
+ComplexHeatmap_RowLabel<-gpar(fontfamily="Arial",fontsize=6,col="gray30")
+
+LegendTheme<-EVPaperTheme+theme(legend.position = "bottom",legend.title = element_blank(),legend.key.size = unit(0.5,"mm"),legend.text = element_text(size=8))
+
+PVal_Cols<-viridis(3,option = "A")
+```
+
+# Loading and preparing RNAseq
+```{r}
+Counts1<-read.table("BloodPaper_FinalResults/SBI/raw_count_table_jul22.tsv",header=TRUE)
+Counts2<-read.table("BloodPaper_FinalResults/SBI/raw_count_table_oct22.tsv",header=TRUE)
+both<-intersect(Counts1$gene_id,Counts2$gene_id)
+rownames(Counts1)<-Counts1$gene_id
+rownames(Counts2)<-Counts2$gene_id
+CountsFull<-cbind(Counts1[both,c("Sample_1h_replicate1","Sample_Baseline_replicate1")],Counts2[both,c("Sample_1h_replicate1","Sample_Baseline_replicate1")])
+colnames(CountsFull)<-c("Sample_1h_replicate1","Sample_Baseline_replicate1","Sample_1h_replicate2","Sample_Baseline_replicate2")
+
+# Table of Gene type
+Type<-Counts1[,c("gene_id","type")]
+colnames(Type)<-c("gene_id","type_original")
+
+# reading in modernized list
+Types_New<-read.csv("ModernTypes.csv")
+Dups<-Types_New[duplicated(Types_New$Input),]
+CurrentDups<-Dups[Dups$Input.Type=="current symbol",]
+rownames(CurrentDups)<-CurrentDups$Symbol
+ 
+Sub<-Types_New[!(Types_New$Input%in%Dups$Input),] #removing duplicated terms from list
+Sub<-rbind(Sub,CurrentDups)
+rownames(Sub)<-Sub$Input
+Sub[Sub$MGI.Gene.Marker.ID=="No associated gene","Symbol"]<-NA
+Sub[Sub$Feature.Type=="No associated gene","Symbol"]<-NA
+
+# putting old and new list together
+Type$name_new<-NA
+Type$type_new<-NA
+Type[Type$gene_id%in%Sub$Input,"name_new"]<-Sub[Type[Type$gene_id%in%Sub$Input,"gene_id"],"Symbol"]
+Type[Type$gene_id%in%Sub$Input,"type_new"]<-Sub[Type[Type$gene_id%in%Sub$Input,"gene_id"],"Feature.Type"]
+Sub$lower<-tolower(Sub$Input)
+rownames(Sub)<-Sub$lower
+Type[Type$gene_id%in%Sub$lower,"type_new"]<-Sub[Type[Type$gene_id%in%Sub$lower,"gene_id"],"Feature.Type"]
+Type[Type$gene_id%in%Sub$lower,"name_new"]<-Sub[Type[Type$gene_id%in%Sub$lower,"gene_id"],"Symbol"]
+Type[is.na(Type$name_new),"name_new"]<-Type[is.na(Type$name_new),"gene_id"]
+Type[is.na(Type$type_new),"type_new"]<-Type[is.na(Type$type_new),"type_original"]
+Type[Type$type_new=="","type_new"]<-Type[Type$type_new=="","type_original"]
+
+miRNA<-Type[Type$type_original=="miRNA",]
+miRNA$name_new<-sub("-5p","",miRNA$name_new)
+miRNA$name_new<-sub("-3p","",miRNA$name_new)
+miRNA$name_new<-sub("mmu-","",miRNA$name_new)
+miRNA$name_new<-sub("miR","Mir",miRNA$name_new)
+miRNA$name_new<-sub("mir","Mir",miRNA$name_new)
+miRNA$name_new<-sub("-","",miRNA$name_new)
+miRNA$name_new<-sub("-","",miRNA$name_new)
+miRNA[miRNA$name_new=="let7c","name_new"]<-"Mirlet7c-1"
+miRNA[miRNA$name_new=="let7d","name_new"]<-"Mirlet7d"
+miRNA[miRNA$name_new=="let7g","name_new"]<-"Mirlet7g"
+miRNA[miRNA$name_new=="let7e","name_new"]<-"Mirlet7e"
+miRNA[miRNA$name_new=="Mir142a","name_new"]<-"Mir142"
+miRNA[miRNA$gene_id=="mmu-miR-125b-5p","name_new"]<-"Mir125b1"
+miRNA[miRNA$name_new=="Mir146a","name_new"]<-"Mir146"
+miRNA[miRNA$name_new=="Mir3070","name_new"]<-"Mir30701"
+miRNA[miRNA$name_new=="Mir125b1","name_new"]<-"Mir125b-1"
+miRNA[miRNA$name_new=="Mir26a","name_new"]<-"Mir26a1"
+miRNA[miRNA$name_new=="Mir486a","name_new"]<-"Mir486"
+miRNA[miRNA$name_new=="Mir486b","name_new"]<-"Mir486"
+miRNA$type_new<-"miRNA"
+Type<-Type[Type$type_new!="miRNA",]
+Type<-rbind(Type,miRNA)
+
+library(org.Mm.eg.db)
+Anno<-read.csv("/Users/alinakline-schoder/Documents/Papers/Blood/miAnno.csv")
+Anno$symbol<- mapIds(org.Mm.eg.db, keys=Anno$GeneBank, column="SYMBOL", keytype="ACCNUM", multiVals="first")
+Anno$name_new<-Type[Anno$gene,]$name_new
+
+
+CountsFull$name_OG<-rownames(CountsFull)
+CountsFull$name_new<-Type[CountsFull$name_OG,"name_new"]
+rownames(CountsFull)<-NULL
+CountsFull<-CountsFull[,c("Sample_1h_replicate1","Sample_Baseline_replicate1","Sample_1h_replicate2","Sample_Baseline_replicate2","name_new")]
+# summing duplicates
+CountsFull<-CountsFull %>%
+  group_by(name_new) %>%
+  summarize(Sample_1h_replicate1=sum(Sample_1h_replicate1),
+            Sample_Baseline_replicate1=sum(Sample_Baseline_replicate1),
+            Sample_1h_replicate2=sum(Sample_1h_replicate2),
+            Sample_Baseline_replicate2=sum(Sample_Baseline_replicate2))
+
+library(edgeR)
+# setting up treatment and batch info
+Treatment <- factor(c(2,1,2,1))
+Batch <- factor(c("A","A","B","B"))
+design <- model.matrix(~Batch+Treatment)
+
+#filtering grouped by Treatment
+CountsFull<-as.data.frame(CountsFull)
+rownames(CountsFull)<-CountsFull$name_new
+CountsFull<-CountsFull[,2:5]
+CountsFull<-CountsFull[rowSums(CountsFull)>50,]
+Counts_DESeq<-DGEList(counts=CountsFull)
+keep <- filterByExpr(Counts_DESeq, group=Treatment)
+Counts_DESeq <- Counts_DESeq[keep,,keep.lib.sizes=FALSE]
+
+# Normalizing data
+Counts_DESeq <- calcNormFactors(Counts_DESeq, method="TMM")
+Counts_DESeq <- estimateDisp(Counts_DESeq,design)
+
+# Performing QLF test
+fit <- glmQLFit(Counts_DESeq,design)
+qlf <- glmQLFTest(fit,coef=3)
+tab<-qlf$table
+
+Type$type_new<-recode(Type$type_new,
+                      "miRNA gene"="miRNA",
+                      "lncRNA gene"="lncRNA",
+                      "protein coding gene"="RefSeq",
+                      "rRNA gene"="rRNA"
+                      )
+Type<-unique(Type[,c("name_new","type_new")])
+Type<-Type[Type$name_new%in%rownames(tab),]
+Type <- Type %>%
+  group_by(name_new) %>%
+    summarize(type_new = paste(type_new, collapse = ','))
+rownames(Type)<-Type$name_new
+
+tab$type<-Type[rownames(tab),]$type_new
+#removing antisense
+tab<-tab[!(grepl("antisense",tab$type)),]
+tab<-tab[!(grepl("pseudogene",tab$type)),]
+
+tab$type_big<-recode(tab$type,
+                     "bidirectional promoter lncRNA gene"="lncRNA",
+                     "lincRNA"="lncRNA",
+                     "sense overlapping lncRNA gene"="lncRNA")
+tab$name<-rownames(tab)
+rownames(tab)<-NULL
+
+tab <- tab %>%
+  filter(duplicated(logFC,logCPM,PValue) == FALSE)
+```
+
+# piRNA targets
+```{r}
+PIRNA_Targets<-rbind(data.frame(target=c("Fancm","Map4"),
+                                gene="mmu_piR_035358"),
+      data.frame(target=c("Cd200r2", "Cd200r4", "Kbtbd7", "Mdh2", "Mlst8", "Rps20", "Smad4"),
+                 gene="mmu_piR_024896"),
+      data.frame(target=c("Nek1", "Pgbd5", "Smcr8"),
+                 gene="mmu_piR_009033"),
+      data.frame(target=c("1110028F18Rik", "1700015F17Rik", "4930415L06Rik", "AW549542", "Aamdc", "Acad10", "C1qtnf9", "Ccnc",
+                          "Cdc42bpa", "Chtop", "Cr2", "Dnajc1", "Dop1a", "Dtl", "E2f6", "Gm10536", "Gm20356", "Gm32123",
+                          "Gm9696", "Gmeb2", "Gspt1", "Hecw1", "Kdm5c", "Lancl1", "Lgi3", "Lrrc7", "Lrrc75b", "Map4", "Nomo1",
+                          "Phldb2", "Qk", "Rbak", "Slc4a3", "Ssr1", "Tab2", "Tfip11", "Timm22", "Tnfrsf19", "Tspan2", "Ttc19",
+                          "Ttn", "Uqcrc2", "Usp31", "Vmn2r90", "Zfp292", "Zfp654"),
+                 gene="mmu_piR_010565"),
+      data.frame(target="Ube2w",
+                 gene="mmu_piR_002066"),
+      data.frame(target=c("Olfr1510","Olfr1511"),
+                 gene="mmu_piR_000900"),
+      data.frame(target="4732471J01Rik",
+                 gene="mmu_piR_002491"),
+      data.frame(target="Tbc1d12",gene="mmu_piR_024318"),
+      data.frame(target="Cyth4",gene="mmu_piR_69027"),
+      data.frame(target="Cyth4",gene="mmu_piR_000159"),
+      data.frame(target=c("Gm6093", "Muc5b"),gene="mmu_piR_000536"),
+      data.frame(target="Larp4b",gene="mmu_piR_002435"),
+      data.frame(target=c("Gm4884", "Gm5114", "Mast2"),gene="mmu_piR_008672"),
+      data.frame(target="Gm8801",gene="mmu_piR_016166"),
+      data.frame(target=c("Bhlha15","Dus3l", "Pofut1", "Sox2ot"),gene="mmu_piR_022379"),
+      data.frame(target=c("Fbxo4"),gene="mmu_piR_036735"),
+      data.frame(gene=c("mmu_piR_031351"),
+                 target="9830166K06Rik"),
+      data.frame(target=c("Acvr1b", "Adamtsl3", "Adgrg4", "Ankrd11", "Arhgap33", "Atp5c1", "Camk2b", "Card10", "Casr", "Celf5",
+                          "Dab2ip", "Disp1", "Dpp6", "Ednra", "Elovl7", "Ero1l", "Fam160a2", "Fam163a", "Fam189a2", "Fiz1",
+                          "Furin", "Glg1", "Gm12633", "Gm14139", "Hmbs", "Hydin", "Lcn4", "Lct", "Madd", "Masp1", "Mbl2",
+                          "Myo3b", "Nr2c2", "Nup160", "Olfr284", "Olfr397", "Plxna3", "Rnf165", "Sec22b", "Sema5a", "Serpinf2",
+                          "Slc38a9", "Tango6", "Teddm1a", "Tmc5", "Tmco3", "Trcg1", "Zbtb9", "Zfp345", "Zfp352", "Zfp397",
+                          "Zscan20"),
+                 gene="mmu_piR_024635"),
+      data.frame(target=c("1700052K11Rik", "Cyb5d2", "Dzank1", "Hif3a", "Polr3k", "Rab3d", "Rmi1", "Tktl2", "Trp53rka", "Zhx1"),gene=c("mmu_piR_021732")),
+      data.frame(gene=c("mmu_piR_007584"),target=c("Pcdhb13", "Pclaf", "Pde5a", "Pdf", "Pdk1", "Pigm", "Pigv", "Pik3ca", "Polg2", "Polr3gl", "Pphln1", "Ppp1r7", "Prpf19", "Ptrh2", "Pycr1", "Rab11b", "Rab7", "Racgap1", "Rchy1", "Rdh1", "Reep3", "Resf1", "Rheb", "Ripor2", "Rnd1", "Rnf130", "Rpl37rt", "Rps3", "Rsl24d1", "Sco1", "Sema3e", "Sfxn2", "Sgk3", "Sh3rf2", "Six4", "Ska3", "Slc11a2", "Slc12a9", "Slc15a1", "Slc25a42", "Slc25a51", "Slc35e1", "Slc52a2", "Slc6a20b", "Slc8b1", "Slfn5", "Smco1", "Spdef", "Spib", "Sppl2a", "Srgn", "St7l", "Stam", "Stat1", "Suox", "Tapbp", "Tars2", "Tbl2", "Tbrg4", "Tbx18", "Tcp1", "Tfcp2", "Tfcp2l1", "Thap2", "Tln2", "Tmem209", "Tmem82", "Tmem88b", "Tmx4", "Tnfrsf10b", "Tnfrsf26", "Trak1", "Trim2", "Trim24", "Trim36", "Trmt10a", "Tstd2", "Ttc23", "Ttc26", "Ttc5", "Tti2", "Tube1", "Ubac1", "Ubap1", "Vps50", "Vsig10", "Wfikkn2", "Wipf2", "Xkr8", "Xrcc2", "Xrn1", "Zbtb6", "Zc3h12b", "Zcchc4", "Zdhhc2", "Zfp346", "Zfp354a", "Zfp626", "Zfp668", "Zfp799", "Zfp830", "Zfp933", "Zswim1")),
+      data.frame(gene="mmu_piR_006854",target=c("C87436")),
+      data.frame(target="Grk4 Zup1",gene="mmu_piR_007405"),
+      data.frame(target=c("Kcnq1ot1"),gene="mmu_piR_019800"),
+      data.frame(target=c("1700047E10Rik", "4930429H19Rik", "9530051G07Rik", "Acad11", "Anks1b", "Atxn2", "Blk", "Brd8", "Col7a1", "Ddr1", "Dgke", "Eapp", "Egr2", "Fgd1", "Fgfr2", "Gas2l3", "Gmeb1", "Gosr2", "Gpr25", "H2-T24", "Igf1r", "Il17f", "Insrr", "Letm2", "Lsm10", "Lyn", "March5", "Mindy4", "Nanog", "Nmnat1", "Nrros", "Omd", "P2ry6", "Pcid2", "Ppp1r16b", "Rpn2", "S1pr2", "Scpep1os", "Sema4c", "Stap2", "Synm", "Tenm4", "Tmem206", "Tyk2", "Unkl", "Wdr48", "Xist", "Zfp11", "Zmynd8"),gene="mmu_piR_009360"),
+      data.frame(gene=c("mmu_piR_006423"),target="Bbof1"),
+      data.frame(gene="mmu_piR_004567",target="Galnt6"),
+      data.frame(gene="mmu_piR_005370",target="Tas2r126"),
+      data.frame(target=c("4930546K05Rik", "4930558J18Rik", "4933411E08Rik", "9830132P13Rik", "A630075F10Rik", "A830052D11Rik", "Aasdhppt", "Atp23", "C2cd2", "Camk4", "Ccr9", "Cgas", "Crk", "D230017M19Rik", "Dzip1l", "Eif2b1", "Gimap6", "Gm12596", "Gm38415", "Gpatch2", "Gstz1", "Lsm6", "Mir1a-1hg", "Nipal4", "Prep", "Ptp4a3", "Rbpjl", "Trim65", "Txnl4a"),gene="mmu_piR_005425"),
+      data.frame(gene="mmu_piR_000626",target="Lhx9"),
+      data.frame(gene=c("mmu_piR_000870"),target=c("Map3k14")),
+      data.frame(gene="mmu_piR_001071",target=c("C8a","Col9a1")),
+      data.frame(gene="mmu_piR_000958",target=c("Mrgpra4","Rps15")),
+      data.frame(target=c("1110002J07Rik","1700094D03Rik","2010315B03Rik","2810021J22Rik","A330094K24Rik","A830082N09Rik","Abcc9","Abi2","Ajuba","Akap5","Apod","Aqp7","Atg9a","Atp9a","Bbs1","Bloc1s6os","C330026H20Rik","C5ar2","Car5b","Ccdc157","Ccdc62","Ccl9","Cd93","Cdk6","Cdk7","Cdnf", "Cramp1l","Crk","Ctsa","Cyp20a1","D030040B21Rik", "D130020L05Rik", "D330050I16Rik", "Dcxr", "Ddhd2", "Ddx58", "Dgke", "Dut", "Eif1ax", "Elovl7","Epb42","Ephb2","Ephx3", "Ercc6","Etv6","Fam208a","Fam219b", "Fnip2", "Foxj3", "Galns", "Gatad1", "Gdf3", "Gdpgp1", "Gid8", "Gjc3", "Gm17753", "Gm17801", "Gm28043", "Gm32455", "Gngt1", "Gnl3l", "Gpr68", "Gtf2i", "H2-DMa", "Helb", "Hnrnpab", "Hnrnpc", "Il1rl1", "Ints7", "Irak2", "Kbtbd2", "Kdelc2", "Kif15", "Klhl41", "LOC215458", "Lix1", "Lrrc58", "Map3k20", "Map7", "Mapre1", "Mcc", "Mga", "Mirc35hg", "Mrps16", "Mrtfb", "Mttp", "Ncan", "Ncl", "Noc2l", "Noc3l", "Orc4", "P2ry4", "Pafah1b2", "Pde7a", "Polr1b", "Pphln1", "Ptafr", "Pycr1", "Rab11b", "Rab1a", "Rbm34", "Rbms2", "Rdh1", "Rmi2", "Rpl7l1", "Rrp1b", "Sfi1", "Sfxn2", "Sgk3", "Shmt1", "Slc25a42", "Slc25a51", "Slc28a3", "Slc35e1", "Slc35e2", "Slc3a2", "Smco1", "Smtnl2", "Tapbp", "Tbl1xr1", "Tln2", "Tmem82", "Tox4", "Trmt13", "Tspyl1", "Ubap1", "Ube2v2", "Ufd1", "Usp45", "Wdr19", "Wipf2", "Xrcc2", "Zbtb24", "Zbtb44", "Zc3h12b", "Zc3hav1", "Zfp597", "Zfp799", "Zfp830", "Zfp874b", "Zfp882", "Zfp933"),gene="mmu_piR_024234"))
+```
+
+
+
+
+
+# Mass Spec
+
+## Loading/Setup/DEG Mass Spec
+```{r}
+run1 <- read_excel("BloodPaper_FinalResults/SBI/111502_raw.xlsx")
+names(run1)[names(run1) == 'Abundances (Normalized): F7: Sample, 111502-2'] <- "ExpAb1"
+names(run1)[names(run1) == 'Abundances (Normalized): F6: Sample, 111502-1'] <- "ControlAb1"
+run2 <- read_excel("BloodPaper_FinalResults/SBI/114596_Raw.xlsx")
+names(run2)[names(run2) == 'Abundances (Normalized): F1: Sample, 114956-1'] <- "ControlAb2"
+names(run2)[names(run2) == 'Abundances (Normalized): F2: Sample, 114956-2'] <- "ExpAb2"
+
+run1<-data.frame(run1)
+run2<-data.frame(run2)
+both<-intersect(run1$Accession,run2$Accession)
+a<-GetNamesTaxa(both)
+rownames(run1)<-run1$Accession
+rownames(run2)<-run2$Accession
+both_mus<-a[a$Organism=="Mus musculus (Mouse)","Entry"]
+run1_sub<-run1[both_mus,]
+run2_sub<-run2[both_mus,]
+
+pep_edata<-cbind(run1_sub[,c("ControlAb1","ExpAb1")],run2_sub[,c("ControlAb2","ExpAb2")])
+avg<-colMeans(pep_edata,na.rm = TRUE)
+avgavg<-mean(avg)
+adj<-avgavg/avg
+pep_edata<-pep_edata*adj
+pep_edata$Mass_Tag_ID<-rownames(pep_edata)
+rownames(pep_edata)<-NULL
+
+# pep_fdata
+pep_fdata<-data.frame(SampleID=c("ExpAb1","ControlAb1","ExpAb2","ControlAb2"),Condition=c("Exp","Control","Exp","Control"))
+```
+## setting up protein info
+```{r}
+# pep emeta
+pep_emeta<-data.frame(Mass_Tag_ID=pep_edata$Mass_Tag_ID,Protein=a[pep_edata$Mass_Tag_ID,"Protein.names"],Gene=a[pep_edata$Mass_Tag_ID,"Gene.Names..primary."])
+pep_emeta[pep_emeta$Mass_Tag_ID=="Q3UCL5","Gene"]<-"Fth1"
+pep_emeta[pep_emeta$Mass_Tag_ID=="Q3UNR7","Gene"]<-"Sugct"
+pep_emeta[pep_emeta$Mass_Tag_ID=="Q7M0D9","Gene"]<-"Pappa"
+pep_emeta[pep_emeta$Mass_Tag_ID%in%c("I6L991","I6L9E1"),"Gene"]<-"Igkv"
+pep_emeta[pep_emeta$Mass_Tag_ID=="Q8VI54","Gene"]<-"Comp"
+pep_emeta[pep_emeta$Mass_Tag_ID=="Q6LEM8","Gene"]<-"Ildr1"#or Ilrd2
+pep_emeta[pep_emeta$Mass_Tag_ID%in%c("X5J577","X5J4N1","X5J4C4","X5J5A4","X5J4Z8","X5J4F7","X5J4C7","X5J4F8"),"Gene"]<-"Ighm"
+pep_emeta[pep_emeta$Mass_Tag_ID=="Q53VQ0","Gene"]<-"Igh-V"
+pep_emeta[pep_emeta$Mass_Tag_ID=="A0A1X9HIL9","Gene"]<-"Igh-V7183"
+pep_emeta[pep_emeta$Mass_Tag_ID=="P01652","Gene"]<-"Igk"
+pep_emeta[pep_emeta$Mass_Tag_ID=="Q9D8L4","Gene"]<-"Igh"
+pep_emeta[pep_emeta$Mass_Tag_ID=="Q7M084","Gene"]<-"Kng1" #or Kng2
+pep_emeta[pep_emeta$Mass_Tag_ID=="Q53VP8","Gene"]<-"Igk"
+pep_emeta[pep_emeta$Mass_Tag_ID=="K7TDI6","Gene"]<-"Igm"
+pep_emeta[pep_emeta$Mass_Tag_ID=="P01676","Gene"]<-"Igkv5-6"
+pep_emeta[pep_emeta$Mass_Tag_ID%in%c("P01663","P01665","P01660","P01655","P03977"),"Gene"]<-"Igkv5-3"
+pep_emeta[pep_emeta$Mass_Tag_ID=="P01741","Gene"]<-"Igh-VJ558"
+pep_emeta[pep_emeta$Mass_Tag_ID=="A2NW55","Gene"]<-"Igh-8"
+pep_emeta[pep_emeta$Mass_Tag_ID=="X5J4H8","Gene"]<-"IgG1"
+pep_emeta[pep_emeta$Mass_Tag_ID=="U5LP42","Gene"]<-"Ctnnd2"
+pep_emeta[pep_emeta$Mass_Tag_ID%in%c("Q9JL76","Q9JL74"),"Gene"]<-"Igkv4-72"
+pep_emeta[pep_emeta$Mass_Tag_ID=="Q8K1F2","Gene"]<-"Igkv4-71"
+pep_emeta[pep_emeta$Mass_Tag_ID=="G0YP42","Gene"]<-"Cd207"
+pep_emeta[pep_emeta$Mass_Tag_ID=="","Gene"]<-"Igkv4-72"
+rownames(pep_emeta)<-pep_emeta$Mass_Tag_ID
+
+```
+
+
+
+## Using proteins
+```{r}
+# into pep data form
+mypepData <- as.pepData(e_data = pep_edata, f_data = pep_fdata, e_meta = pep_emeta, edata_cname = "Mass_Tag_ID", emeta_cname = "Protein", fdata_cname = "SampleID", data_scale = "abundance")
+mypepData <- edata_replace(mypepData, x = 0, y = NA)
+mypepData <- edata_transform(mypepData, data_scale = "log2")
+
+# filtering
+pep_object <- group_designation(omicsData = mypepData, main_effects = c("Condition"))
+myfilt <- imdanova_filter(omicsData = pep_object)
+
+# comparing conditions
+all_pairwise_resultsV2 <- imd_anova(omicsData = pep_object,test_method = "anova")
+all_pairwise_resultsV2$logCPM<-log(all_pairwise_resultsV2$Mean_Exp+all_pairwise_resultsV2$Mean_Control)
+
+all_pairwise_resultsV2$protein_name<-pep_emeta[all_pairwise_resultsV2$Mass_Tag_ID,"Protein"]
+all_pairwise_resultsV2$gene_name<-pep_emeta[all_pairwise_resultsV2$Mass_Tag_ID,"Gene"]
+all_pairwise_resultsV2$lab<-all_pairwise_resultsV2$gene_name
+Keep<-c("Serpina1a","Hbb-b2","Spp2")
+all_pairwise_resultsV2[!(all_pairwise_resultsV2$lab%in%Keep),"lab"]<-NA
+```
+
+## Using gene names
+```{r}
+pep_edata$gene<-pep_emeta[pep_edata$Mass_Tag_ID,"Gene"]
+pep_edata_filt<-pep_edata%>%
+  group_by(gene)%>%
+  mutate(ControlAb1=sum(ControlAb1,na.rm = T),ControlAb2=sum(ControlAb2,na.rm = T),ExpAb1=sum(ExpAb1,na.rm = T),ExpAb2=sum(ExpAb2,na.rm = T),Mass_Tag_ID=Mass_Tag_ID)
+pep_emeta_filt<-pep_emeta[pep_edata$Mass_Tag_ID,]
+mypepData <- as.pepData(e_data = pep_edata_filt[,c(1:5)], f_data = pep_fdata, e_meta = pep_emeta_filt, edata_cname = "Mass_Tag_ID", emeta_cname = "Protein", fdata_cname = "SampleID", data_scale = "abundance")
+mypepData <- edata_replace(mypepData, x = 0, y = NA)
+mypepData <- edata_transform(mypepData, data_scale = "log2")
+
+# filtering
+pep_object <- group_designation(omicsData = mypepData, main_effects = c("Condition"))
+myfilt <- imdanova_filter(omicsData = pep_object)
+
+# comparing conditions
+all_pairwise_results_bygene <- imd_anova(omicsData = pep_object,test_method = "anova")
+all_pairwise_results_bygene$logCPM<-log(all_pairwise_results_bygene$Mean_Exp+all_pairwise_results_bygene$Mean_Control)
+all_pairwise_results_bygene$gene_name<-pep_emeta[all_pairwise_results_bygene$Mass_Tag_ID,"Gene"]
+all_pairwise_results_bygene<-all_pairwise_results_bygene[,c(2:10)]
+all_pairwise_results_bygene<-unique(all_pairwise_results_bygene)
+all_pairwise_results_bygene$lab<-all_pairwise_results_bygene$gene_name
+all_pairwise_results_bygene<-all_pairwise_results_bygene[!is.na(all_pairwise_results_bygene$gene_name),]
+all_pairwise_results_bygene[is.na(all_pairwise_results_bygene$Fold_change_Exp_vs_Control),"Fold_change_Exp_vs_Control"]<-0
+all_pairwise_results_bygene[is.na(all_pairwise_results_bygene$P_value_A_Exp_vs_Control),"P_value_A_Exp_vs_Control"]<-1
+```
+
+
+
+# Running UpRegulated Ontology
+```{r}
+# Protein coding
+SigUp<-tab[tab$logFC>0&tab$PValue<0.05&tab$type=="RefSeq",]
+Ref<-tab[tab$type=="RefSeq",]
+rownames(SigUp)<-SigUp$name
+Onto_Up_RNA<-GO_Search_EVs(SigUp,Ref$name)
+
+#ncRNA
+All<-tab[tab$type!="RefSeq",]
+SigUp<-All[All$PValue<0.05&All$logFC>0,]
+rownames(SigUp)<-SigUp$name
+Onto_Up_ncRNA<-GO_Search_EVs(SigUp,All$name)
+
+#miRNA
+MI_Up<-tab[tab$logFC<0&tab$PValue<0.1&tab$type=="miRNA",]
+MI_All<-tab[tab$type=="miRNA",]
+rownames(MI_Up)<-MI_Up$name
+Sig_Targets<-Anno[Anno$name_new%in%MI_Up$name,]
+Sig_Targets$PValue<-MI_Up[Sig_Targets$name_new,"PValue"]
+Sig_Targets <- Sig_Targets %>%
+  group_by(symbol) %>%
+  summarize(PValue=min(PValue))
+Sig_Targets<-as.data.frame(Sig_Targets[!is.na(Sig_Targets$symbol),])
+rownames(Sig_Targets)<-Sig_Targets$symbol
+MIUp_Target_Ontology<-GO_Search_EVs(Sig_Targets,unique(Anno$symbol))
+
+#piRNA
+PI_Up<-tab[tab$logFC>0&tab$PValue<0.1&tab$type=="piRNA",]
+PI_All<-tab[tab$type=="piRNA",]
+rownames(PI_Up)<-PI_Up$name
+Sig_Targets<-PIRNA_Targets[PIRNA_Targets$gene%in%PI_Up$name,]
+Sig_Targets$PValue<-PI_Up[Sig_Targets$gene,"PValue"]
+Sig_Targets <- Sig_Targets %>%
+  group_by(target) %>%
+  summarize(PValue=min(PValue))
+Sig_Targets<-as.data.frame(Sig_Targets[!is.na(Sig_Targets$target),])
+rownames(Sig_Targets)<-Sig_Targets$target
+PIUp_Target_Ontology<-GO_Search_EVs(Sig_Targets,unique(PIRNA_Targets$target))
+
+Up_MS<-all_pairwise_results_bygene[all_pairwise_results_bygene$P_value_A_Exp_vs_Control<0.1&all_pairwise_results_bygene$Fold_change_Exp_vs_Control>0,]
+rownames(Up_MS)<-Up_MS$gene_name
+colnames(Up_MS)[colnames(Up_MS)=="P_value_A_Exp_vs_Control"]<-"PValue"
+
+All<-all_pairwise_results_bygene$gene_name
+Onto_Up_MS<-GO_Search_EVs(Up_MS,All)
+```
+
+
+#Down regulated ontology
+```{r}
+# Protein coding
+SigUp<-tab[tab$logFC<0&tab$PValue<0.05&tab$type=="RefSeq",]
+Ref<-tab[tab$type=="RefSeq",]
+rownames(SigUp)<-SigUp$name
+Onto_RNA<-GO_Search_EVs(SigUp,Ref$name)
+Onto_RNA<-Onto_RNA[Onto_RNA$Fisher<0.05|Onto_RNA$KS<0.05,]
+Onto_RNA<-Onto_RNA[Onto_RNA$Significant.x>1|Onto_RNA$Significant.y>1,]
+
+#miRNA
+MI_Up<-tab[tab$logFC>0&tab$PValue<0.1&tab$type=="miRNA",]
+MI_All<-tab[tab$type=="miRNA",]
+rownames(MI_Up)<-MI_Up$name
+Sig_Targets<-Anno[Anno$name_new%in%MI_Up$name,]
+Sig_Targets$PValue<-MI_Up[Sig_Targets$name_new,"PValue"]
+Sig_Targets <- Sig_Targets %>%
+  group_by(symbol) %>%
+  summarize(PValue=min(PValue))
+Sig_Targets<-as.data.frame(Sig_Targets[!is.na(Sig_Targets$symbol),])
+rownames(Sig_Targets)<-Sig_Targets$symbol
+Onto_MI<-GO_Search_EVs(Sig_Targets,unique(Anno$symbol))
+Onto_MI<-Onto_MI[Onto_MI$Fisher<0.05|Onto_MI$KS<0.05,]
+Onto_MI<-Onto_MI[Onto_MI$Significant.x>1|Onto_MI$Significant.y>1,]
+
+#piRNA
+PI_Up<-tab[tab$logFC<0&tab$PValue<0.1&tab$type=="piRNA",]
+PI_All<-tab[tab$type=="piRNA",]
+rownames(PI_Up)<-PI_Up$name
+Sig_Targets<-PIRNA_Targets[PIRNA_Targets$gene%in%PI_Up$name,]
+Sig_Targets$PValue<-PI_Up[Sig_Targets$gene,"PValue"]
+Sig_Targets <- Sig_Targets %>%
+  group_by(target) %>%
+  summarize(PValue=min(PValue))
+Sig_Targets<-as.data.frame(Sig_Targets[!is.na(Sig_Targets$target),])
+rownames(Sig_Targets)<-Sig_Targets$target
+Onto_PI<-GO_Search_EVs(Sig_Targets,unique(PIRNA_Targets$target))
+Onto_PI<-Onto_PI[Onto_PI$Fisher<0.05|Onto_PI$KS<0.05,]
+Onto_PI<-Onto_PI[Onto_PI$Significant.x>1|Onto_PI$Significant.y>1,]
+```
+
+
+
+# Plots
+## Shared Heatmap
+```{r}
+CountsRefSeq<-tab[tab$type=="RefSeq",]
+rownames(CountsRefSeq)<-CountsRefSeq$name
+DetectedBoth<-intersect(CountsRefSeq$name,all_pairwise_results_bygene$gene_name)
+
+RNABoth<-CountsRefSeq[DetectedBoth,c("logFC","PValue")]
+RNABoth$gene<-rownames(RNABoth)
+
+MSBoth<-all_pairwise_results_bygene[all_pairwise_results_bygene$gene_name %in% DetectedBoth,c("Fold_change_Exp_vs_Control","P_value_A_Exp_vs_Control","gene_name")]
+
+#Merging
+colnames(MSBoth)<-c("LogFC_MS","PVal_MS","Gene")
+colnames(RNABoth)<-c("LogFC_RNA","PVal_RNA","Gene")
+MSBoth<-as.data.frame(MSBoth)
+Full<-merge(MSBoth,RNABoth,by="Gene")
+Full<-Full %>%
+  distinct(Gene,.keep_all = TRUE)
+
+Full<-Full[Full$PVal_MS<0.05|Full$PVal_RNA<0.05|(abs(Full$LogFC_MS)>1&abs(Full$LogFC_RNA)>1),]
+LogFC<-as.matrix(Full[,c("LogFC_MS","LogFC_RNA")])
+rownames(LogFC)<-Full$Gene
+PVal<-Full[,c("PVal_MS","PVal_RNA")]
+PVal$PVal_MS<-str_replace(str_replace(str_replace(add.significance.stars(PVal$PVal_MS),' ',''),' ',''),'NA','')
+PVal$PVal_RNA<-str_replace(str_replace(str_replace(add.significance.stars(PVal$PVal_RNA),' ',''),' ',''),'NA','')
+PVal<-as.matrix(PVal)
+LogFC<-LogFC
+colnames(LogFC)<-c("Protein","RNA")
+col_fun = colorRamp2(c(-4.5, 0, 4.5), LogFC_Cols)
+
+Shared_HM<-Heatmap(LogFC,
+                   heatmap_height = unit(2,"in"),
+                   cluster_rows = FALSE,
+                   column_names_side = "bottom",
+                   column_names_rot = 0,
+                   cluster_columns = FALSE,
+                   column_names_gp = ComplexHeatmap_AnnoLabel, 
+                   row_names_gp = ComplexHeatmap_RowLabel,
+                   column_names_centered = TRUE,
+                   col=col_fun,
+                   row_names_side = "left",
+                   show_heatmap_legend = FALSE,
+        cell_fun=function(j,i,x,y,width,height,fill){
+          grid.text(t(PVal[i,j]),x,y,gp=gpar(fontsize = 6,col="black",font="Arial"))
+        })
+```
+
+## Ontology Plot
+```{r}
+Keep<-c("regulation of growth","cell differentiation","acute-phase response","acute inflammatory response","negative regulation of cell-cell adhesion","chemical synaptic transmission","response to stimulus","sensory perception of sound","brain development","regulation of synaptic plasticity","neurogenesis","mitotic cell cycle","cell-cell adhesion","cell junction assembly")
+
+# Mass Spec
+Onto_Up_MS$Type<-"Protein\n"
+Onto_Up_ncRNA$Type<-"All\nncRNA"
+MIUp_Target_Ontology$Type<-"miRNA\nTargets"
+Onto_Up_RNA$Type<-"Protein Coding\nRNA"
+PIUp_Target_Ontology$Type<-"piRNA\nTargets"
+Full<-rbind(Onto_Up_MS,PIUp_Target_Ontology,Onto_Up_ncRNA,MIUp_Target_Ontology,Onto_Up_RNA)
+
+Full$Sig_max<-rowMax(cbind(Full$Significant.x,Full$Significant.y))
+Full$PCT<-Full$Sig_max/Full$Annotated
+Full<-Full[Full$Term%in%Keep,]
+Full$PVal<-rowMins(cbind(as.numeric(Full$Fisher),as.numeric(Full$KS)))
+Full$PValAdj<-(-log10(Full$PVal))
+Full[Full$PValAdj>4,]$PValAdj<-4
+#Full[Full$Significant>20,]$Significant<-20
+Full[Full$PCT<0.05,]$PCT<-0.05
+Full[Full$PCT>0.5,]$PCT<-0.5
+
+#Full<-Full[Full$PVal<0.05,]
+Full$Type<-factor(Full$Type,levels=c("Protein\n","Protein Coding\nRNA","All\nncRNA","piRNA\nTargets","miRNA\nTargets"))
+
+OntoPlot<-ggplot(Full,aes(x=Type,y=Term,color=PValAdj,size=100*PCT))+
+  geom_point()+
+  scale_color_gradient2(low=PVal_Cols[1],high=PVal_Cols[3],mid=PVal_Cols[2],breaks=c(0,2,4),limits=c(0,4),labels=c("0","2","\u2265 4"),midpoint = 2)+
+  scale_size_continuous(limits=c(5,50),breaks=c(5,25,50),labels=c("\u2264 5","25","\u2265 50"),range = c(1,3))+
+  guides(color=guide_colorbar(title=LogP),size=guide_legend(title="Percent (%)"))+EVPaperTheme+theme(legend.position = "right",legend.direction = "vertical",axis.title = element_blank())
+```
+
+##  Volcanos
+```{r}
+tab$lab<-tab$name
+Label<-c("Olfr606","Mapk12","Sox3","Cd47","Trim2","Ccdc78","Dmrtc1c1","Il31","Cldn11","Pgls","Cd209e","Vcam1","Icam1","Nrgn","Cd63","Cd81","Actb","Sox12","Csf2","Cdk11b","Tlr4")
+tab[!(tab$lab %in% Label),"lab"]<-NA
+Volcano_RNA<-ggplot(tab,aes(x=logFC,y=-log10(PValue),color=logFC,label=lab)) + 
+  geom_point(size=0.5,alpha=0.5,shape=16)+
+  scale_color_gradient2(low=LogFC_Cols[1],high=LogFC_Cols[3],mid=LogFC_Cols[2],midpoint=0,limits=c(-6,6),guide = guide_colorbar(title="LogFC",title.position = "top"),breaks=c(-6,0,6))+
+  geom_label_repel(size=2.5,box.padding = unit(0.01,"mm"),label.padding = unit(0.75,"mm")) + scale_y_continuous(expand = c(0,0),limits = c(0,4)) + scale_x_continuous(expand=c(0,0),limits=c(-8,9.5)) + ylab(LogP) + xlab("LogFC") + EVPaperTheme+theme(legend.position = "right",legend.direction = "vertical")
+
+Volcano_MS<-ggplot(all_pairwise_resultsV2,aes(x=Fold_change_Exp_vs_Control,y=-log10(P_value_A_Exp_vs_Control),color=Fold_change_Exp_vs_Control,label=lab))+geom_point(size=0.5,alpha=0.5)+geom_label_repel(size=2.5,box.padding = unit(0.01,"mm"),label.padding = unit(0.75,"mm"))+
+  scale_color_gradient2(low=LogFC_Cols[1],high=LogFC_Cols[3],mid=LogFC_Cols[2],midpoint=0,limits=c(-6,6),breaks=c(-6,0,6),guide = guide_colorbar(title="LogFC",title.position = "top"))+
+  xlab("LogFC")+ylab(LogP)+scale_y_continuous(expand = c(0,0),limits = c(0,4))+scale_x_continuous(expand=c(0,0),limits=c(-8,9.5))+ylab(LogP) + EVPaperTheme+theme(legend.position = "right",legend.direction = "vertical")
+```
+
+## RNASeq RNA type
+```{r}
+TabUp<-tab[tab$logFC>0&tab$PValue<0.05,]
+TabUpType<-as.data.frame(table(TabUp$type))
+
+TabDown<-tab[tab$logFC<0&tab$PValue<0.05,]
+TabDownType<-as.data.frame(table(TabDown$type))
+
+
+k<-full_join(TabUpType,TabDownType,by="Var1",keep=TRUE)
+colnames(k)<-c("RNA Type","Up","Del","Down")
+long<-pivot_longer(k,cols=c("Up","Down"))
+
+
+BP_RNAType<-ggplot(long, aes(x=name, y=value, fill=`RNA Type`)) + geom_bar(stat="identity", width=0.75) + scale_y_continuous(expand = c(0,0),limits=c(0,650))+ylab("Count")+guides(fill=guide_legend(ncol=1))+EVPaperTheme+xlab("Direction")+EVPaperTheme+theme(legend.position = "right",legend.direction = "vertical",legend.key.size = unit(0.15,"cm"),legend.title = element_blank())
+```
+
+
+## RefSeq Significant genes
+```{r}
+Ref<-tab[tab$type=="RefSeq",]
+Ref<-Ref[!(grepl("copy",Ref$name)),]
+Genes<-Ref[Ref$PValue<0.05|abs(Ref$logFC)>3,]
+t<-Genes %>%
+  slice_min(PValue,n=10)
+t1<-Genes %>%
+  slice_max(abs(logFC),n=10)
+
+Full<-unique(rbind(t,t1))
+
+RNASig<-ggplot(Full,aes(y=name,x=logFC,color=(-log10(PValue))))+
+  geom_point()+
+  scale_color_gradient2(low=PVal_Cols[1],high=PVal_Cols[3],mid=PVal_Cols[2],breaks=c(0,2,4),limits=c(0,4),labels=c("0","2","\u2265 4"),midpoint = 2)+
+  xlab("LogFC")+ylab("Gene")+
+  EVPaperTheme+theme(legend.position = "top",legend.direction = "horizontal")+
+  guides(color=guide_colorbar(title=LogP),size=guide_legend(title=LogP))+EVPaperTheme+theme(legend.position = "right",legend.direction = "vertical",axis.title = element_blank())
+```
+
+## Significance by genes plot
+```{r}
+Genes<-all_pairwise_resultsV2[all_pairwise_resultsV2$P_value_A_Exp_vs_Control<0.1&abs(all_pairwise_resultsV2$Fold_change_Exp_vs_Control)>0.5,]
+Genes<-Genes[!is.na(Genes$gene_name),]
+Genes$protein_name<-recode(Genes$protein_name,
+                           "Lacrein (Predicted gene 1553)"="Lacrein",
+                           "Lipopolysaccharide-binding protein (LBP)"="Lipopolysaccharide-binding protein",
+                           "Collagen alpha-1(I) chain (Alpha-1 type I collagen)"="Alpha-1 type I collagen",
+                           "Proteasome subunit beta type-6 (EC 3.4.25.1) (Low molecular mass protein 19) (Macropain delta chain) (Multicatalytic endopeptidase complex delta chain) (Proteasome delta chain) (Proteasome subunit Y)"="Proteasome subunit beta type-6",
+                           "Peroxiredoxin-2 (EC 1.11.1.24) (Thiol-specific antioxidant protein) (TSA) (Thioredoxin peroxidase 1) (Thioredoxin-dependent peroxide reductase 1) (Thioredoxin-dependent peroxiredoxin 2)"="Thiol-specific antioxidant protein",
+                           "CD5 antigen-like (Apoptosis inhibitor expressed by macrophages) (mAIM) (Apoptosis inhibitory 6) (SP-alpha)"="CD5 antigen-like",
+                           "Pigment epithelium-derived factor (PEDF) (Caspin) (Serpin F1) (Stromal cell-derived factor 3) (SDF-3)"="Pigment epithelium-derived factor",
+                           "Alpha globin 1 (Alpha globin 2) (Alpha-globin) (Globin c1) (Hemoglobin alpha, adult chain 1) (Hemoglobin alpha, adult chain 2)"="Hemoglobin, alpha",
+                           "Beta-globin (Globin a1) (Hemoglobin, beta adult s chain) (Hemoglobin, beta adult t chain)"="Hemoglobin, beta",
+                           "Alpha-1-antitrypsin 1-5 (Alpha-1 protease inhibitor 5) (Serine protease inhibitor 1-5) (Serine protease inhibitor A1e) (Serpin A1e)"="Serine protease inhibitor 1-5",
+                           "Alpha-1-antitrypsin 1-1 (AAT) (Alpha-1 protease inhibitor 1) (Alpha-1-antiproteinase) (Serine protease inhibitor 1-1) (Serine protease inhibitor A1a) (Serpin A1a)" ="Serine protease inhibitor A1a",
+                           "Apolipoprotein C-III (Apolipoprotein C3)"="Apolipoprotein C3",
+                           "Immunoglobulin heavy variable 1-76"="IgM heavy variable 1-76",
+                           "Immunoglobulin heavy variable V1-18"="IgM heavy variable V1-18",
+                           "Immunoglobulin kappa variable 8-28"="IgM kappa variable 8-28",
+                           "IgM heavy chain VDJ region"="IgM heavy chain VDJ",
+                           "Immunoglobulin kappa chain variable 9-124"="IgM kappa chain variable 9-124",
+                           "Immunoglobulin J chain"="IgM J chain"
+                           )
+#Genes<-Genes[Genes$protein_name%in%c("Immunoglobulin kappa chain variable 9-124",]
+MSSig<-ggplot(Genes,aes(y=protein_name,x=Fold_change_Exp_vs_Control,color=(-log10(P_value_A_Exp_vs_Control))))+
+  geom_point()+
+scale_color_gradient2(low=PVal_Cols[1],high=PVal_Cols[3],mid=PVal_Cols[2],breaks=c(0,2,4),limits=c(0,4),labels=c("0","2","\u2265 4"),midpoint = 2)+
+  xlab("LogFC")+
+guides(color=guide_colorbar(title=LogP))+
+  scale_x_continuous(expand=c(0,0))+
+  ylab("Protein")+
+  EVPaperTheme+
+  theme(legend.position = "right",legend.direction = "vertical")
+```
+
+# Putting it together
+```{r}
+Blank<-ggplot()+theme_void()
+
+Left<-plot_grid(Volcano_RNA,Volcano_MS,nrow=2,align = "v",axis="lr",labels = c("a","d"))
+
+TopRight<-plot_grid(BP_RNAType,RNASig,nrow=1,align = "h",axis = "tb",labels=c("b","c"))
+
+Top<-plot_grid(Left,plot_grid(TopRight,MSSig,nrow=2,labels=c("","e")),nrow=1,rel_widths = c(1,2))
+
+Full<-plot_grid(Top,OntoPlot+theme(legend.position = "right",legend.box = "vertical"),nrow=2,rel_heights = c(2,1),labels=c("","f"))
+
+ggsave("MouseEVContent.png",bg = "white",width = 8.5,height = 8.2,units = "in")
+
+```
+
+
+

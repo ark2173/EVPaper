@@ -1,0 +1,437 @@
+---
+title: "Patient EV/Serum Content"
+author: "Alina Kline-Schoder"
+date: "05/19/2022"
+output:
+  pdf_document: 
+    number_sections: yes
+  html_document:
+    df_print: paged
+---
+# Loading everything in
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+library(tidyr)
+library(ggpubr)
+library(ggplot2)
+library(ggpmisc)
+library(ComplexHeatmap)
+library(dplyr)
+library(tidyverse)
+library(rstatix)
+library(viridis)
+library(pander)
+library(tidyverse)
+library(circlize)
+library(plotrix)
+library(scales)
+
+Stat_Summary_Size<-1
+stat_compare_means_star_size<-4
+stat_compare_means_text_size<-3
+Geom_size<-0.75
+Geom_size_line<-1
+Geom_size_bp<-0.5
+Colors<-hue_pal()(6)
+Colors_NoP3<-Colors[c(1:2,4:6)]
+LogFC_Cols<-viridis(3)
+EVPaperTheme<-theme_classic()+
+  theme(legend.position="none",
+        axis.text = element_text(size=8),
+        axis.title = element_text(size=8),
+        panel.grid = element_blank(),
+        strip.text = element_text(size=8),
+        plot.margin = margin(0.25,0.25,0.25,0.5,"cm"),
+        strip.background =element_rect(fill="white",color="white"),
+        axis.line = element_line(size=0.5))
+ComplexHeatmap_AnnoLabel<-gpar(fontfamily="Arial",fontsize=8,col="gray30")
+ComplexHeatmap_RowLabel<-gpar(fontfamily="Arial",fontsize=6,col="gray30")
+
+LegendTheme<-EVPaperTheme+theme(legend.position = "bottom",legend.title = element_blank(),legend.key.size = unit(0.5,"mm"),legend.text = element_text(size=8))
+
+LegendTheme<-EVPaperTheme+theme(legend.position = "top",legend.title = element_blank(),legend.key.size = unit(0.5,"mm"),legend.text = element_text(size=8))
+```
+
+
+
+# Preparing EV concentration values
+```{r}
+Stats<-read.csv('/Users/alinakline-schoder/Documents/Papers/Blood/Blood Paper/BloodPaper_FinalResults/Humans_FinalEVConcentration/PatientStats-Table 1.csv')
+rownames(Stats)<-Stats$Patient.
+
+EV<-data.frame(P=c("CD81","CD9","CD63"),Type="EV")
+CNS<-data.frame(P=c("NCAM1","ICAM1","VCAM1","S100B","GFAP","TREM2"),Type="CNS")
+AD<-data.frame(P=c("AB40","AB42","Tau","PT181","ABRatio","NRGN","NF.H"),Type="AD")
+BBBO<-data.frame(P=c("BBBO","EVConc"),Type="BBBO")
+
+Type<-rbind(BBBO,EV,CNS,AD)
+rownames(Type)<-Type$P
+```
+
+
+# Preparing
+```{r}
+# Loading EV content
+EVRaw<-read.csv('/Users/alinakline-schoder/Documents/Papers/Blood/Blood Paper/BloodPaper_FinalResults/HumanFinalContent/EVs-Calc-Table 1.csv')
+EVRaw<-EVRaw[EVRaw$Time.Point!="Base",]
+EVRaw$ABRatio<-EVRaw$AB42/EVRaw$AB40
+# Adding in BBBO
+EVRaw$BBBO<-Stats[EVRaw$Patient,]$Opening.Volume..mm3.
+
+# Adding in EV concentration
+Exo<-read.csv('/Users/alinakline-schoder/Documents/Papers/Blood/Blood Paper/BloodPaper_FinalResults/Humans_FinalEVConcentration/Short-Table 1.csv')
+Exo$Timepoint<-recode(Exo$Timepoint,"0d pre"="0d Pre","0d post"="0d Post")
+Exo_wide<-Exo[,c(1:2,4)]
+Exo_wide<-as.data.frame(pivot_wider(Exo_wide,names_from = "Timepoint",values_from = "Concentration"))
+rownames(Exo_wide)<-Exo_wide$Patient
+EVRaw$EVConc<-Exo_wide[EVRaw$Patient,]$`0d Post`
+EVRaw[EVRaw$Time.Point=="0d Pre",]$EVConc<-Exo_wide[EVRaw[EVRaw$Time.Point=="0d Pre",]$Patient,"0d Pre"]
+EVRaw[EVRaw$Time.Point=="0d Post",]$EVConc<-Exo_wide[EVRaw[EVRaw$Time.Point=="0d Post",]$Patient,"0d Post"]
+EVRaw[EVRaw$Time.Point=="3d",]$EVConc<-Exo_wide[EVRaw[EVRaw$Time.Point=="3d",]$Patient,"3d"]
+
+EVNorm<-EVRaw
+EVNorm[,!(colnames(EVNorm)%in%c("Patient","Time.Point","BBBO","EVConc"))]<-EVNorm[,!(colnames(EVNorm)%in%c("Patient","Time.Point","BBBO","EVConc"))]/EVNorm$EVConc
+
+BaseMat<-EVRaw[EVRaw$Time.Point=="0d Pre",!(colnames(EVRaw) %in% c("Patient","Time.Point","BBBO","SCDh","SCDu","ICD"))]
+rownames(BaseMat)<-EVRaw[EVRaw$Time.Point=="0d Pre","Patient"]
+
+NonBaseMat<-EVRaw[!(EVRaw$Time.Point=="0d Pre"),!(colnames(EVRaw) %in% c("Patient","Time.Point","BBBO","SCDh","SCDu","ICD"))]
+
+EVLogFC<-log2(NonBaseMat/BaseMat[EVRaw[!(EVRaw$Time.Point=="0d Pre"),"Patient"],])
+EVLogFC$Patient<-EVRaw[!(EVRaw$Time.Point=="0d Pre"),"Patient"]
+EVLogFC$Time.Point<-EVRaw[!(EVRaw$Time.Point=="0d Pre"),"Time.Point"]
+EVLogFC$BBBO<-EVRaw[!(EVRaw$Time.Point=="0d Pre"),"BBBO"]
+
+EVLogFC$Patient<-factor(EVLogFC$Patient,levels=c("P1","P2","P3","P4","P5","P6"))
+EVLogFC$Time.Point<-factor(EVLogFC$Time.Point,levels=c("0d Post","3d"))
+cols<-setdiff(colnames(EVLogFC),c("Patient","Time.Point","BBBO","SCDh","SCDu","ICD"))
+BaseMat<-EVNorm[EVNorm$Time.Point=="0d Pre",!(colnames(EVNorm) %in% c("Patient","Time.Point","BBBO"))]
+rownames(BaseMat)<-EVNorm[EVNorm$Time.Point=="0d Pre","Patient"]
+
+NonBaseMat<-EVNorm[!(EVNorm$Time.Point=="0d Pre"),!(colnames(EVNorm) %in% c("Patient","Time.Point","BBBO"))]
+
+EVLogFC_Norm<-log2(NonBaseMat/BaseMat[EVNorm[!(EVNorm$Time.Point=="0d Pre"),"Patient"],])
+EVLogFC_Norm$Patient<-EVNorm[!(EVNorm$Time.Point=="0d Pre"),"Patient"]
+EVLogFC_Norm$Time.Point<-EVNorm[!(EVNorm$Time.Point=="0d Pre"),"Time.Point"]
+EVLogFC_Norm$BBBO<-EVNorm[!(EVNorm$Time.Point=="0d Pre"),"BBBO"]
+
+EVLogFC_Norm$Patient<-factor(EVLogFC_Norm$Patient,levels=c("P1","P2","P3","P4","P5","P6"))
+EVLogFC_Norm$Time.Point<-factor(EVLogFC_Norm$Time.Point,levels=c("0d Post","3d"))
+```
+
+```{r}
+# Loading EV content
+SerumRaw<-read.csv('/Users/alinakline-schoder/Documents/Papers/Blood/Blood Paper/BloodPaper_FinalResults/HumanFinalContent/Serum-Calc-Table 1.csv')
+SerumRaw<-SerumRaw[SerumRaw$Time.Point!="Base",]
+SerumRaw$ABRatio<-SerumRaw$AB42/SerumRaw$AB40
+# Adding in BBBO
+SerumRaw$BBBO<-Stats[SerumRaw$Patient,]$Opening.Volume..mm3.
+
+# Adding in EV concentration
+SerumRaw$EVConc<-Exo_wide[SerumRaw$Patient,]$`0d Post`
+SerumRaw[SerumRaw$Time.Point=="0d Pre",]$EVConc<-Exo_wide[SerumRaw[SerumRaw$Time.Point=="0d Pre",]$Patient,"0d Pre"]
+SerumRaw[SerumRaw$Time.Point=="0d Post",]$EVConc<-Exo_wide[SerumRaw[SerumRaw$Time.Point=="0d Post",]$Patient,"0d Post"]
+SerumRaw[SerumRaw$Time.Point=="3d",]$EVConc<-Exo_wide[SerumRaw[SerumRaw$Time.Point=="3d",]$Patient,"3d"]
+
+SerumNorm<-SerumRaw
+SerumNorm[,!(colnames(SerumNorm)%in%c("Patient","Time.Point","BBBO","EVConc"))]<-SerumNorm[,!(colnames(SerumNorm)%in%c("Patient","Time.Point","BBBO","EVConc"))]/SerumNorm$EVConc
+
+
+
+BaseMat<-SerumRaw[SerumRaw$Time.Point=="0d Pre",!(colnames(SerumRaw) %in% c("Patient","Time.Point","BBBO","SCDh","SCDu","ICD"))]
+rownames(BaseMat)<-SerumRaw[SerumRaw$Time.Point=="0d Pre","Patient"]
+
+NonBaseMat<-SerumRaw[!(SerumRaw$Time.Point=="0d Pre"),!(colnames(SerumRaw) %in% c("Patient","Time.Point","BBBO","SCDh","SCDu","ICD"))]
+
+SerumLogFC<-log2(NonBaseMat/BaseMat[SerumRaw[!(SerumRaw$Time.Point=="0d Pre"),"Patient"],])
+SerumLogFC$Patient<-SerumRaw[!(SerumRaw$Time.Point=="0d Pre"),"Patient"]
+SerumLogFC$Time.Point<-SerumRaw[!(SerumRaw$Time.Point=="0d Pre"),"Time.Point"]
+SerumLogFC$BBBO<-SerumRaw[!(SerumRaw$Time.Point=="0d Pre"),"BBBO"]
+
+SerumLogFC$Patient<-factor(SerumLogFC$Patient,levels=c("P1","P2","P3","P4","P5","P6"))
+SerumLogFC$Time.Point<-factor(SerumLogFC$Time.Point,levels=c("0d Post","3d"))
+cols<-setdiff(colnames(SerumLogFC),c("Patient","Time.Point","BBBO","SCDh","SCDu","ICD"))
+BaseMat<-SerumNorm[SerumNorm$Time.Point=="0d Pre",!(colnames(SerumNorm) %in% c("Patient","Time.Point","BBBO"))]
+rownames(BaseMat)<-SerumNorm[SerumNorm$Time.Point=="0d Pre","Patient"]
+
+NonBaseMat<-SerumNorm[!(SerumNorm$Time.Point=="0d Pre"),!(colnames(SerumNorm) %in% c("Patient","Time.Point","BBBO"))]
+
+SerumLogFC_Norm<-log2(NonBaseMat/BaseMat[SerumNorm[!(SerumNorm$Time.Point=="0d Pre"),"Patient"],])
+SerumLogFC_Norm$Patient<-SerumNorm[!(SerumNorm$Time.Point=="0d Pre"),"Patient"]
+SerumLogFC_Norm$Time.Point<-SerumNorm[!(SerumNorm$Time.Point=="0d Pre"),"Time.Point"]
+SerumLogFC_Norm$BBBO<-SerumNorm[!(SerumNorm$Time.Point=="0d Pre"),"BBBO"]
+
+SerumLogFC_Norm$Patient<-factor(SerumLogFC_Norm$Patient,levels=c("P1","P2","P3","P4","P5","P6"))
+SerumLogFC_Norm$Time.Point<-factor(SerumLogFC_Norm$Time.Point,levels=c("0d Post","3d"))
+```
+
+
+# 0d vs 3d
+```{r}
+# normalized to EV concentration
+ToKeep<-c("CD81","CD9","GFAP","NRGN","Tau")
+Long1<-as.data.frame(pivot_longer(EVLogFC_Norm,cols=ToKeep))
+Long1$type<-"EV Norm"
+Long2<-as.data.frame(pivot_longer(SerumLogFC,cols=ToKeep))
+Long2$type<-"Serum"
+
+Long3<-as.data.frame(pivot_longer(EVLogFC,cols=ToKeep))
+Long3$type<-"EV"
+
+Long<-rbind(Long1,Long2,Long3)
+#Long[is.na(Long$value),]$value<-0
+#Long[Long$value==Inf,]$value<-5
+#Long[Long$value==(-Inf),]$value<-(-5)
+Long$Time.Point<-recode(Long$Time.Point,
+                        "0d Post"="1h",
+                        "3d"="3d")
+Long<-Long[Long$Patient!="P3",]
+Long$name<-recode(Long$name,
+                  "ABRatio"="AB42/AB40")
+NormPlot<-ggplot(Long,aes(x=Time.Point,y=value))+
+  geom_boxplot(outlier.shape = NA,size=Geom_size_bp)+
+  geom_point(aes(color=Patient),size=Geom_size)+
+  facet_grid(name~type,scales = "free")+
+  stat_compare_means(method="t.test",label = "p.format",label.y.npc = 0.1,label.x.npc = 0.4,size=stat_compare_means_text_size)+
+  scale_y_continuous(limits=c(-5,4)) + 
+  ylab(bquote(~Log[2]~"FC")) +
+  xlab("Time Point") + 
+  EVPaperTheme+
+  scale_color_manual(values=Colors_NoP3)+LegendTheme+theme(legend.position = "right")
+```
+
+# LogFC Heatmap:
+## EVNorm
+```{r}
+Long<-as.data.frame(pivot_longer(EVNorm,cols=colnames(EVNorm)[!colnames(EVNorm)%in%c("Patient","EVConc","BBBO","Time.Point","SCDh","SCDu","ICD")]))
+Long$Time.Point<-recode(factor(Long$Time.Point,levels=c("0d Pre","0d Post","3d")),
+                        "0d Pre"="Base",
+                        "0d Post"="1h",
+                        "3d"="3d")
+Mat<-pivot_wider(Long[,c("Patient","Time.Point","name","value")],names_from = Time.Point,values_from = value)
+EV_PVal_1h<-Mat[!(Mat$Patient%in%c("P1","P2","P3")),] %>%
+  group_by(name) %>%
+  summarise(p=round(t.test(x = Base,y=`1h`,paired=TRUE)$p.value,2))
+EV_PVal_3d<-Mat[!(Mat$Patient%in%c("P3")),] %>%
+  group_by(name) %>%
+  summarise(p=round(t.test(x = Base,y=`3d`,paired=TRUE)$p.value,2))
+PVal_EVNorm_No10<-merge(EV_PVal_1h,EV_PVal_3d,by="name")
+
+Long<-pivot_longer(EVLogFC_Norm,cols = setdiff(colnames(EVLogFC),c("Patient","Time.Point","BBBO","EVConc","ICD","SCDh","SCDu")))
+#Long<-Long[!((Long$Patient=="P6")&(Long$Time.Point=="0d Post")),]
+Long<-Long[!(Long$Patient=="P3"),]
+Long[is.infinite(Long$value),"value"]<-NaN
+Avg<-Long %>%
+  group_by(name,Time.Point) %>%
+  summarise(m=mean(value,na.rm=TRUE))
+Wide_EVNorm<-as.data.frame(pivot_wider(Avg,names_from = "Time.Point",values_from = "m"))
+rownames(Wide_EVNorm)<-Wide_EVNorm$name
+```
+
+# EV Raw
+```{r}
+Long<-as.data.frame(pivot_longer(EVRaw,cols=colnames(EVRaw)[!colnames(EVRaw)%in%c("Patient","EVConc","BBBO","Time.Point","SCDh","SCDu","ICD")]))
+Long$Time.Point<-recode(factor(Long$Time.Point,levels=c("0d Pre","0d Post","3d")),
+                        "0d Pre"="Base",
+                        "0d Post"="1h",
+                        "3d"="3d")
+Mat<-pivot_wider(Long[,c("Patient","Time.Point","name","value")],names_from = Time.Point,values_from = value)
+EV_PVal_1h<-Mat[!(Mat$Patient%in%c("P1","P2","P3")),] %>%
+  group_by(name) %>%
+  summarise(p=round(t.test(x = Base,y=`1h`,paired=TRUE)$p.value,2))
+EV_PVal_3d<-Mat[!(Mat$Patient%in%c("P3")),] %>%
+  group_by(name) %>%
+  summarise(p=round(t.test(x = Base,y=`3d`,paired=TRUE)$p.value,2))
+PVal_EVRaw_No10<-merge(EV_PVal_1h,EV_PVal_3d,by="name")
+
+Long<-pivot_longer(EVLogFC,cols = setdiff(colnames(EVLogFC),c("Patient","Time.Point","BBBO","EVConc","ICD","SCDh","SCDu")))
+#Long<-Long[!((Long$Patient=="P6")&(Long$Time.Point=="0d Post")),]
+Long<-as.data.frame(Long[!(Long$Patient=="P3"),])
+Long[is.infinite(Long$value),"value"]<-NaN
+
+Avg<-Long %>%
+  group_by(name,Time.Point) %>%
+  summarise(m=mean(value,na.rm=TRUE))
+Wide_EVRaw<-as.data.frame(pivot_wider(Avg,names_from = "Time.Point",values_from = "m"))
+rownames(Wide_EVRaw)<-Wide_EVRaw$name
+```
+
+## Serum Raw
+```{r}
+Long<-as.data.frame(pivot_longer(SerumRaw,cols=colnames(SerumRaw)[!colnames(SerumRaw)%in%c("Patient","EVConc","BBBO","Time.Point","SCDh","SCDu","ICD")]))
+Long$Time.Point<-recode(factor(Long$Time.Point,levels=c("0d Pre","0d Post","3d")),
+                        "0d Pre"="Base",
+                        "0d Post"="1h",
+                        "3d"="3d")
+Mat<-pivot_wider(Long[,c("Patient","Time.Point","name","value")],names_from = Time.Point,values_from = value)
+Serum_PVal_1h<-Mat[!(Mat$Patient%in%c("P1","P2","P3")),] %>%
+  group_by(name) %>%
+  summarise(p=round(t.test(x = Base,y=`1h`,paired=TRUE)$p.value,2))
+Serum_PVal_3d<-Mat[!(Mat$Patient%in%c("P3")),] %>%
+  group_by(name) %>%
+  summarise(p=round(t.test(x = Base,y=`3d`,paired=TRUE)$p.value,2))
+PVal_Serum<-merge(Serum_PVal_1h,Serum_PVal_3d,by="name")
+
+Long<-pivot_longer(SerumLogFC,cols = setdiff(colnames(SerumLogFC),c("Patient","Time.Point","BBBO","EVConc","ICD","SCDh","SCDu")))
+#Long<-Long[!((Long$Patient=="P6")&(Long$Time.Point=="0d Post")),]
+Long<-as.data.frame(Long[!(Long$Patient=="P3"),])
+Long[is.infinite(Long$value),"value"]<-NaN
+
+Avg<-Long %>%
+  group_by(name,Time.Point) %>%
+  summarise(m=mean(value,na.rm=TRUE))
+Wide_SerumRaw<-as.data.frame(pivot_wider(Avg,names_from = "Time.Point",values_from = "m"))
+rownames(Wide_SerumRaw)<-Wide_SerumRaw$name
+```
+
+```{r}
+Full<-merge(merge(Wide_EVRaw,Wide_EVNorm,by="name"),Wide_SerumRaw,by="name")
+rownames(Full)<-Full$name
+Full<-Full[,setdiff(colnames(Full),"name")]
+
+FullPVal<-merge(merge(PVal_EVRaw_No10,PVal_EVNorm_No10,by="name"),PVal_Serum,by="name")
+rownames(FullPVal)<-FullPVal$name
+FullPVal<-FullPVal[,setdiff(colnames(FullPVal),"name")]
+
+TypeSplit<-c("Raw","Raw","Norm","Norm","Serum","Serum")
+
+FullPVal<-as.matrix(FullPVal)
+FullPVal[FullPVal>0.2]<-" "
+col_fun = colorRamp2(c(-2, 0, 2), LogFC_Cols)
+
+rownames(Full)[rownames(Full)=="ABRatio"]<-"AB42/AB40"
+
+top=columnAnnotation(Type=anno_block(gp=gpar(fill=c("white","white","white")),
+                                     labels=c("EV","EV Norm","Serum"),
+                                     labels_gp = ComplexHeatmap_AnnoLabel,
+                                     height=unit(8,"mm")),
+                     Time=anno_text(x=c("1h","3d","1h","3d","1h","3d"),
+                                    which="column",
+                                    rot=0,
+                                    just="center",
+                                    location=0.5,
+                                    height=unit(4,"mm"),
+                                    gp=c(ComplexHeatmap_AnnoLabel,fill="white",border="black")))
+
+HM1<-Heatmap(as.matrix(Full),
+             cluster_column_slices = FALSE,
+             cluster_columns = FALSE,
+             show_column_names = FALSE,
+             column_title = NULL,
+             top_annotation = top,
+             col=col_fun,
+             column_split = TypeSplit,
+             row_names_gp = ComplexHeatmap_RowLabel,
+             row_split = Type[rownames(FullPVal),]$Type,
+             row_title_gp=ComplexHeatmap_AnnoLabel,
+             cell_fun = function(j, i, x, y, width, height, fill) {grid.text(as.matrix(FullPVal)[i, j], x, y, gp = gpar(fontsize = 6,col="black",font="Arial"))},
+             heatmap_legend_param = list(
+               title="LogFC",
+               at=c(-2,0,2),
+               labels_gp=ComplexHeatmap_RowLabel,
+               title_gp=ComplexHeatmap_AnnoLabel,
+               grid_width=unit(0.45,"cm"),
+               legend_height = unit(2, "cm")))
+```
+
+
+
+# Correlation specific plot
+```{r}
+Mat<-pivot_longer(EVLogFC,cols=c("GFAP","NCAM1","PT181"))
+Mat<-Mat[(Mat$Time.Point=="3d"),]
+formula<-y~x
+CorrPlot_Specific<-ggplot(Mat,aes(x=BBBO,y=value))+
+  geom_point(aes(color=Patient,group=Patient),size=Geom_size)+facet_wrap(name~.,nrow = 4,scales="free") +
+  geom_smooth(method="lm",se=FALSE,color="gray",size=Geom_size_bp,fullrange=TRUE)+
+  stat_poly_eq(aes(label = paste(..rr.label..)), label.x = c(0.1,0.25), label.y = 0.95, formula = formula, parse = TRUE, size = stat_compare_means_text_size,method="lm") + 
+  stat_fit_glance(method = 'lm', method.args = list(formula = formula),geom = 'text_npc', aes(label = paste("P = ", signif(..p.value.., digits = 2), sep = "")),label.x = c(0.1,0.25), label.y = 0.65, size = stat_compare_means_text_size) +
+  ylab(bquote(~Log[2]~"FC")) + 
+  xlab(bquote('BBBO '(mm^3)))+
+  EVPaperTheme+scale_color_manual(values=Colors)+LegendTheme+guides(color=guide_legend(ncol=1))+theme(legend.position = "right",axis.line = element_line())
+```
+
+
+
+```{r}
+Targets<-setdiff(colnames(EVLogFC),c("Patient","Time.Point","S100B","SCDh","SCDu","ICD"))
+Sub<-EVLogFC
+mat<-Sub[Sub$Time.Point=="3d",Targets]
+Cor<-mat %>%
+  cor_mat() %>%
+  cor_gather()
+Cor$Time<-"3d"
+Cor$Type<-"EV"
+Cor1<-Cor
+
+Targets<-setdiff(colnames(EVNorm),c("Patient","Time.Point","S100B","SCDh","SCDu","ICD"))
+Sub<-EVLogFC_Norm
+mat<-Sub[Sub$Time.Point=="3d",Targets]
+Cor<-mat %>%
+  cor_mat() %>%
+  cor_gather()
+Cor$Time<-"3d"
+Cor$Type<-"EV Norm"
+Cor2<-Cor
+
+Targets<-setdiff(colnames(SerumRaw),c("Patient","Time.Point","S100B","SCDh","SCDu","ICD"))
+Sub<-SerumLogFC
+mat<-Sub[Sub$Time.Point=="3d",Targets]
+Cor<-mat %>%
+  cor_mat() %>%
+  cor_gather()
+Cor$Time<-"3d"
+Cor$Type<-"Serum"
+Cor3<-Cor
+
+
+FullCor<-rbind(Cor1,Cor2,Cor3)
+FullCor$var1<-factor(FullCor$var1,c(levels=unique(Type$P)))
+FullCor$var2<-factor(FullCor$var2,c(levels=unique(Type$P)))
+FullCor$PValAdj<-(-log10(FullCor$p))
+FullCor<-FullCor[FullCor$var1%in%c("BBBO"),]
+FullCor$Type.y<-Type[FullCor$var2,"Type"]
+FullCor$Type.y<-factor(FullCor$Type.y,levels=rev(unique(Type$Type)))
+FullCor<-FullCor[FullCor$Type.y!="BBBO",]
+FullCor$p<-round(FullCor$p,3)
+FullCor$Type<-recode(factor(FullCor$Type),
+                     "0d Post"="1h")
+FullCor$var2<-recode(FullCor$var2,"ABRatio"="AB42/AB40")
+#FullCor<-FullCor[FullCor$p<0.1,]
+CorrPlot<-ggplot(FullCor,aes(x=var1,y=var2,label=p,color=cor,size=(-log10(p))))+
+  scale_size_continuous(range = c(1,3))+
+  facet_grid(Type.y~Type,scales="free",switch = "y",shrink = T,space = "free",drop = TRUE)+scale_x_discrete(position = "top")+
+  geom_label()+
+  EVPaperTheme+
+  guides(size="none")+
+  scale_color_gradientn(colors=c("blue","gray","red"),
+                        limits = c(-1.1,1.1),
+                        guide = guide_colorbar(title=bquote(R^2),
+                                               barwidth = unit(0.45,"cm"),
+                                               barheight  = unit(2,"cm")),
+                        breaks=c(-1,0,1))+
+  theme(legend.position = "right",
+        panel.border = element_blank(),
+        strip.placement = "outside",
+        axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title=element_blank(),
+        legend.title = element_text(size=8,color="gray30",hjust=0.25),
+        legend.text = element_text(size=6,color="gray30"),
+        legend.margin = margin(0,0,0,0,"cm"),
+        legend.box.margin = margin(0,0,0,0,"cm"),axis.line = element_blank(),strip.background = element_rect(fill="white",color="black"))
+```
+
+
+
+```{r}
+library(cowplot)
+HM1_Ready<-plot_grid(grid.grabExpr(draw(HM1,heatmap_legend_side="right")))
+#HMCorr_Ready<-plot_grid(grid.grabExpr(draw(Heatmap_Corr,heatmap_legend_side="right")))
+Top<-plot_grid(HM1_Ready,NormPlot,nrow=1,labels=c("a","b"),label_fontfamily = "Arial")
+Bottom<-plot_grid(CorrPlot,CorrPlot_Specific,nrow=1,rel_widths = c(1,1.5),labels=c("c","d"),label_fontfamily = "Arial")
+
+Full<-plot_grid(Top,Bottom,nrow=2)
+ggsave("Fig_HumanContent.png",width = 8.5,height = 11,units = "in",bg="white")
+```
+
+

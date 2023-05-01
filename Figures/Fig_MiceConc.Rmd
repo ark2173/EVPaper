@@ -1,0 +1,103 @@
+---
+title: "Exosome Analysis"
+author: "Alina Kline-Schoder"
+date: "9/30/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+remove(list=ls())
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(rstatix)
+library(ggpubr)
+library(tidyverse)
+library(ggsignif)
+library(broom)
+library(rstatix)
+library(ggpmisc)
+library(cowplot)
+
+Stat_Summary_Size<-1
+stat_compare_means_star_size<-4
+stat_compare_means_text_size<-3
+Geom_size<-0.75
+Geom_size_line<-1
+Geom_size_bp<-0.5
+Colors<-hue_pal()(6)
+Colors_NoP1007<-Colors[c(1:2,4:6)]
+LogFC_Cols<-viridis(3)
+EVPaperTheme<-theme_classic()+
+  theme(legend.position="none",
+        axis.text = element_text(size=8),
+        axis.title = element_text(size=8),
+        panel.grid = element_blank(),
+        strip.text = element_text(size=8),
+        plot.margin = margin(0.25,0.25,0.25,0.5,"cm"),
+        strip.background =element_rect(fill="white",color="white"),
+        axis.line = element_line(size=0.5))
+ComplexHeatmap_AnnoLabel<-gpar(fontfamily="Arial",fontsize=8,col="gray30")
+ComplexHeatmap_RowLabel<-gpar(fontfamily="Arial",fontsize=6,col="gray30")
+
+LegendTheme<-EVPaperTheme+theme(legend.position = "bottom",legend.title = element_blank(),legend.key.size = unit(0.5,"mm"),legend.text = element_text(size=8))
+```
+
+
+# Wild Type Mice
+```{r}
+library(dplyr)
+setwd("/Users/alinakline-schoder/Documents/Papers/Blood/Blood Paper/BloodPaper_FinalResults/")
+Info<-read.csv('MouseExosomes_Jan_2022 - Results.csv')
+Info<-Info[!is.na(Info$Mouse),]
+Info$X1h<-as.numeric(Info$X1h)
+Info$X24h<-as.numeric(Info$X24h)
+Info$X7d<-as.numeric(Info$X7d)
+
+Info$Baseline<-as.numeric(Info$Baseline)
+
+#Info<-Info[!is.na(as.numeric(Info$X24h)),]
+
+Info_Long<-pivot_longer(Info,cols = c("X1h","X24h", "X7d"))
+Info_Long<-Info_Long[Info_Long$Treatment!="",]
+
+Info_Long[Info_Long$name=="X1h",]$name<-"1h"
+Info_Long[Info_Long$name=="X24h",]$name<-"24h"
+Info_Long[Info_Long$name=="X7d",]$name<-"7d"
+Info_Long$Treatment<-factor(Info_Long$Treatment,levels=c("Naive","Sham","450kPa"))
+Info_Long$pct.dif<-(Info_Long$value-Info_Long$Baseline)/Info_Long$Baseline*100
+# Compared to baseline
+
+Info_Long$Treatment<-recode(Info_Long$Treatment,
+                            "450kPa"="FUS-\nBBBO")
+my_comparisons <- list( c("Naive", "Sham"), c("Naive", "FUS-\nBBBO"), c("Sham", "FUS-\nBBBO"))
+
+
+Info_1h<-Info_Long[Info_Long$name=="1h",]
+Just1h<-ggplot(Info_1h,aes(x=Treatment,y=pct.dif,color=Treatment))+geom_point(size=Geom_size)+stat_summary(geom = "errorbar",size=Geom_size_bp)+stat_compare_means(comparisons = my_comparisons,method = "t.test",size=stat_compare_means_star_size,hide.ns = TRUE,label = "p.signif",label.y.npc = 0.2,step.increase = 0.2)+stat_compare_means(method="anova",label.y.npc = 0.995,size=stat_compare_means_text_size,label.x.npc = "left")+ylab("EV Concentration Change (%)")+scale_color_manual(values=c("black","#707071","#5550A5"))+xlab("Treatment")+ylim(-100,600)+EVPaperTheme
+  
+```
+
+
+```{r}
+# Raw values (not % change)
+DF<-as.data.frame(pivot_longer(Info,cols = c('Baseline','X1h'),names_to = "Time"))
+DF$value<-as.numeric(as.character(DF$value))
+DF$Time<-factor(DF$Time,levels=c("Baseline","X1h"))
+DF<-DF[DF$Treatment=="450kPa",]
+#DF[DF$Time=="X1h",]$Time<-'1h post-treatment'
+DF$Time<-recode(DF$Time,
+                "X1h"="1h\n")
+
+Paired<-ggplot(DF,aes(x=Time,y=value))+geom_point(aes(group=Mouse),color="#5550A5",size=Geom_size)+geom_line(aes(group=Mouse),color="#5550A5",size=Geom_size_bp)+stat_compare_means(paired=TRUE,method="t.test",label = "p.signif",label.x.npc = 0.4,label.y.npc = 0.95,hide.ns=TRUE,size=stat_compare_means_star_size,bracket.size = Geom_size_line)+ylab("EV Concentration (EVs/mL)")+scale_y_continuous(limits=c(0,2e10))+EVPaperTheme
+```
+
+
+# putting it together
+```{r}
+plot_grid(ggplot()+theme_void(),plot_grid(ggplot()+theme_void(),Paired,Just1h,nrow=1,labels = c("b","c","d"),rel_widths = c(0.75,1,1),align = "tb",axis = "h"),nrow=2,labels=c("a",""),rel_heights = c(1,0.85))
+
+ggsave("MouseEVConcentration.png",height = 7.3,width = 8.5,bg="white")
+```
+

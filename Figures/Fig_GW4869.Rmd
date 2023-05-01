@@ -1,0 +1,383 @@
+
+```{r setup, include=FALSE}
+remove(list=ls())
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(rstatix)
+library(ggpubr)
+library(tidyverse)
+library(ggsignif)
+library(broom)
+library(rstatix)
+library(ggpmisc)
+library(viridis)
+library(Seurat)
+library(cowplot)
+library(ComplexHeatmap)
+library(RColorBrewer)
+library("AnnotationDbi")
+library("org.Mm.eg.db")
+source("/Users/alinakline-schoder/Documents/Papers/Blood/Blood Paper/AKS_EVGO.R")
+source("/Users/alinakline-schoder/Documents/Papers/Blood/Blood Paper/AKS_ScatterPlot.R")
+
+setwd("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/Part2-BBBRestoration/")
+MRIs<-read.csv('MRISize-Table 1.csv')
+Info<-read.csv('Animals-Table 1.csv')
+rownames(Info)<-Info$Mouse.Code.1
+Info<-Info[!(Info$Exclude=="TRUE"),]
+Info<-Info[Info$Group %in% c("CC","CG"),]
+
+Colors_Drug<-c("black","#FFC4AF","#877BC8","#CA523D")
+
+EVPaperTheme<-theme_classic()+
+  theme(axis.text = element_text(size=8),
+        axis.title = element_text(size=8),
+        panel.grid = element_blank(),
+        strip.text = element_text(size=8),
+        plot.margin = margin(0.25,0.25,0.25,0.5,"cm"),
+        strip.background =element_rect(fill="white",color="white"),
+        axis.line = element_line(size=0.5),
+        legend.key.width = unit(1,"mm"),
+        legend.key.height = unit(0.25,"cm"))
+stat_compare_means_star_size<-6
+stat_compare_means_text_size<-4
+Geom_size<-0.75
+Geom_size_line<-0.25
+```
+
+# Values across dif time points
+```{r}
+MRIs$Day.1.Norm<-MRIs$Day.1/MRIs$Day.0
+MRIs$Day.3.Norm<-MRIs$Day.3/MRIs$Day.0
+MRIs$Day.5.Norm<-MRIs$Day.5/MRIs$Day.0
+MRIs$Group<-Info[MRIs$Mouse,]$Group
+MRIs<-MRIs[!is.na(MRIs$Group),]
+
+MRIs$Group<-recode(factor(MRIs$Group,levels=c("CC","CG")),"CC"="FUS-BBBO","CG"="FUS-BBBO+\nGW4869")
+  
+PlotA<-ggplot(MRIs,aes(x=Group,y=Day.0,fill=Group))+stat_summary(fun="mean",geom="bar")+stat_summary(geom="errorbar",width=0.2,size=Geom_size_line)+stat_compare_means(method="anova",label="p.format",label.x.npc = 0.4,label.y.npc = 0.75,size=stat_compare_means_text_size)+ylab(bquote('Day 1 BBBO Volume '(mm^3)))+EVPaperTheme+scale_fill_manual(values=Colors_Drug[3:4])+theme(axis.title.x = element_blank())+scale_y_continuous(expand=c(0,0),limits=c(0,30))+stat_summary(geom = "point",fun = "mean",position = position_dodge(width=0.8),size=Geom_size)
+
+
+MRIs_Long<-pivot_longer(MRIs,cols = c("Day.1.Norm","Day.3.Norm"))
+MRIs_Long$name<-recode(MRIs_Long$name,
+                       "Day.1.Norm"="Day 1",
+                       "Day.3.Norm"="Day 3")
+PlotB<-ggplot(MRIs,aes(x=Group,y=Day.1.Norm,color=Group))+stat_summary(geom="errorbar",position=position_dodge(width=0.8),size=Geom_size_line)+stat_compare_means(method="anova",size=stat_compare_means_text_size,label="p.format",show.legend = FALSE)+ylab("Opening Volume (% Relative to Day 0)")+xlab("Days after treatment")+EVPaperTheme+stat_summary(geom = "point",fun = "mean",position = position_dodge(width=0.8),size=Geom_size)+scale_color_manual(values=Colors_Drug[3:4])
+
+
+
+MRIs_Long<-pivot_longer(MRIs,cols = c("Day.0","Day.1","Day.3","Day.5"))
+MRIs_Long$name<-recode(MRIs_Long$name,
+                       "Day.0"="0",
+                       "Day.1"="1",
+                       "Day.3"="3",
+                       "Day.5"="5")
+Plot_MRILong<-ggplot(MRIs_Long,aes(x=name,y=value,color=Group))+
+  stat_summary(geom="errorbar",position=position_dodge(width=0.8),size=Geom_size_line)+
+  ylab(bquote('BBBO Volume '(mm^3)))+
+  xlab("Days after treatment")+
+  EVPaperTheme+
+  stat_summary(geom = "point",fun = "mean",position = position_dodge(width=0.8),size=Geom_size)+
+  stat_summary(aes(group=Group),geom="line",fun=mean,position=position_dodge(width=0.8),size=Geom_size_line,alpha=0.5)+
+  scale_color_manual(values=Colors_Drug[3:4])
+```
+
+
+```{r}
+EVs<-read.csv("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/EV Concentration GW4869/EV Data Run 1-Table 1.csv")
+EVs<-EVs[!(EVs$Mouse%in%c("CC1","CC2")),]
+EVs$Group<-recode(factor(EVs$Group,levels=c("Naive","GW4869","FUS-BBBO","FUS-BBBO+GW4869")),"FUS-BBBO+GW4869"="FUS-BBBO+GW4869")
+Long<-pivot_longer(EVs,cols = c("Baseline","h1","H24"))
+Long<-Long[Long$Group%in%c("FUS-BBBO","FUS-BBBO+GW4869"),]
+Long<-Long[Long$name%in%c("Baseline","h1"),]
+Long$name<-recode(factor(Long$name,levels=c("Baseline","h1")),
+                  "h1"="1h")
+
+Sub<-Long[Long$Group=="FUS-BBBO",]
+PlotDa<-ggplot(Sub,aes(x=name,y=value))+geom_point(aes(group=Group,color=Group),size=Geom_size)+geom_line(aes(group=Mouse,color=Group))+stat_compare_means(paired=TRUE,method="t.test",label = "p.signif",label.x.npc = 0.4,label.y.npc = 0.75,hide.ns=TRUE,size=stat_compare_means_star_size,bracket.size = Geom_size_line)+ylab("EV Concentration (EVs/mL)")+scale_y_continuous(limits=c(0,2e10))+EVPaperTheme+scale_color_manual(values=Colors_Drug[3])+theme(axis.title.x = element_blank())+facet_grid(.~Group)+theme(legend.position = "none")
+
+Sub<-Long[Long$Group=="FUS-BBBO+GW4869",]
+PlotDb<-ggplot(Sub,aes(x=name,y=value))+geom_point(aes(group=Group,color=Group),size=Geom_size)+geom_line(aes(group=Mouse,color=Group))+stat_compare_means(paired=TRUE,method="t.test",label = "p.signif",label.x.npc = 0.4,label.y.npc = 0.75,hide.ns=TRUE,size=stat_compare_means_star_size,bracket.size = Geom_size_line)+ylab("EV Concentration (EVs/mL)")+scale_y_continuous(limits=c(0,2e10))+EVPaperTheme+scale_color_manual(values=Colors_Drug[4])+theme(axis.title.x = element_blank())+facet_grid(.~Group)+theme(legend.position = "none")
+Long$Group<-recode(Long$Group,"FUS-BBBO+GW4869"="FUS-BBBO+\nGW4869")
+PlotPaired<-ggplot(Long,aes(x=name,y=value))+geom_point(aes(group=Group,color=Group),size=Geom_size)+geom_line(aes(group=Mouse,color=Group))+stat_compare_means(paired=TRUE,method="t.test",label = "p.signif",label.x.npc = 0.4,label.y.npc = 0.75,hide.ns=TRUE,size=stat_compare_means_star_size,bracket.size = Geom_size_line)+ylab("EV Concentration (EVs/mL)")+scale_y_continuous(limits=c(0,2e10))+EVPaperTheme+scale_color_manual(values=c(Colors_Drug[3],Colors_Drug[4]))+theme(axis.title.x = element_blank())+facet_grid(.~Group)+theme(legend.position = "none")
+
+
+
+
+EVs$h1.norm<-(EVs$h1-EVs$Baseline)/EVs$Baseline
+EVs$h24.norm<-(EVs$H24-EVs$Baseline)/EVs$Baseline
+Long<-pivot_longer(EVs,cols = c("h1.norm","h24.norm"))
+Long$name<-recode(factor(Long$name,levels=c("h1.norm","h24.norm")),
+                  "h1.norm"="1h",
+                  "h24.norm"="24h")
+PlotE<-ggplot(Long,aes(x=name,y=value,color=Group))+geom_boxplot()+geom_point(position=position_dodge(width=0.75))+scale_color_manual(values=Colors_Drug)+EVPaperTheme
+Long$Group<-recode(Long$Group,
+                   "FUS-BBBO+GW4869"="FUS-BBBO+\nGW4869")
+my_comparisons <- list(c("Naive", "GW4869"), 
+                       c("Naive", "FUS-BBBO"), 
+                       c("FUS-BBBO","FUS-BBBO+\nGW4869"),
+                       c("GW4869","FUS-BBBO+\nGW4869"))
+
+
+PlotF<-ggplot(Long,aes(x=Group,y=value*100,color=Group))+geom_point(size=Geom_size,position = position_dodge(width=0.75))+stat_summary(geom = "errorbar",size=Geom_size_line,position = position_dodge(width=0.75))+
+  stat_compare_means(comparisons = my_comparisons,method = "t.test",size=stat_compare_means_text_size,hide.ns = FALSE,label = "p.signif",label.y = 300,step.increase = 0.1)+ylab("EV Concentration Change (%)")+scale_color_manual(values=Colors_Drug)+xlab("Time")+ylim(-100,500)+EVPaperTheme+facet_grid(.~name,scales = "free",drop=T)+theme(axis.title.x = element_blank())+theme(legend.position = "none")
+
+Sub<-Long[Long$name=="1h",]
+
+
+```
+
+
+
+```{r}
+Sub$Group<-recode(Sub$Group,
+                  "FUS-BBBO\nGW4869"="FUS-BBBO+\nDepleted EVs",
+                  "GW4869"="Naive")
+my_comparisons <- list(c("Naive", "FUS-BBBO"), 
+                       c("FUS-BBBO","FUS-BBBO+\nDepleted EVs"),
+                       c("Naive","FUS-BBBO+\nDepleted EVs"))
+
+Colors<-c("black","#5550A5","#BE6E46")
+PlotFsub<-ggplot(Sub,aes(x=Group,y=value*100,color=Group))+geom_point(size=Geom_size,position = position_dodge(width=0.75))+stat_summary(geom = "errorbar",size=Geom_size_line,position = position_dodge(width=0.75))+
+  stat_compare_means(comparisons = my_comparisons,method = "t.test",size=stat_compare_means_text_size,hide.ns = FALSE,label = "p.signif",label.y = 400,step.increase = 0.1)+ylab("EV Concentration Change (%)")+scale_color_manual(values=Colors)+xlab("Time")+ylim(-100,500)+EVPaperTheme+facet_grid(.~name,scales = "free",drop=T)+theme(axis.ticks.x = element_blank())+theme(legend.position = "none",axis.title.x = element_blank())
+
+MRIs$Group<-recode(MRIs$Group,
+                  "FUS-BBBO+\nGW4869"="FUS-BBBO+\nDepleted EVs")
+Plot_Day0Norm<-ggplot(MRIs,aes(x=Group,y=Day.1.Norm,fill=Group))+stat_summary(fun="mean",geom="bar")+stat_summary(geom="errorbar",width=0.2,size=Geom_size_line)+stat_compare_means(method="anova",label="p.format",label.x.npc = 0.4,label.y.npc = 0.75,size=3)+ylab(bquote('Day 1 Opening Volume'))+EVPaperTheme+scale_fill_manual(values=Colors[2:3])+theme(axis.title.x = element_blank())+scale_y_continuous(expand=c(0,0),limits=c(0,1))+theme(legend.position = "none")
+
+plot_grid(PlotFsub,Plot_Day0Norm,align = "v",nrow=2)
+ggsave("Deplention.png",width=3,height=5,units="in")
+```
+
+
+
+#Loading in Tab file and setting up for run 7
+```{r}
+# Read the data into R
+Run7 <- read.delim("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/GW4869_RNA/Run7ReadsPerGene.out.tab", stringsAsFactors = FALSE)
+Run7<-Run7[,c(1,4)]
+colnames(Run7)<-c("ensembl","FD0")
+
+Run8 <- read.delim("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/GW4869_RNA/Run8ReadsPerGene.out.tab", stringsAsFactors = FALSE)
+Run8<-Run8[,c(1,4)]
+colnames(Run8)<-c("ensembl","FS0")
+
+
+Run9 <- read.delim("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/GW4869_RNA/Run9ReadsPerGene.out.tab", stringsAsFactors = FALSE)
+Run9<-Run9[,c(1,4)]
+colnames(Run9)<-c("ensembl","ND0")
+
+FD1<-read.delim("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/GW4869_RNA/FD1ReadsPerGene.out.tab")
+FD1<-FD1[,c(1,4)]
+colnames(FD1)<-c("ensembl","FD1")
+
+FD2<-read.delim("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/GW4869_RNA/FD2ReadsPerGene.out.tab")
+FD2<-FD2[,c(1,4)]
+colnames(FD2)<-c("ensembl","FD2")
+
+FS1<-read.delim("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/GW4869_RNA/FS1ReadsPerGene.out.tab")
+FS1<-FS1[,c(1,4)]
+colnames(FS1)<-c("ensembl","FS1")
+
+FS2<-read.delim("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/GW4869_RNA/FS2ReadsPerGene.out.tab")
+FS2<-FS2[,c(1,4)]
+colnames(FS2)<-c("ensembl","FS2")
+
+ND1<-read.delim("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/GW4869_RNA/ND1ReadsPerGene.out.tab")
+ND1<-ND1[,c(1,4)]
+colnames(ND1)<-c("ensembl","ND1")
+
+
+ND2<-read.delim("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/GW4869_RNA/ND2ReadsPerGene.out.tab")
+ND2<-ND2[,c(1,4)]
+colnames(ND2)<-c("ensembl","ND2")
+
+NS1<-read.delim("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/GW4869_RNA/NS1ReadsPerGene.out.tab")
+NS1<-NS1[,c(1,4)]
+colnames(NS1)<-c("ensembl","NS1")
+
+NS2<-read.delim("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/GW4869_RNA/NS2ReadsPerGene.out.tab")
+NS2<-NS2[,c(1,4)]
+colnames(NS2)<-c("ensembl","NS2")
+
+NS3<-read.delim("/Users/alinakline-schoder/Documents/Papers/Blood/GW4869/FinalData/GW4869_RNA/NS3ReadsPerGene.out.tab")
+NS3<-NS3[,c(1,4)]
+colnames(NS3)<-c("ensembl","NS3")
+
+AllFD<-merge(merge(Run7,FD1,by="ensembl"), FD2, by="ensembl")
+AllND<-merge(merge(Run9,ND1,by="ensembl"), ND2, by="ensembl")
+AllFS<-merge(merge(Run8,FS1,by="ensembl"), FS2, by="ensembl")
+AllNS<-merge(merge(NS1,NS2,by="ensembl"), NS3, by="ensembl")
+
+Counts<-merge(merge(merge(AllFD,AllND,by="ensembl"),AllFS,by="ensembl"),AllNS,by="ensembl")
+Counts$Symbol<-mapIds(org.Mm.eg.db,keys=Counts$ensembl,keytype="ENSEMBL",column="SYMBOL", multiVals = "first")
+Counts<-Counts[rowSums(Counts[,2:13])>0,c(2:14)]
+CountsFull <- Counts %>%
+  group_by(Symbol) %>%
+  summarise_all(sum)
+CountsFull<-CountsFull[!is.na(CountsFull$Symbol),]
+CountsFull<-as.data.frame(CountsFull)
+rownames(CountsFull)<-CountsFull$Symbol
+CountsFull<-CountsFull[,c(2:13)]
+```
+
+# putting into edgeR
+```{r}
+library(edgeR)
+#get into format for normalization
+
+group<-factor(c(1,1,1,2,2,2,3,3,3,4,4,4))
+design<-model.matrix(~group)
+
+Counts_DESeq<-DGEList(counts=as.matrix(CountsFull),group=group)
+#keep<-filterByExpr(Counts_DESeq)
+#Counts_DESeq<-Counts_DESeq[keep,,keep.lib.sizes=F]
+Counts_DESeq<-calcNormFactors(Counts_DESeq, method="TMM")
+Counts_DESeq<-estimateDisp(Counts_DESeq,design)
+
+fit<-glmQLFit(Counts_DESeq,design)
+
+FDvND<-glmQLFTest(fit,coef=2)$table
+FDvND$gene<-rownames(FDvND)
+
+FSvNS<-glmQLFTest(fit,contrast = c(0,0,1,-1))$table
+FSvNS$gene<-rownames(FSvNS)
+
+NDvNS<-glmQLFTest(fit,contrast = c(0,1,0,-1))$table
+FDvFS<-glmQLFTest(fit,coef=3)$table
+```
+
+# Heatmap
+```{r}
+V<-merge(FSvNS,FDvND,by="gene")
+genes<-c("Ccl4","Il6","Ccl7","Ccr6","Cd209c","Mmp3")
+Mat_logFC<-V
+Mat_logFC<-V[V$gene%in%genes,]
+rownames(Mat_logFC)<-Mat_logFC$gene
+Mat_logFC<-Mat_logFC[,colnames(Mat_logFC)%in%c("logFC.x","logFC.y")]
+colnames(Mat_logFC)<-c("FUS+BBBO","FUS-BBBO+GW4869")
+
+Top<-columnAnnotation(foo = anno_block(gp = gpar(fill = Colors_Drug[3:4]),
+        labels = c("FUS+BBBO","FUS-BBBO+\nGW4869"), 
+        labels_gp = gpar(col = "white", fontsize = 10)))
+
+RNAHM<-grid.grabExpr(draw(Heatmap(Mat_logFC,cluster_columns = F,cluster_rows=F,name = "logFC",top_annotation = Top,column_split = c(1,2),show_column_names = F,column_title = NULL)))
+```
+
+# Ontology Search
+```{r}
+SigUp<-FSvNS[FSvNS$logFC>0&FSvNS$PValue<0.05,]
+Onto_FSvNS<-GO_Search_EVs(SigUp,rownames(FSvNS))
+
+SigUp<-FDvND[FDvND$logFC>0&FDvND$PValue<0.05,]
+Onto_FDvND<-GO_Search_EVs(SigUp,rownames(FDvND))
+```
+# Scatter plot for ontology terms
+```{r}
+#Onto_FSvNS[Onto_FSvNS$Fisher=="< 1e-30",]$Fisher<-0
+Onto_FSvNS[Onto_FSvNS$KS=="< 1e-30",]$KS<-0
+Onto_FSvNS$Fisher<-as.numeric(Onto_FSvNS$Fisher)
+Onto_FSvNS$KS<-as.numeric(Onto_FSvNS$KS)
+
+#Onto_FDvND[Onto_FDvND$Fisher=="< 1e-30",]$Fisher<-0
+Onto_FDvND[Onto_FDvND$KS=="< 1e-30",]$KS<-0
+Onto_FDvND$Fisher<-as.numeric(Onto_FDvND$Fisher)
+Onto_FDvND$KS<-as.numeric(Onto_FDvND$KS)
+
+Onto_FSvNS$PVal<-rowMin(cbind(Onto_FSvNS$Fisher,Onto_FSvNS$KS))
+Onto_FDvND$PVal<-rowMin(cbind(Onto_FDvND$Fisher,Onto_FDvND$KS))
+
+Onto_FSvNS<-Onto_FSvNS[Onto_FSvNS$PVal<0.005,]
+Onto_FDvND<-Onto_FDvND[Onto_FDvND$PVal<0.005,]
+
+Onto_FSvNS<-Onto_FSvNS[,c("GO.ID","Term","PVal","Group")]
+Onto_FDvND<-Onto_FDvND[,c("GO.ID","Term","PVal","Group")]
+
+Onto<-merge(Onto_FSvNS,Onto_FDvND,by=c("GO.ID","Term","Group"),all=T)
+Onto<-Onto[Onto$Group=="Biological Process",]
+Onto$PVal<-matrixStats::rowMins(cbind(Onto$PVal.x,Onto$PVal.y),na.rm=T)
+library(rrvgo)
+simMatrix <- calculateSimMatrix(Onto$GO.ID,
+                                orgdb="org.Mm.eg.db",
+                                ont="BP",
+                                method="Rel")
+scores <- setNames(-log10(Onto$PVal), Onto$GO.ID)
+reducedTerms <- reduceSimMatrix(simMatrix,
+                                scores,
+                                threshold=0.7,
+                                orgdb="org.Mm.eg.db")
+reducedTerms[reducedTerms$score==Inf,]$score<-1000
+
+reducedTerms$Which<-"TBD"
+reducedTerms[(reducedTerms$go%in%Onto_FSvNS$GO.ID)&(reducedTerms$go%in%Onto_FDvND$GO.ID),]$Which<-"Both"
+reducedTerms[reducedTerms$go%in%Onto_FSvNS$GO.ID&!(reducedTerms$go%in%Onto_FDvND$GO.ID),]$Which<-"FSvNS"
+reducedTerms[reducedTerms$go%in%Onto_FDvND$GO.ID&!(reducedTerms$go%in%Onto_FSvNS$GO.ID),]$Which<-"FDvND"
+
+```
+
+
+# scatter plot for ontology
+```{r}
+x <- cmdscale(as.matrix(as.dist(1 - simMatrix)), eig = TRUE, k = 2)
+df <- cbind(as.data.frame(x$points), reducedTerms[match(rownames(x$points),reducedTerms$go), c("term", "parent", "parentTerm","size","Which")])
+df<-df[df$size>1,]
+df<-df %>%
+    group_by(parentTerm) %>%
+    mutate(max=max(size)) %>%
+    mutate(n = n())
+
+sub<-df[df$size==df$max,]
+sub<-sub[!(grepl("negative",sub$term)),]
+
+labs<-sub %>%
+  group_by(Which) %>%
+  slice_max(n=5,order_by = size)
+
+df$lab<-NA
+df[df$term%in%labs$term,]$lab<-df[df$term%in%labs$term,]$parentTerm
+df$Which<-factor(recode(df$Which,
+                 "FDvND"="FUS-BBBO+GW4869 v. Naive+GW4869",
+                 "FSvNS"="FUS-BBBO v. Naive"),levels=c("FUS-BBBO v. Naive","Both","FUS-BBBO+GW4869 v. Naive+GW4869"))
+
+OntoPlot<-ggplot(df, aes(x = V1, y = V2, color = parentTerm)) + 
+    geom_point(aes(size = size), alpha = 0.5) + 
+    scale_color_discrete(guide = "none") + scale_size_continuous(guide = "none",range = c(0, 15)) + scale_x_continuous(name = "") + scale_y_continuous(name = "") + theme_minimal() + 
+    theme(axis.text.x = element_blank(), axis.text.y = element_blank()) + 
+    ggrepel::geom_label_repel(aes(label = lab), box.padding = grid::unit(0.05,"lines"), size = 3,max.overlaps = 10,alpha=0.75)+facet_wrap(~Which,nrow = 3)+theme(panel.grid=element_blank(),axis.line = element_line())
+```
+
+
+
+# Volcano
+```{r}
+FDvFS$color<-(FDvFS$PValue<0.05)
+FDvFS$direction<-(FDvFS$logFC>0)
+FDvFS$Significance<-"NS"
+FDvFS[FDvFS$color&FDvFS$direction,]$Significance<-"FUS-BBBO+GW4869"
+FDvFS[FDvFS$color&!(FDvFS$direction),]$Significance<-"FUS-BBBO"
+FDvFS$Significance<-factor(FDvFS$Significance,levels=c("NS","FUS-BBBO","FUS-BBBO+GW4869"))
+LogP<-bquote(-~Log[10]~italic(P))
+
+Volcano<-ggplot(FDvFS,aes(x=logFC,y=(-log10(PValue)),color=Significance))+geom_point()+scale_color_manual(values=c("black",Colors_Drug[3:4]))+EVPaperTheme+theme(legend.position = "none")+scale_y_continuous(expand = c(0,0))+scale_x_continuous(expand = c(0,0))+ylab(LogP)
+```
+
+
+
+
+
+```{r}
+Blank<-ggplot()+theme_void()
+
+Row2<-plot_grid(PlotPaired+theme(legend.position = "none"),PlotF+theme(legend.position = "none"),nrow=1,align="h",axis="tb",rel_widths = c(1,2.25),labels=c("b","c"))
+Left<-plot_grid(Plot_MRILong+
+                  theme(legend.position = "none",legend.title = element_blank()),
+                Plot_Day0Norm+theme(legend.position = "none"),
+                Volcano+theme(legend.position="none"),nrow=3,labels=c("d","e","f"))
+Full<-plot_grid(Blank,Row2,plot_grid(Left,OntoPlot,nrow=1,rel_widths = c(1,3),labels=c("","g")),nrow=3,rel_heights = c(1,1.15,2),labels=c("a"))
+ggsave("GWPlot.png",width = 8.5,height = 11,units = "in",bg="white")
+```
+
+
+

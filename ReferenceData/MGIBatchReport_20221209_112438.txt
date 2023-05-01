@@ -1,0 +1,1812 @@
+Input	Input Type	MGI Gene/Marker ID	Symbol	Name	Feature Type
+0610005C13Rik	current symbol	MGI:1918911	0610005C13Rik	RIKEN cDNA 0610005C13 gene	lncRNA gene
+0610007N19Rik	old symbol	MGI:1914085	Snhg18	small nucleolar RNA host gene 18	lncRNA gene
+0610008F07Rik	old symbol	MGI:1915564	Hnf4aos	hepatic nuclear factor 4 alpha, opposite strand	antisense lncRNA gene
+0610009B14Rik	old symbol	MGI:1915604	Plekhd1os	pleckstrin homology domain containing, family D (with coiled-coil domains) member 1, opposite strand	antisense lncRNA gene
+0610009L18Rik	current symbol	MGI:1914088	0610009L18Rik	RIKEN cDNA 0610009L18 gene	lncRNA gene
+0610012G03Rik	current symbol	MGI:1913301	0610012G03Rik	RIKEN cDNA 0610012G03 gene	protein coding gene
+0610031O16Rik	current symbol	MGI:1915619	0610031O16Rik	RIKEN cDNA 0610031O16 gene	lncRNA gene
+0610038B21Rik	current symbol	MGI:1917595	0610038B21Rik	RIKEN cDNA 0610038B21 gene	lncRNA gene
+0610038L08Rik	old symbol	MGI:1921342	Tbc1d22bos	TBC1 domain family, member 22B, opposite strand	antisense lncRNA gene
+0610040B10Rik	current symbol	MGI:1914922	0610040B10Rik	RIKEN cDNA 0610040B10 gene	lncRNA gene
+0610040F04Rik	current symbol	MGI:1922644	0610040F04Rik	RIKEN cDNA 0610040F04 gene	lncRNA gene
+0610040F04Rik:copy2		No associated gene			
+0610043K17Rik	current symbol	MGI:1915650	0610043K17Rik	RIKEN cDNA 0610043K17 gene	lncRNA gene
+1110002L01Rik	current symbol	MGI:1915821	1110002L01Rik	RIKEN cDNA 1110002L01 gene	lncRNA gene
+1110006O24Rik	current symbol	MGI:1913373	1110006O24Rik	RIKEN cDNA 1110006O24 gene	lncRNA gene
+1110015O18Rik	current symbol	MGI:1915766	1110015O18Rik	RIKEN cDNA 1110015O18 gene	lncRNA gene
+1110019D14Rik	current symbol	MGI:1923561	1110019D14Rik	RIKEN cDNA 1110019D14 gene	lncRNA gene
+1110020A21Rik	current symbol	MGI:1915781	1110020A21Rik	RIKEN cDNA 1110020A21 gene	lncRNA gene
+1110028F11Rik	current symbol	MGI:1915940	1110028F11Rik	RIKEN cDNA 1110028F11 gene	lncRNA gene
+1110035M17Rik	old symbol	MGI:3044900	Zfp652os	zinc finger protein 652, opposite strand	antisense lncRNA gene
+1110046J04Rik	current symbol	MGI:1916058	1110046J04Rik	RIKEN cDNA 1110046J04 gene	lncRNA gene
+1110054M08Rik	old symbol	MGI:1916091	Lppos	LIM domain containing preferred translocation partner in lipoma, opposite strand	lncRNA gene
+1190002F15Rik	old symbol	MGI:1915081	Lockd	lncRNA downstream of Cdkn1b	lncRNA gene
+1300002E11Rik	current symbol	MGI:1919001	1300002E11Rik	RIKEN cDNA 1300002E11 gene	lncRNA gene
+1300015D01Rik	old symbol	MGI:1921411	Ctcflos	CCCTC-binding factor (zinc finger protein)-like, opposite strand	antisense lncRNA gene
+1500002O10Rik	old symbol	MGI:1916236	Gad1os	glutamate decarboxylase 1, opposite strand	antisense lncRNA gene
+1500004A13Rik	current symbol	MGI:2442808	1500004A13Rik	RIKEN cDNA 1500004A13 gene	lncRNA gene
+1500009C09Rik	old symbol	MGI:1923755	Smim45	small integral membrane protein 45	protein coding gene
+1500011B03Rik	current symbol	MGI:1913486	1500011B03Rik	RIKEN cDNA 1500011B03 gene	protein coding gene
+1500012K07Rik	current symbol	MGI:1916204	1500012K07Rik	RIKEN cDNA 1500012K07 gene	lncRNA gene
+1500015A07Rik	current symbol	MGI:1916232	1500015A07Rik	RIKEN cDNA 1500015A07 gene	lncRNA gene
+1500015L24Rik	current symbol	MGI:1916244	1500015L24Rik	RIKEN cDNA 1500015L24 gene	lncRNA gene
+1500016L03Rik	old symbol	MGI:1925615	Lhx1os	LIM homeobox 1, opposite strand	lncRNA gene
+1500017E21Rik	old symbol	MGI:1919243	Hectd2os	Hectd2, opposite strand	antisense lncRNA gene
+1600002D24Rik	current symbol	MGI:1917026	1600002D24Rik	RIKEN cDNA 1600002D24 gene	lncRNA gene
+1600002D24Rik:copy2		No associated gene			
+1600010M07Rik	current symbol	MGI:1917031	1600010M07Rik	RIKEN cDNA 1600010M07 gene	lncRNA gene
+1600020E01Rik	current symbol	MGI:1919262	1600020E01Rik	RIKEN cDNA 1600020E01 gene	lncRNA gene
+1600029I14Rik	current symbol	MGI:1917047	1600029I14Rik	RIKEN cDNA 1600029I14 gene	lncRNA gene
+1700001D01Rik	current symbol	MGI:1916529	1700001D01Rik	RIKEN cDNA 1700001D01 gene	lncRNA gene
+1700001G17Rik	current symbol	MGI:1914753	1700001G17Rik	RIKEN cDNA 1700001G17 gene	lncRNA gene
+1700001K23Rik	current symbol	MGI:1916569	1700001K23Rik	RIKEN cDNA 1700001K23 gene	lncRNA gene
+1700001L05Rik	current symbol	MGI:1916541	1700001L05Rik	RIKEN cDNA 1700001L05 gene	lncRNA gene
+1700003C15Rik	current symbol	MGI:1916595	1700003C15Rik	RIKEN cDNA 1700003C15 gene	lncRNA gene
+1700003D09Rik	current symbol	MGI:1916588	1700003D09Rik	RIKEN cDNA 1700003D09 gene	lncRNA gene
+1700003F17Rik	old symbol	MGI:1923642	Slfn5os	schlafen 5, opposite strand	antisense lncRNA gene
+1700003G18Rik	current symbol	MGI:1916600	1700003G18Rik	RIKEN cDNA 1700003G18 gene	lncRNA gene
+1700003H04Rik	current symbol	MGI:1923637	1700003H04Rik	RIKEN cDNA 1700003H04 gene	protein coding gene
+1700003L19Rik	current symbol	MGI:1922743	1700003L19Rik	RIKEN cDNA 1700003L19 gene	lncRNA gene
+1700003M07Rik	current symbol	MGI:1919475	1700003M07Rik	RIKEN cDNA 1700003M07 gene	lncRNA gene
+1700003P14Rik	current symbol	MGI:1916594	1700003P14Rik	RIKEN cDNA 1700003P14 gene	lncRNA gene
+1700006H21Rik	current symbol	MGI:1919507	1700006H21Rik	RIKEN cDNA 1700006H21 gene	lncRNA gene
+1700007F19Rik	current symbol	MGI:1915100	1700007F19Rik	RIKEN cDNA 1700007F19 gene	lncRNA gene
+1700007J10Rik	current symbol	MGI:1916570	1700007J10Rik	RIKEN cDNA 1700007J10 gene	lncRNA gene
+1700007L15Rik	current symbol	MGI:1916581	1700007L15Rik	RIKEN cDNA 1700007L15 gene	lncRNA gene
+1700008J07Rik	current symbol	MGI:1916610	1700008J07Rik	RIKEN cDNA 1700008J07 gene	lncRNA gene
+1700008K24Rik	current symbol	MGI:1916561	1700008K24Rik	RIKEN cDNA 1700008K24 gene	lncRNA gene
+1700009C05Rik	current symbol	MGI:1921470	1700009C05Rik	RIKEN cDNA 1700009C05 gene	lncRNA gene
+1700010I02Rik	current symbol	MGI:1922726	1700010I02Rik	RIKEN cDNA 1700010I02 gene	lncRNA gene
+1700010J16Rik	current symbol	MGI:1916605	1700010J16Rik	RIKEN cDNA 1700010J16 gene	lncRNA gene
+1700010K23Rik	current symbol	MGI:1922751	1700010K23Rik	RIKEN cDNA 1700010K23 gene	lncRNA gene
+1700011J10Rik	old symbol	MGI:1914936	Sp3os	trans-acting transcription factor 3, opposite strand	antisense lncRNA gene
+1700011M02Rik	current symbol	MGI:1922693	1700011M02Rik	RIKEN cDNA 1700011M02 gene	protein coding gene
+1700012B15Rik	old symbol	MGI:1921423	Rab10os	RAB10, member RAS oncogene family, opposite strand	antisense lncRNA gene
+1700012D14Rik	old symbol	MGI:1922729	Zbed5-ps	zinc finger, BED type containing 5, pseudogene	pseudogene
+1700012I11Rik	current symbol	MGI:1916584	1700012I11Rik	RIKEN cDNA 1700012I11 gene	lncRNA gene
+1700016L04Rik	current symbol	MGI:1916662	1700016L04Rik	RIKEN cDNA 1700016L04 gene	lncRNA gene
+1700016L21Rik	current symbol	MGI:1919458	1700016L21Rik	RIKEN cDNA 1700016L21 gene	lncRNA gene
+1700017G19Rik	current symbol	MGI:1919477	1700017G19Rik	RIKEN cDNA 1700017G19 gene	lncRNA gene
+1700017J07Rik	current symbol	MGI:1922758	1700017J07Rik	RIKEN cDNA 1700017J07 gene	lncRNA gene
+1700018A04Rik	current symbol	MGI:1916631	1700018A04Rik	RIKEN cDNA 1700018A04 gene	lncRNA gene
+1700019B21Rik	old symbol	MGI:1922795	Tslrn1	testis specific long noncoding RNA 1	lncRNA gene
+1700019G24Rik	current symbol	MGI:1919499	1700019G24Rik	RIKEN cDNA 1700019G24 gene	lncRNA gene
+1700020G17Rik	current symbol	MGI:1922880	1700020G17Rik	RIKEN cDNA 1700020G17 gene	lncRNA gene
+1700020I14Rik	old symbol	MGI:1913852	Oip5os1	Opa interacting protein 5, opposite strand 1	lncRNA gene
+1700020N01Rik	current symbol	MGI:1914942	1700020N01Rik	RIKEN cDNA 1700020N01 gene	protein coding gene
+1700022A21Rik	current symbol	MGI:1919502	1700022A21Rik	RIKEN cDNA 1700022A21 gene	pseudogene
+1700022A22Rik	current symbol	MGI:1922807	1700022A22Rik	RIKEN cDNA 1700022A22 gene	lncRNA gene
+1700023C21Rik	current symbol	MGI:1920507	1700023C21Rik	RIKEN cDNA 1700023C21 gene	lncRNA gene
+1700023L04Rik	old symbol	MGI:1923669	Smkr-ps	smal lysine rich protein 1, pseudogene	pseudogene
+1700024B18Rik	current symbol	MGI:1916643	1700024B18Rik	RIKEN cDNA 1700024B18 gene	lncRNA gene
+1700024F13Rik	old symbol	MGI:1924187	2810429I04Rik	RIKEN cDNA 2810429I04 gene	lncRNA gene
+1700024P03Rik	old symbol	MGI:1922767	Ccdc34os	coiled-coil domain containing 34, opposite strand	antisense lncRNA gene
+1700025C18Rik	current symbol	MGI:1919461	1700025C18Rik	RIKEN cDNA 1700025C18 gene	protein coding gene
+1700025F24Rik	current symbol	MGI:1914331	1700025F24Rik	RIKEN cDNA 1700025F24 gene	lncRNA gene
+1700025K24Rik	current symbol	MGI:1916668	1700025K24Rik	RIKEN cDNA 1700025K24 gene	lncRNA gene
+1700025M24Rik	current symbol	MGI:1919526	1700025M24Rik	RIKEN cDNA 1700025M24 gene	lncRNA gene
+1700026D11Rik	current symbol	MGI:1917621	1700026D11Rik	RIKEN cDNA 1700026D11 gene	lncRNA gene
+1700026F02Rik	current symbol	MGI:1916669	1700026F02Rik	RIKEN cDNA 1700026F02 gene	lncRNA gene
+1700027A15Rik	current symbol	MGI:1916699	1700027A15Rik	RIKEN cDNA 1700027A15 gene	lncRNA gene
+1700027F09Rik	current symbol	MGI:1917249	1700027F09Rik	RIKEN cDNA 1700027F09 gene	lncRNA gene
+1700027H10Rik	current symbol	MGI:1919524	1700027H10Rik	RIKEN cDNA 1700027H10 gene	lncRNA gene
+1700027I24Rik	current symbol	MGI:1922817	1700027I24Rik	RIKEN cDNA 1700027I24 gene	lncRNA gene
+1700027J07Rik	current symbol	MGI:1916693	1700027J07Rik	RIKEN cDNA 1700027J07 gene	lncRNA gene
+1700028E10Rik	current symbol	MGI:1916713	1700028E10Rik	RIKEN cDNA 1700028E10 gene	lncRNA gene
+1700028I16Rik	current symbol	MGI:1917253	1700028I16Rik	RIKEN cDNA 1700028I16 gene	lncRNA gene
+1700028J19Rik	current symbol	MGI:1917254	1700028J19Rik	RIKEN cDNA 1700028J19 gene	protein coding gene
+1700028M03Rik	current symbol	MGI:1916710	1700028M03Rik	RIKEN cDNA 1700028M03 gene	lncRNA gene
+1700028P15Rik	current symbol	MGI:1922905	1700028P15Rik	RIKEN cDNA 1700028P15 gene	lncRNA gene
+1700029B22Rik	current symbol	MGI:1916745	1700029B22Rik	RIKEN cDNA 1700029B22 gene	lncRNA gene
+1700029J03Rik	current symbol	MGI:1919514	1700029J03Rik	RIKEN cDNA 1700029J03 gene	lncRNA gene
+1700029N11Rik	current symbol	MGI:1916741	1700029N11Rik	RIKEN cDNA 1700029N11 gene	lncRNA gene
+1700030A11Rik	current symbol	MGI:1921429	1700030A11Rik	RIKEN cDNA 1700030A11 gene	lncRNA gene
+1700030C10Rik	current symbol	MGI:1916763	1700030C10Rik	RIKEN cDNA 1700030C10 gene	lncRNA gene
+1700030F04Rik	current symbol	MGI:1919513	1700030F04Rik	RIKEN cDNA 1700030F04 gene	lncRNA gene
+1700030N03Rik	current symbol	MGI:1917261	1700030N03Rik	RIKEN cDNA 1700030N03 gene	lncRNA gene
+1700031A10Rik	current symbol	MGI:1920536	1700031A10Rik	RIKEN cDNA 1700031A10 gene	lncRNA gene
+1700031M16Rik	current symbol	MGI:1920552	1700031M16Rik	RIKEN cDNA 1700031M16 gene	lncRNA gene
+1700034G24Rik	current symbol	MGI:1914575	1700034G24Rik	RIKEN cDNA 1700034G24 gene	lncRNA gene
+1700034H15Rik	current symbol	MGI:1921515	1700034H15Rik	RIKEN cDNA 1700034H15 gene	lncRNA gene
+1700034K08Rik	current symbol	MGI:1925599	1700034K08Rik	RIKEN cDNA 1700034K08 gene	lncRNA gene
+1700034P13Rik	current symbol	MGI:1920581	1700034P13Rik	RIKEN cDNA 1700034P13 gene	lncRNA gene
+1700036G14Rik	current symbol	MGI:1920533	1700036G14Rik	RIKEN cDNA 1700036G14 gene	lncRNA gene
+1700039E22Rik	current symbol	MGI:1920572	1700039E22Rik	RIKEN cDNA 1700039E22 gene	lncRNA gene
+1700040N02Rik	old symbol	MGI:1920553	Bcas1os2	brain enriched myelin associated protein 1, opposite strand 2	antisense lncRNA gene
+1700041C23Rik	current symbol	MGI:1914569	1700041C23Rik	RIKEN cDNA 1700041C23 gene	lncRNA gene
+1700041M19Rik	current symbol	MGI:1923851	1700041M19Rik	RIKEN cDNA 1700041M19 gene	lncRNA gene
+1700042G15Rik	current symbol	MGI:1920599	1700042G15Rik	RIKEN cDNA 1700042G15 gene	lncRNA gene
+1700042O10Rik	current symbol	MGI:1920571	1700042O10Rik	RIKEN cDNA 1700042O10 gene	lncRNA gene
+1700044C05Rik	current symbol	MGI:1920556	1700044C05Rik	RIKEN cDNA 1700044C05 gene	lncRNA gene
+1700045H11Rik	current symbol	MGI:1920598	1700045H11Rik	RIKEN cDNA 1700045H11 gene	lncRNA gene
+1700046C09Rik	current symbol	MGI:1920557	1700046C09Rik	RIKEN cDNA 1700046C09 gene	lncRNA gene
+1700047E10Rik	current symbol	MGI:1921578	1700047E10Rik	RIKEN cDNA 1700047E10 gene	lncRNA gene
+1700048O20Rik	current symbol	MGI:1920637	1700048O20Rik	RIKEN cDNA 1700048O20 gene	lncRNA gene
+1700049E15Rik	current symbol	MGI:1920644	1700049E15Rik	RIKEN cDNA 1700049E15 gene	lncRNA gene
+1700049E22Rik	current symbol	MGI:1920645	1700049E22Rik	RIKEN cDNA 1700049E22 gene	lncRNA gene
+1700049L16Rik	current symbol	MGI:1920633	1700049L16Rik	RIKEN cDNA 1700049L16 gene	pseudogene
+1700051A21Rik	current symbol	MGI:1920616	1700051A21Rik	RIKEN cDNA 1700051A21 gene	lncRNA gene
+1700052K11Rik	current symbol	MGI:1920681	1700052K11Rik	RIKEN cDNA 1700052K11 gene	lncRNA gene
+1700054A03Rik	current symbol	MGI:1925707	1700054A03Rik	RIKEN cDNA 1700054A03 gene	lncRNA gene
+1700057H15Rik	current symbol	MGI:1925710	1700057H15Rik	RIKEN cDNA 1700057H15 gene	lncRNA gene
+1700060C16Rik	current symbol	MGI:1920675	1700060C16Rik	RIKEN cDNA 1700060C16 gene	lncRNA gene
+1700060C20Rik	current symbol	MGI:1920649	1700060C20Rik	RIKEN cDNA 1700060C20 gene	lncRNA gene
+1700061F12Rik	current symbol	MGI:1920688	1700061F12Rik	RIKEN cDNA 1700061F12 gene	lncRNA gene
+1700061I17Rik	current symbol	MGI:1920612	1700061I17Rik	RIKEN cDNA 1700061I17 gene	lncRNA gene
+1700063A18Rik	current symbol	MGI:1920704	1700063A18Rik	RIKEN cDNA 1700063A18 gene	lncRNA gene
+1700063D05Rik	current symbol	MGI:1925750	1700063D05Rik	RIKEN cDNA 1700063D05 gene	lncRNA gene
+1700064J06Rik	current symbol	MGI:1920650	1700064J06Rik	RIKEN cDNA 1700064J06 gene	lncRNA gene
+1700065J11Rik	current symbol	MGI:1920659	1700065J11Rik	RIKEN cDNA 1700065J11 gene	lncRNA gene
+1700065O20Rik	current symbol	MGI:1923859	1700065O20Rik	RIKEN cDNA 1700065O20 gene	lncRNA gene
+1700066N21Rik	current symbol	MGI:1920721	1700066N21Rik	RIKEN cDNA 1700066N21 gene	lncRNA gene
+1700066O22Rik	current symbol	MGI:1920651	1700066O22Rik	RIKEN cDNA 1700066O22 gene	lncRNA gene
+1700069L16Rik	current symbol	MGI:1920726	1700069L16Rik	RIKEN cDNA 1700069L16 gene	protein coding gene
+1700069P05Rik	current symbol	MGI:1920781	1700069P05Rik	RIKEN cDNA 1700069P05 gene	lncRNA gene
+1700071M16Rik	current symbol	MGI:1920754	1700071M16Rik	RIKEN cDNA 1700071M16 gene	lncRNA gene
+1700072B07Rik	current symbol	MGI:1920779	1700072B07Rik	RIKEN cDNA 1700072B07 gene	lncRNA gene
+1700072O05Rik	current symbol	MGI:1920755	1700072O05Rik	RIKEN cDNA 1700072O05 gene	lncRNA gene
+1700073E17Rik	current symbol	MGI:1920734	1700073E17Rik	RIKEN cDNA 1700073E17 gene	pseudogene
+1700080N15Rik	current symbol	MGI:1920739	1700080N15Rik	RIKEN cDNA 1700080N15 gene	lncRNA gene
+1700081H22Rik	old symbol	MGI:1920765	Nell1os	NEL-like 1, opposite strand	antisense lncRNA gene
+1700084F23Rik	current symbol	MGI:1921530	1700084F23Rik	RIKEN cDNA 1700084F23 gene	lncRNA gene
+1700085B03Rik	old symbol	MGI:1914601	Tmem132cos	transmembrane protein 132C, opposite strand	antisense lncRNA gene
+1700085C21Rik	current symbol	MGI:1921533	1700085C21Rik	RIKEN cDNA 1700085C21 gene	lncRNA gene
+1700086L19Rik	current symbol	MGI:1921534	1700086L19Rik	RIKEN cDNA 1700086L19 gene	protein coding gene
+1700086O06Rik	current symbol	MGI:1920766	1700086O06Rik	RIKEN cDNA 1700086O06 gene	lncRNA gene
+1700091E21Rik	old symbol	MGI:1920838	St8sia3os	ST8 alpha-N-acetyl-neuraminide alpha-2,8-sialyltransferase 3, opposite strand	antisense lncRNA gene
+1700091H14Rik	current symbol	MGI:1920803	1700091H14Rik	RIKEN cDNA 1700091H14 gene	lncRNA gene
+1700092C10Rik	current symbol	MGI:1920804	1700092C10Rik	RIKEN cDNA 1700092C10 gene	lncRNA gene
+1700092E19Rik	current symbol	MGI:1920826	1700092E19Rik	RIKEN cDNA 1700092E19 gene	lncRNA gene
+1700094J05Rik	current symbol	MGI:1914773	1700094J05Rik	RIKEN cDNA 1700094J05 gene	lncRNA gene
+1700094M24Rik	current symbol	MGI:1921554	1700094M24Rik	RIKEN cDNA 1700094M24 gene	lncRNA gene
+1700095A21Rik	current symbol	MGI:1914774	1700095A21Rik	RIKEN cDNA 1700095A21 gene	lncRNA gene
+1700095B10Rik	current symbol	MGI:1914610	1700095B10Rik	RIKEN cDNA 1700095B10 gene	lncRNA gene
+1700095B22Rik	old symbol	MGI:1925885	Kcnd3os	potassium voltage-gated channel, Shal-related family, member 3, opposite strand	antisense lncRNA gene
+1700096J18Rik	current symbol	MGI:1915177	1700096J18Rik	RIKEN cDNA 1700096J18 gene	lncRNA gene
+1700097N02Rik	current symbol	MGI:1914772	1700097N02Rik	RIKEN cDNA 1700097N02 gene	lncRNA gene
+1700101O22Rik	current symbol	MGI:1920825	1700101O22Rik	RIKEN cDNA 1700101O22 gene	lncRNA gene
+1700104A03Rik	old symbol	MGI:1920817	Gldnos	gliomedin, opposite strand	antisense lncRNA gene
+1700108F19Rik	current symbol	MGI:1920814	1700108F19Rik	RIKEN cDNA 1700108F19 gene	lncRNA gene
+1700109F18Rik	old symbol	MGI:1923875	Hoxd3os1	homeobox D3, opposite strand 1	antisense lncRNA gene
+1700109G14Rik	current symbol	MGI:1914605	1700109G14Rik	RIKEN cDNA 1700109G14 gene	lncRNA gene
+1700109I08Rik	current symbol	MGI:1920841	1700109I08Rik	RIKEN cDNA 1700109I08 gene	lncRNA gene
+1700110C19Rik	current symbol	MGI:1923884	1700110C19Rik	RIKEN cDNA 1700110C19 gene	lncRNA gene
+1700110I01Rik	current symbol	MGI:1920799	1700110I01Rik	RIKEN cDNA 1700110I01 gene	lncRNA gene
+1700110I01Rik:copy2		No associated gene			
+1700110I01Rik:copy3		No associated gene			
+1700110K17Rik	current symbol	MGI:1920808	1700110K17Rik	RIKEN cDNA 1700110K17 gene	lncRNA gene
+1700111N16Rik	current symbol	MGI:1921555	1700111N16Rik	RIKEN cDNA 1700111N16 gene	lncRNA gene
+1700112H15Rik	current symbol	MGI:1920840	1700112H15Rik	RIKEN cDNA 1700112H15 gene	lncRNA gene
+1700112J05Rik	current symbol	MGI:3696786	1700112J05Rik	RIKEN cDNA 1700112J05 gene	lncRNA gene
+1700113A16Rik	current symbol	MGI:1923892	1700113A16Rik	RIKEN cDNA 1700113A16 gene	lncRNA gene
+1700119H24Rik	current symbol	MGI:1923899	1700119H24Rik	RIKEN cDNA 1700119H24 gene	lncRNA gene
+1700120C14Rik	current symbol	MGI:1920850	1700120C14Rik	RIKEN cDNA 1700120C14 gene	lncRNA gene
+1700120E14Rik	current symbol	MGI:1920856	1700120E14Rik	RIKEN cDNA 1700120E14 gene	lncRNA gene
+1700120G07Rik	current symbol	MGI:1921564	1700120G07Rik	RIKEN cDNA 1700120G07 gene	lncRNA gene
+1700121L16Rik	current symbol	MGI:1923893	1700121L16Rik	RIKEN cDNA 1700121L16 gene	lncRNA gene
+1700121N20Rik	current symbol	MGI:1923889	1700121N20Rik	RIKEN cDNA 1700121N20 gene	lncRNA gene
+1700123M08Rik	current symbol	MGI:1923915	1700123M08Rik	RIKEN cDNA 1700123M08 gene	lncRNA gene
+1700123O12Rik	current symbol	MGI:1920874	1700123O12Rik	RIKEN cDNA 1700123O12 gene	lncRNA gene
+1700123O21Rik	current symbol	MGI:1915488	1700123O21Rik	RIKEN cDNA 1700123O21 gene	lncRNA gene
+1700125G02Rik	current symbol	MGI:1920878	1700125G02Rik	RIKEN cDNA 1700125G02 gene	lncRNA gene
+1700125G22Rik	current symbol	MGI:1923907	1700125G22Rik	RIKEN cDNA 1700125G22 gene	lncRNA gene
+1700125H03Rik	current symbol	MGI:1920859	1700125H03Rik	RIKEN cDNA 1700125H03 gene	lncRNA gene
+1700126H18Rik	current symbol	MGI:1920889	1700126H18Rik	RIKEN cDNA 1700126H18 gene	lncRNA gene
+1700128A07Rik	current symbol	MGI:1920881	1700128A07Rik	RIKEN cDNA 1700128A07 gene	lncRNA gene
+1700128F08Rik	current symbol	MGI:1923919	1700128F08Rik	RIKEN cDNA 1700128F08 gene	pseudogene
+1810006J02Rik	current symbol	MGI:1916280	1810006J02Rik	RIKEN cDNA 1810006J02 gene	lncRNA gene
+1810007D17Rik	current symbol	MGI:1916305	1810007D17Rik	RIKEN cDNA 1810007D17 gene	lncRNA gene
+1810007I06Rik	old symbol	MGI:1923934	Pla2g10os	phospholipase A2, group X, opposite strand	antisense lncRNA gene
+1810014B01Rik	current symbol	MGI:1913513	1810014B01Rik	RIKEN cDNA 1810014B01 gene	pseudogene
+1810019D21Rik	current symbol	MGI:1917021	1810019D21Rik	RIKEN cDNA 1810019D21 gene	lncRNA gene
+1810020O05Rik	old symbol	MGI:3586838	Cfap92	cilia and flagella associated protein 92	protein coding gene
+1810026B05Rik	old symbol	MGI:1916420	Chaserr	CHD2 adjacent suppressive regulatory RNA	lncRNA gene
+1810032O08Rik	old symbol	MGI:1913543	Snhg16	small nucleolar RNA host gene 16	lncRNA gene
+1810034E14Rik	current symbol	MGI:1913753	1810034E14Rik	RIKEN cDNA 1810034E14 gene	lncRNA gene
+1810053B23Rik	current symbol	MGI:1917107	1810053B23Rik	RIKEN cDNA 1810053B23 gene	lncRNA gene
+1810058I24Rik	old symbol	MGI:1914955	Stmp1	short transmembrane mitochondrial protein 1	protein coding gene
+1810062O18Rik	current symbol	MGI:1922852	1810062O18Rik	RIKEN cDNA 1810062O18 gene	lncRNA gene
+2010009K17Rik	current symbol	MGI:1919590	2010009K17Rik	RIKEN cDNA 2010009K17 gene	lncRNA gene
+2010010A06Rik	current symbol	MGI:1913686	2010010A06Rik	RIKEN cDNA 2010010A06 gene	lncRNA gene
+2010016I18Rik	current symbol	MGI:1916456	2010016I18Rik	RIKEN cDNA 2010016I18 gene	lncRNA gene
+2010204K13Rik	current symbol	MGI:1922859	2010204K13Rik	RIKEN cDNA 2010204K13 gene	lncRNA gene
+2010308F09Rik	current symbol	MGI:1919372	2010308F09Rik	RIKEN cDNA 2010308F09 gene	lncRNA gene
+2010310C07Rik	current symbol	MGI:1919381	2010310C07Rik	RIKEN cDNA 2010310C07 gene	lncRNA gene
+2210015D19Rik	old symbol	MGI:1913774	Ube2d-ps	ubiquitin-conjugating enzyme E2D, pseudogene	pseudogene
+2210019I11Rik	old symbol	MGI:1917397	Plut	PDX1 associated lncRNA, upregulator of transcription	lncRNA gene
+2210039B01Rik	current symbol	MGI:1920894	2210039B01Rik	RIKEN cDNA 2210039B01 gene	lncRNA gene
+2210408F21Rik	current symbol	MGI:1920902	2210408F21Rik	RIKEN cDNA 2210408F21 gene	lncRNA gene
+2210414B05Rik	current symbol	MGI:1917393	2210414B05Rik	RIKEN cDNA 2210414B05 gene	lncRNA gene
+2210416O15Rik	current symbol	MGI:1917643	2210416O15Rik	RIKEN cDNA 2210416O15 gene	lncRNA gene
+2210417K05Rik	old symbol	MGI:1917412	Hk1os	hexokinase 1, opposite strand	antisense lncRNA gene
+2210420H20Rik	current symbol	MGI:1924211	2210420H20Rik	RIKEN cDNA 2210420H20 gene	lncRNA gene
+2310001H17Rik	current symbol	MGI:1923682	2310001H17Rik	RIKEN cDNA 2310001H17 gene	lncRNA gene
+2310002D06Rik	current symbol	MGI:1916772	2310002D06Rik	RIKEN cDNA 2310002D06 gene	lncRNA gene
+2310002F09Rik	current symbol	MGI:1916779	2310002F09Rik	RIKEN cDNA 2310002F09 gene	lncRNA gene
+2310005E17Rik	current symbol	MGI:1917340	2310005E17Rik	RIKEN cDNA 2310005E17 gene	lncRNA gene
+2310008N11Rik	current symbol	MGI:1919566	2310008N11Rik	RIKEN cDNA 2310008N11 gene	lncRNA gene
+2310014F07Rik	old symbol	MGI:1916881	Plet1os	placenta expressed transcript 1, opposite strand	antisense lncRNA gene
+2310015A10Rik	current symbol	MGI:1916798	2310015A10Rik	RIKEN cDNA 2310015A10 gene	lncRNA gene
+2310015B20Rik	old symbol	MGI:1916813	Mrln	myoregulin	protein coding gene
+2310015D24Rik	current symbol	MGI:1917350	2310015D24Rik	RIKEN cDNA 2310015D24 gene	lncRNA gene
+2310016D03Rik	current symbol	MGI:1916816	2310016D03Rik	RIKEN cDNA 2310016D03 gene	lncRNA gene
+2310020H05Rik	current symbol	MGI:1916853	2310020H05Rik	RIKEN cDNA 2310020H05 gene	lncRNA gene
+2310030A07Rik	current symbol	MGI:1922834	2310030A07Rik	RIKEN cDNA 2310030A07 gene	lncRNA gene
+2310034O05Rik	current symbol	MGI:1916821	2310034O05Rik	RIKEN cDNA 2310034O05 gene	lncRNA gene
+2310039L15Rik	current symbol	MGI:1916879	2310039L15Rik	RIKEN cDNA 2310039L15 gene	lncRNA gene
+2310043O21Rik	current symbol	MGI:1916929	2310043O21Rik	RIKEN cDNA 2310043O21 gene	lncRNA gene
+2310044G17Rik	old symbol	MGI:1919185	Cipc	CLOCK interacting protein, circadian	protein coding gene
+2310050B05Rik	old symbol	MGI:1916928	Atcayos	ataxia, cerebellar, Cayman type, opposite strand	antisense lncRNA gene
+2310061J03Rik	old symbol	MGI:1913641	Zbtb11os1	zinc finger and BTB domain containing 11, opposite strand 1	antisense lncRNA gene
+2310065F04Rik	current symbol	MGI:1921434	2310065F04Rik	RIKEN cDNA 2310065F04 gene	lncRNA gene
+2310069B03Rik	current symbol	MGI:1916902	2310069B03Rik	RIKEN cDNA 2310069B03 gene	lncRNA gene
+2310069G16Rik	current symbol	MGI:1916909	2310069G16Rik	RIKEN cDNA 2310069G16 gene	lncRNA gene
+2410003L11Rik	current symbol	MGI:1916979	2410003L11Rik	RIKEN cDNA 2410003L11 gene	lncRNA gene
+2410004I01Rik	current symbol	MGI:1916989	2410004I01Rik	RIKEN cDNA 2410004I01 gene	lncRNA gene
+2410004N09Rik	old symbol	MGI:1916999	Epb41l4aos	erythrocyte membrane protein band 4.1 like 4a, opposite strand	lncRNA gene
+2410006H16Rik	current symbol	MGI:1916471	2410006H16Rik	RIKEN cDNA 2410006H16 gene	lncRNA gene
+2410012E07Rik	current symbol	MGI:1920898	2410012E07Rik	RIKEN cDNA 2410012E07 gene	lncRNA gene
+2410017I17Rik	current symbol	MGI:1916967	2410017I17Rik	RIKEN cDNA 2410017I17 gene	lncRNA gene
+2410018L13Rik	current symbol	MGI:1916982	2410018L13Rik	RIKEN cDNA 2410018L13 gene	lncRNA gene
+2410057H14Rik	old symbol	MGI:1925741	Tspan2os	tetraspanin 2, opposite strand	antisense lncRNA gene
+2410088K16Rik	old symbol	MGI:1925900	Platr5	pluripotency associated transcript 5	lncRNA gene
+2410137F16Rik	old symbol	MGI:1924048	Srrm4os	serine/arginine repetitive matrix 4, opposite strand	antisense lncRNA gene
+2600006L11Rik	old symbol	MGI:1924064	Scarletltr	Scarletltr, erythroid developmental long intergenic non-protein coding transcript	lncRNA gene
+2610005L07Rik	current symbol	MGI:1914283	2610005L07Rik	RIKEN cDNA 2610005L07 gene	pseudogene
+2610017I09Rik	old symbol	MGI:1913547	Pantr1	POU domain, class 3, transcription factor 3 adjacent noncoding transcript 1	lncRNA gene
+2610020C07Rik	current symbol	MGI:1917168	2610020C07Rik	RIKEN cDNA 2610020C07 gene	lncRNA gene
+2610027K06Rik	current symbol	MGI:1917159	2610027K06Rik	RIKEN cDNA 2610027K06 gene	lncRNA gene
+2610028E06Rik	current symbol	MGI:1919645	2610028E06Rik	RIKEN cDNA 2610028E06 gene	lncRNA gene
+2610035D17Rik	current symbol	MGI:1919636	2610035D17Rik	RIKEN cDNA 2610035D17 gene	lncRNA gene
+2610035F20Rik	current symbol	MGI:1916498	2610035F20Rik	RIKEN cDNA 2610035F20 gene	lncRNA gene
+2610037D02Rik	current symbol	MGI:1917290	2610037D02Rik	RIKEN cDNA 2610037D02 gene	lncRNA gene
+2610100L16Rik	old symbol	MGI:1917691	Mir124-2hg	Mir124-2 host gene (non-protein coding)	lncRNA gene
+2610203C20Rik	old symbol	MGI:1920394	Mir100hg	Mir100 Mirlet7a-2 Mir125b-1 cluster host gene	lncRNA gene
+2610203C22Rik	current symbol	MGI:1919731	2610203C22Rik	RIKEN cDNA 2610203C22 gene	lncRNA gene
+2610204G22Rik	old symbol	MGI:1917698	Atad3aos	ATPase family, AAA domain containing 3A, opposite strand	antisense lncRNA gene
+2610206C17Rik	current symbol	MGI:1919745	2610206C17Rik	RIKEN cDNA 2610206C17 gene	lncRNA gene
+2610307P16Rik	current symbol	MGI:1919768	2610307P16Rik	RIKEN cDNA 2610307P16 gene	lncRNA gene
+2610316D01Rik	current symbol	MGI:1919761	2610316D01Rik	RIKEN cDNA 2610316D01 gene	lncRNA gene
+2610507I01Rik	current symbol	MGI:1919453	2610507I01Rik	RIKEN cDNA 2610507I01 gene	lncRNA gene
+2700038G22Rik	current symbol	MGI:1914444	2700038G22Rik	RIKEN cDNA 2700038G22 gene	lncRNA gene
+2700046A07Rik	current symbol	MGI:1919803	2700046A07Rik	RIKEN cDNA 2700046A07 gene	lncRNA gene
+2700046G09Rik	current symbol	MGI:1914438	2700046G09Rik	RIKEN cDNA 2700046G09 gene	lncRNA gene
+2700054A10Rik	current symbol	MGI:1919828	2700054A10Rik	RIKEN cDNA 2700054A10 gene	lncRNA gene
+2700069I18Rik	current symbol	MGI:1919858	2700069I18Rik	RIKEN cDNA 2700069I18 gene	lncRNA gene
+2700081L22Rik	old symbol	MGI:1919898	Smc2os	structural maintenance of chromosomes 2, opposite strand	antisense lncRNA gene
+2700086A05Rik	old symbol	MGI:1919878	Hoxaas3	Hoxa cluster antisense RNA 3	antisense lncRNA gene
+2700089I24Rik	current symbol	MGI:1919897	2700089I24Rik	RIKEN cDNA 2700089I24 gene	lncRNA gene
+2700099C18Rik	current symbol	MGI:1924272	2700099C18Rik	RIKEN cDNA 2700099C18 gene	pseudogene
+2810002D19Rik	current symbol	MGI:1913707	2810002D19Rik	RIKEN cDNA 2810002D19 gene	lncRNA gene
+2810008D09Rik	old symbol	MGI:1924222	Snhg20	small nucleolar RNA host gene 20	lncRNA gene
+2810011L19Rik	old symbol	MGI:1917202	Tunar	Tcl1 upstream neural differentiation associated RNA	lncRNA gene
+2810013P06Rik	current symbol	MGI:1914456	2810013P06Rik	RIKEN cDNA 2810013P06 gene	lncRNA gene
+2810025M15Rik	current symbol	MGI:1917203	2810025M15Rik	RIKEN cDNA 2810025M15 gene	lncRNA gene
+2810029C07Rik	current symbol	MGI:1919920	2810029C07Rik	RIKEN cDNA 2810029C07 gene	lncRNA gene
+2810032G03Rik	current symbol	MGI:1919919	2810032G03Rik	RIKEN cDNA 2810032G03 gene	lncRNA gene
+2810047C21Rik1	current symbol	MGI:1919966	2810047C21Rik1	RIKEN cDNA 2810047C21 gene 1	lncRNA gene
+2810049E08Rik	current symbol	MGI:1919927	2810049E08Rik	RIKEN cDNA 2810049E08 gene	lncRNA gene
+2810055G20Rik	old symbol	MGI:1919929	Mir99ahg	Mir99a and Mirlet7c-1 host gene (non-protein coding)	lncRNA gene
+2810403D21Rik	current symbol	MGI:1917214	2810403D21Rik	RIKEN cDNA 2810403D21 gene	lncRNA gene
+2810404M03Rik	current symbol	MGI:1917216	2810404M03Rik	RIKEN cDNA 2810404M03 gene	lncRNA gene
+2810405F15Rik	current symbol	MGI:1917224	2810405F15Rik	RIKEN cDNA 2810405F15 gene	lncRNA gene
+2810408I11Rik	current symbol	MGI:1917191	2810408I11Rik	RIKEN cDNA 2810408I11 gene	lncRNA gene
+2810410L24Rik	old symbol	MGI:1923627	Reno1	regulator of early neurogenesis 1	lncRNA gene
+2810429I04Rik	current symbol	MGI:1924187	2810429I04Rik	RIKEN cDNA 2810429I04 gene	lncRNA gene
+2810433D01Rik	current symbol	MGI:1924382	2810433D01Rik	RIKEN cDNA 2810433D01 gene	lncRNA gene
+2810442I21Rik	old symbol	MGI:1919985	Eldr	Egfr long non-coding downstream RNA	lncRNA gene
+2810442N19Rik	current symbol	MGI:1920003	2810442N19Rik	RIKEN cDNA 2810442N19 gene	lncRNA gene
+2810468N07Rik	old symbol	MGI:1920084	Cerox1	cytoplasmic endogenous regulator of oxidative phosphorylation 1	lncRNA gene
+2810471M01Rik	current symbol	MGI:1920068	2810471M01Rik	RIKEN cDNA 2810471M01 gene	lncRNA gene
+2900002K06Rik	old symbol	MGI:1917476	Rbm3os	RNA binding motif protein 3, opposite strand	antisense lncRNA gene
+2900008C10Rik	old symbol	MGI:1918708	Bcor	BCL6 interacting corepressor	protein coding gene
+2900009J06Rik	current symbol	MGI:1920137	2900009J06Rik	RIKEN cDNA 2900009J06 gene	lncRNA gene
+2900052N01Rik	current symbol	MGI:1920290	2900052N01Rik	RIKEN cDNA 2900052N01 gene	lncRNA gene
+2900056M20Rik	old symbol	MGI:1920247	Kantr	Kdm5c adjacent non-coding transcript	lncRNA gene
+2900057B20Rik	current symbol	MGI:1920259	2900057B20Rik	RIKEN cDNA 2900057B20 gene	lncRNA gene
+2900076A07Rik	current symbol	MGI:1920242	2900076A07Rik	RIKEN cDNA 2900076A07 gene	lncRNA gene
+2900079G21Rik	current symbol	MGI:1920268	2900079G21Rik	RIKEN cDNA 2900079G21 gene	lncRNA gene
+2900079G21Rik:copy2		No associated gene			
+2900093L17Rik	old symbol	MGI:1925758	Frmpd1os	FERM and PDZ domain containing 1, opposite strand	antisense lncRNA gene
+2900097C17Rik	old symbol	MGI:1914767	Norad	non-coding RNA activated by DNA damage	lncRNA gene
+3010001F23Rik	current symbol	MGI:1922943	3010001F23Rik	RIKEN cDNA 3010001F23 gene	lncRNA gene
+3010001F23Rik:copy2		No associated gene			
+3010033K07Rik	old symbol	MGI:1924437	Lncbate1	brown adipose tissue enriched long non-coding RNA 1	lncRNA gene
+3100003L05Rik	current symbol	MGI:1920326	3100003L05Rik	RIKEN cDNA 3100003L05 gene	lncRNA gene
+3110009F21Rik	current symbol	MGI:1914530	3110009F21Rik	RIKEN cDNA 3110009F21 gene	lncRNA gene
+3110015C05Rik	current symbol	MGI:1920379	3110015C05Rik	RIKEN cDNA 3110015C05 gene	lncRNA gene
+3110021A11Rik	current symbol	MGI:1914539	3110021A11Rik	RIKEN cDNA 3110021A11 gene	lncRNA gene
+3110039I08Rik	old symbol	MGI:1920394	Mir100hg	Mir100 Mirlet7a-2 Mir125b-1 cluster host gene	lncRNA gene
+3110039M20Rik	current symbol	MGI:1914543	3110039M20Rik	RIKEN cDNA 3110039M20 gene	lncRNA gene
+3110056K07Rik	current symbol	MGI:1920454	3110056K07Rik	RIKEN cDNA 3110056K07 gene	lncRNA gene
+3110056K07Rik:copy2		No associated gene			
+3110099E03Rik	current symbol	MGI:1925761	3110099E03Rik	RIKEN cDNA 3110099E03 gene	lncRNA gene
+3200001D21Rik	current symbol	MGI:1919068	3200001D21Rik	RIKEN cDNA 3200001D21 gene	lncRNA gene
+3300005D01Rik	current symbol	MGI:1925762	3300005D01Rik	RIKEN cDNA 3300005D01 gene	lncRNA gene
+3300005D01Rik:copy2		No associated gene			
+3632454L22Rik	current symbol	MGI:2444359	3632454L22Rik	RIKEN cDNA 3632454L22 gene	lncRNA gene
+3632454L22Rik:copy2		No associated gene			
+3830408C21Rik	current symbol	MGI:1917940	3830408C21Rik	RIKEN cDNA 3830408C21 gene	lncRNA gene
+4632415L05Rik	current symbol	MGI:1918058	4632415L05Rik	RIKEN cDNA 4632415L05 gene	pseudogene
+4632428C04Rik	current symbol	MGI:1921600	4632428C04Rik	RIKEN cDNA 4632428C04 gene	lncRNA gene
+4732416N19Rik	current symbol	MGI:2444634	4732416N19Rik	RIKEN cDNA 4732416N19 gene	lncRNA gene
+4732471J01Rik	current symbol	MGI:3603586	4732471J01Rik	RIKEN cDNA 4732471J01 gene	lncRNA gene
+4732471J01Rik:copy2		No associated gene			
+4732490B19Rik	current symbol	MGI:2442884	4732490B19Rik	RIKEN cDNA 4732490B19 gene	lncRNA gene
+4732491K20Rik	current symbol	MGI:3026975	4732491K20Rik	RIKEN cDNA 4732491K20 gene	lncRNA gene
+4831440E17Rik	current symbol	MGI:2445144	4831440E17Rik	RIKEN cDNA 4831440E17 gene	lncRNA gene
+4833412C05Rik	current symbol	MGI:1921154	4833412C05Rik	RIKEN cDNA 4833412C05 gene	lncRNA gene
+4833417C18Rik	current symbol	MGI:1921156	4833417C18Rik	RIKEN cDNA 4833417C18 gene	lncRNA gene
+4833418N02Rik	current symbol	MGI:1921847	4833418N02Rik	RIKEN cDNA 4833418N02 gene	lncRNA gene
+4833419F23Rik	current symbol	MGI:1921165	4833419F23Rik	RIKEN cDNA 4833419F23 gene	lncRNA gene
+4833422C13Rik	current symbol	MGI:3603826	4833422C13Rik	RIKEN cDNA 4833422C13 gene	lncRNA gene
+4833422C13Rik:copy2		No associated gene			
+4833427F10Rik	current symbol	MGI:1921851	4833427F10Rik	RIKEN cDNA 4833427F10 gene	lncRNA gene
+4833428L15Rik	current symbol	MGI:1921852	4833428L15Rik	RIKEN cDNA 4833428L15 gene	lncRNA gene
+4921504A21Rik	current symbol	MGI:1918082	4921504A21Rik	RIKEN cDNA 4921504A21 gene	lncRNA gene
+4921508A21Rik	old symbol	MGI:1921295	Slc36a1os	solute carrier family 36 (proton/amino acid symporter), member 1, opposite strand	antisense lncRNA gene
+4921508D12Rik	current symbol	MGI:1918095	4921508D12Rik	RIKEN cDNA 4921508D12 gene	lncRNA gene
+4921509O07Rik	current symbol	MGI:1918167	4921509O07Rik	RIKEN cDNA 4921509O07 gene	lncRNA gene
+4921511C10Rik	current symbol	MGI:1918174	4921511C10Rik	RIKEN cDNA 4921511C10 gene	lncRNA gene
+4921511I17Rik	current symbol	MGI:1918108	4921511I17Rik	RIKEN cDNA 4921511I17 gene	lncRNA gene
+4921513I03Rik	current symbol	MGI:1918124	4921513I03Rik	RIKEN cDNA 4921513I03 gene	lncRNA gene
+4921515E04Rik	current symbol	MGI:1918136	4921515E04Rik	RIKEN cDNA 4921515E04 gene	lncRNA gene
+4921525B02Rik	old symbol	MGI:1918148	Slain1os	SLAIN motif family, member 1, opposite strand	antisense lncRNA gene
+4921525O09Rik	current symbol	MGI:1921300	4921525O09Rik	RIKEN cDNA 4921525O09 gene	lncRNA gene
+4921530L18Rik	old symbol	MGI:1918207	Stamos	signal transducing adaptor molecule (SH3 domain and ITAM motif) 1, opposite strand	lncRNA gene
+4921531P14Rik	current symbol	MGI:1918210	4921531P14Rik	RIKEN cDNA 4921531P14 gene	lncRNA gene
+4922502H24Rik	current symbol	MGI:1925386	4922502H24Rik	RIKEN cDNA 4922502H24 gene	lncRNA gene
+4922502N22Rik	current symbol	MGI:1918212	4922502N22Rik	RIKEN cDNA 4922502N22 gene	lncRNA gene
+4930401C15Rik	current symbol	MGI:1921053	4930401C15Rik	RIKEN cDNA 4930401C15 gene	lncRNA gene
+4930401O10Rik	current symbol	MGI:1921066	4930401O10Rik	RIKEN cDNA 4930401O10 gene	lncRNA gene
+4930401O12Rik	current symbol	MGI:1921174	4930401O12Rik	RIKEN cDNA 4930401O12 gene	lncRNA gene
+4930404A05Rik	current symbol	MGI:1921070	4930404A05Rik	RIKEN cDNA 4930404A05 gene	lncRNA gene
+4930404H11Rik	current symbol	MGI:1921065	4930404H11Rik	RIKEN cDNA 4930404H11 gene	lncRNA gene
+4930405A10Rik	current symbol	MGI:1921060	4930405A10Rik	RIKEN cDNA 4930405A10 gene	lncRNA gene
+4930405A21Rik	current symbol	MGI:1922096	4930405A21Rik	RIKEN cDNA 4930405A21 gene	lncRNA gene
+4930405D11Rik	current symbol	MGI:1921172	4930405D11Rik	RIKEN cDNA 4930405D11 gene	lncRNA gene
+4930405P13Rik	old symbol	MGI:1921171	Scpep1os	serine carboxypeptidase 1, opposite strand	antisense lncRNA gene
+4930406D18Rik	current symbol	MGI:1921056	4930406D18Rik	RIKEN cDNA 4930406D18 gene	lncRNA gene
+4930412B13Rik	current symbol	MGI:1921188	4930412B13Rik	RIKEN cDNA 4930412B13 gene	lncRNA gene
+4930412C18Rik	current symbol	MGI:2443490	4930412C18Rik	RIKEN cDNA 4930412C18 gene	lncRNA gene
+4930412O13Rik	current symbol	MGI:1921185	4930412O13Rik	RIKEN cDNA 4930412O13 gene	protein coding gene
+4930413E15Rik	current symbol	MGI:1921877	4930413E15Rik	RIKEN cDNA 4930413E15 gene	lncRNA gene
+4930413G21Rik	current symbol	MGI:1921201	4930413G21Rik	RIKEN cDNA 4930413G21 gene	lncRNA gene
+4930413M19Rik	current symbol	MGI:1921139	4930413M19Rik	RIKEN cDNA 4930413M19 gene	lncRNA gene
+4930414L22Rik	old symbol	MGI:1925358	Particl	promoter of Mat2a antisense radiation induced circulating long non-coding RNA	lncRNA gene
+4930414N06Rik	current symbol	MGI:1921144	4930414N06Rik	RIKEN cDNA 4930414N06 gene	lncRNA gene
+4930417O13Rik	current symbol	MGI:1921120	4930417O13Rik	RIKEN cDNA 4930417O13 gene	lncRNA gene
+4930417O22Rik	current symbol	MGI:1921137	4930417O22Rik	RIKEN cDNA 4930417O22 gene	lncRNA gene
+4930419G24Rik	current symbol	MGI:1921124	4930419G24Rik	RIKEN cDNA 4930419G24 gene	lncRNA gene
+4930425K10Rik	current symbol	MGI:1921115	4930425K10Rik	RIKEN cDNA 4930425K10 gene	lncRNA gene
+4930425O10Rik	current symbol	MGI:1921885	4930425O10Rik	RIKEN cDNA 4930425O10 gene	lncRNA gene
+4930426L09Rik	current symbol	MGI:1921879	4930426L09Rik	RIKEN cDNA 4930426L09 gene	lncRNA gene
+4930428E07Rik	current symbol	MGI:1921117	4930428E07Rik	RIKEN cDNA 4930428E07 gene	lncRNA gene
+4930428G15Rik	current symbol	MGI:1921106	4930428G15Rik	RIKEN cDNA 4930428G15 gene	lncRNA gene
+4930429B21Rik	current symbol	MGI:1914826	4930429B21Rik	RIKEN cDNA 4930429B21 gene	lncRNA gene
+4930429D17Rik	current symbol	MGI:1921874	4930429D17Rik	RIKEN cDNA 4930429D17 gene	lncRNA gene
+4930429F24Rik	current symbol	MGI:1921883	4930429F24Rik	RIKEN cDNA 4930429F24 gene	lncRNA gene
+4930431F12Rik	current symbol	MGI:1923033	4930431F12Rik	RIKEN cDNA 4930431F12 gene	lncRNA gene
+4930431P03Rik	current symbol	MGI:1921145	4930431P03Rik	RIKEN cDNA 4930431P03 gene	lncRNA gene
+4930432J09Rik	current symbol	MGI:1921127	4930432J09Rik	RIKEN cDNA 4930432J09 gene	lncRNA gene
+4930433B08Rik	current symbol	MGI:1921209	4930433B08Rik	RIKEN cDNA 4930433B08 gene	lncRNA gene
+4930433N12Rik	current symbol	MGI:2149746	4930433N12Rik	RIKEN cDNA 4930433N12 gene	lncRNA gene
+4930434J06Rik	current symbol	MGI:1921917	4930434J06Rik	RIKEN cDNA 4930434J06 gene	lncRNA gene
+4930438E09Rik	current symbol	MGI:1921227	4930438E09Rik	RIKEN cDNA 4930438E09 gene	lncRNA gene
+4930441J16Rik	current symbol	MGI:1921212	4930441J16Rik	RIKEN cDNA 4930441J16 gene	lncRNA gene
+4930441O14Rik	old symbol	MGI:1915521	Zfp85os	zinc finger protein 85, opposite strand	antisense lncRNA gene
+4930442J19Rik	current symbol	MGI:1921910	4930442J19Rik	RIKEN cDNA 4930442J19 gene	lncRNA gene
+4930443O20Rik	current symbol	MGI:1921937	4930443O20Rik	RIKEN cDNA 4930443O20 gene	lncRNA gene
+4930444F02Rik	current symbol	MGI:1921218	4930444F02Rik	RIKEN cDNA 4930444F02 gene	lncRNA gene
+4930447J18Rik	current symbol	MGI:1921211	4930447J18Rik	RIKEN cDNA 4930447J18 gene	lncRNA gene
+4930447K03Rik	current symbol	MGI:1921231	4930447K03Rik	RIKEN cDNA 4930447K03 gene	lncRNA gene
+4930447N08Rik	current symbol	MGI:1918897	4930447N08Rik	RIKEN cDNA 4930447N08 gene	lncRNA gene
+4930448C13Rik	current symbol	MGI:1921222	4930448C13Rik	RIKEN cDNA 4930448C13 gene	lncRNA gene
+4930448H16Rik	current symbol	MGI:1922122	4930448H16Rik	RIKEN cDNA 4930448H16 gene	lncRNA gene
+4930448I06Rik	current symbol	MGI:1922147	4930448I06Rik	RIKEN cDNA 4930448I06 gene	lncRNA gene
+4930448I18Rik	current symbol	MGI:1921215	4930448I18Rik	RIKEN cDNA 4930448I18 gene	lncRNA gene
+4930452A19Rik	current symbol	MGI:1925363	4930452A19Rik	RIKEN cDNA 4930452A19 gene	lncRNA gene
+4930452G13Rik	current symbol	MGI:1921239	4930452G13Rik	RIKEN cDNA 4930452G13 gene	lncRNA gene
+4930453L07Rik	current symbol	MGI:1921938	4930453L07Rik	RIKEN cDNA 4930453L07 gene	lncRNA gene
+4930455C13Rik	current symbol	MGI:1921240	4930455C13Rik	RIKEN cDNA 4930455C13 gene	lncRNA gene
+4930455D15Rik	current symbol	MGI:1923045	4930455D15Rik	RIKEN cDNA 4930455D15 gene	lncRNA gene
+4930455F16Rik	current symbol	MGI:1922126	4930455F16Rik	RIKEN cDNA 4930455F16 gene	lncRNA gene
+4930455H04Rik	current symbol	MGI:1921904	4930455H04Rik	RIKEN cDNA 4930455H04 gene	protein coding gene
+4930455J16Rik	current symbol	MGI:1914835	4930455J16Rik	RIKEN cDNA 4930455J16 gene	lncRNA gene
+4930456L15Rik	current symbol	MGI:1918900	4930456L15Rik	RIKEN cDNA 4930456L15 gene	lncRNA gene
+4930459L07Rik	current symbol	MGI:1925413	4930459L07Rik	RIKEN cDNA 4930459L07 gene	lncRNA gene
+4930461G14Rik	current symbol	MGI:1922129	4930461G14Rik	RIKEN cDNA 4930461G14 gene	lncRNA gene
+4930465M20Rik	current symbol	MGI:1922218	4930465M20Rik	RIKEN cDNA 4930465M20 gene	lncRNA gene
+4930467D21Rik	current symbol	MGI:1923064	4930467D21Rik	RIKEN cDNA 4930467D21 gene	lncRNA gene
+4930467K11Rik	current symbol	MGI:1922178	4930467K11Rik	RIKEN cDNA 4930467K11 gene	lncRNA gene
+4930470H14Rik	current symbol	MGI:1923065	4930470H14Rik	RIKEN cDNA 4930470H14 gene	lncRNA gene
+4930470P17Rik	current symbol	MGI:1914887	4930470P17Rik	RIKEN cDNA 4930470P17 gene	protein coding gene
+4930471C04Rik	current symbol	MGI:1925426	4930471C04Rik	RIKEN cDNA 4930471C04 gene	lncRNA gene
+4930471G03Rik	current symbol	MGI:1922216	4930471G03Rik	RIKEN cDNA 4930471G03 gene	lncRNA gene
+4930471M09Rik	current symbol	MGI:1922150	4930471M09Rik	RIKEN cDNA 4930471M09 gene	lncRNA gene
+4930473A02Rik	current symbol	MGI:2447823	4930473A02Rik	RIKEN cDNA 4930473A02 gene	lncRNA gene
+4930474G06Rik	current symbol	MGI:2444381	4930474G06Rik	RIKEN cDNA 4930474G06 gene	lncRNA gene
+4930474H20Rik	current symbol	MGI:1922217	4930474H20Rik	RIKEN cDNA 4930474H20 gene	lncRNA gene
+4930474M22Rik	current symbol	MGI:1922167	4930474M22Rik	RIKEN cDNA 4930474M22 gene	lncRNA gene
+4930478L05Rik	current symbol	MGI:1923068	4930478L05Rik	RIKEN cDNA 4930478L05 gene	lncRNA gene
+4930478P22Rik	current symbol	MGI:1922154	4930478P22Rik	RIKEN cDNA 4930478P22 gene	lncRNA gene
+4930479M11Rik	old symbol	MGI:1922177	Pmis2	PMIS2 transmembrane protein	protein coding gene
+4930480G23Rik	current symbol	MGI:1922238	4930480G23Rik	RIKEN cDNA 4930480G23 gene	lncRNA gene
+4930480M12Rik	current symbol	MGI:1922180	4930480M12Rik	RIKEN cDNA 4930480M12 gene	lncRNA gene
+4930481A15Rik	current symbol	MGI:1922181	4930481A15Rik	RIKEN cDNA 4930481A15 gene	lncRNA gene
+4930483K19Rik	current symbol	MGI:1922203	4930483K19Rik	RIKEN cDNA 4930483K19 gene	lncRNA gene
+4930483O08Rik	current symbol	MGI:1922220	4930483O08Rik	RIKEN cDNA 4930483O08 gene	lncRNA gene
+4930486F22Rik	current symbol	MGI:1925420	4930486F22Rik	RIKEN cDNA 4930486F22 gene	lncRNA gene
+4930486I03Rik	current symbol	MGI:1922278	4930486I03Rik	RIKEN cDNA 4930486I03 gene	lncRNA gene
+4930488B22Rik	current symbol	MGI:1922221	4930488B22Rik	RIKEN cDNA 4930488B22 gene	lncRNA gene
+4930500F04Rik	current symbol	MGI:1922182	4930500F04Rik	RIKEN cDNA 4930500F04 gene	lncRNA gene
+4930500J02Rik	old symbol	MGI:1922209	Platr14	pluripotency associated transcript 14	lncRNA gene
+4930500L23Rik	current symbol	MGI:1922223	4930500L23Rik	RIKEN cDNA 4930500L23 gene	lncRNA gene
+4930502A04Rik	current symbol	MGI:1922201	4930502A04Rik	RIKEN cDNA 4930502A04 gene	lncRNA gene
+4930503E24Rik	current symbol	MGI:1922280	4930503E24Rik	RIKEN cDNA 4930503E24 gene	pseudogene
+4930503H13Rik	current symbol	MGI:1922191	4930503H13Rik	RIKEN cDNA 4930503H13 gene	pseudogene
+4930503O07Rik	current symbol	MGI:1922192	4930503O07Rik	RIKEN cDNA 4930503O07 gene	lncRNA gene
+4930506C21Rik	current symbol	MGI:1922310	4930506C21Rik	RIKEN cDNA 4930506C21 gene	lncRNA gene
+4930507D05Rik	current symbol	MGI:1921956	4930507D05Rik	RIKEN cDNA 4930507D05 gene	lncRNA gene
+4930509E16Rik	current symbol	MGI:1922365	4930509E16Rik	RIKEN cDNA 4930509E16 gene	lncRNA gene
+4930509J09Rik	current symbol	MGI:1921943	4930509J09Rik	RIKEN cDNA 4930509J09 gene	lncRNA gene
+4930511A02Rik	current symbol	MGI:1921962	4930511A02Rik	RIKEN cDNA 4930511A02 gene	lncRNA gene
+4930511M06Rik	current symbol	MGI:1922334	4930511M06Rik	RIKEN cDNA 4930511M06 gene	lncRNA gene
+4930512B01Rik	current symbol	MGI:1921974	4930512B01Rik	RIKEN cDNA 4930512B01 gene	lncRNA gene
+4930513D17Rik	current symbol	MGI:1922345	4930513D17Rik	RIKEN cDNA 4930513D17 gene	lncRNA gene
+4930513N10Rik	current symbol	MGI:2443064	4930513N10Rik	RIKEN cDNA 4930513N10 gene	lncRNA gene
+4930515B02Rik	current symbol	MGI:1922378	4930515B02Rik	RIKEN cDNA 4930515B02 gene	lncRNA gene
+4930515L03Rik	current symbol	MGI:1922319	4930515L03Rik	RIKEN cDNA 4930515L03 gene	lncRNA gene
+4930515L19Rik	current symbol	MGI:1922383	4930515L19Rik	RIKEN cDNA 4930515L19 gene	lncRNA gene
+4930517E11Rik	current symbol	MGI:1921952	4930517E11Rik	RIKEN cDNA 4930517E11 gene	lncRNA gene
+4930518P08Rik	current symbol	MGI:1918904	4930518P08Rik	RIKEN cDNA 4930518P08 gene	lncRNA gene
+4930519D14Rik	current symbol	MGI:1922340	4930519D14Rik	RIKEN cDNA 4930519D14 gene	lncRNA gene
+4930519F24Rik	current symbol	MGI:1922047	4930519F24Rik	RIKEN cDNA 4930519F24 gene	lncRNA gene
+4930519H02Rik	current symbol	MGI:1922308	4930519H02Rik	RIKEN cDNA 4930519H02 gene	lncRNA gene
+4930520O04Rik	current symbol	MGI:1922366	4930520O04Rik	RIKEN cDNA 4930520O04 gene	lncRNA gene
+4930520P13Rik	current symbol	MGI:1922336	4930520P13Rik	RIKEN cDNA 4930520P13 gene	lncRNA gene
+4930523C07Rik	current symbol	MGI:1914897	4930523C07Rik	RIKEN cDNA 4930523C07 gene	protein coding gene
+4930523O13Rik	current symbol	MGI:1921976	4930523O13Rik	RIKEN cDNA 4930523O13 gene	lncRNA gene
+4930524C18Rik	current symbol	MGI:1923072	4930524C18Rik	RIKEN cDNA 4930524C18 gene	lncRNA gene
+4930524L23Rik	old symbol	MGI:1925435	Flicr	Foxp3 regulating long intergenic noncoding RNA	lncRNA gene
+4930524O05Rik	current symbol	MGI:1922346	4930524O05Rik	RIKEN cDNA 4930524O05 gene	lncRNA gene
+4930524O08Rik	current symbol	MGI:1921950	4930524O08Rik	RIKEN cDNA 4930524O08 gene	lncRNA gene
+4930525D18Rik	current symbol	MGI:1922350	4930525D18Rik	RIKEN cDNA 4930525D18 gene	lncRNA gene
+4930525G20Rik	current symbol	MGI:2443505	4930525G20Rik	RIKEN cDNA 4930525G20 gene	lncRNA gene
+4930526I15Rik	current symbol	MGI:1922385	4930526I15Rik	RIKEN cDNA 4930526I15 gene	lncRNA gene
+4930526L06Rik	current symbol	MGI:1922388	4930526L06Rik	RIKEN cDNA 4930526L06 gene	lncRNA gene
+4930527F14Rik	current symbol	MGI:1914901	4930527F14Rik	RIKEN cDNA 4930527F14 gene	lncRNA gene
+4930527G23Rik	current symbol	MGI:1925449	4930527G23Rik	RIKEN cDNA 4930527G23 gene	lncRNA gene
+4930528P14Rik	current symbol	MGI:1925443	4930528P14Rik	RIKEN cDNA 4930528P14 gene	lncRNA gene
+4930529F24Rik	old symbol	MGI:1922420	Nrg3os	neuregulin 3, opposite strand	antisense lncRNA gene
+4930529K09Rik	current symbol	MGI:1922405	4930529K09Rik	RIKEN cDNA 4930529K09 gene	lncRNA gene
+4930533B01Rik	current symbol	MGI:1922416	4930533B01Rik	RIKEN cDNA 4930533B01 gene	lncRNA gene
+4930533P14Rik	current symbol	MGI:1922409	4930533P14Rik	RIKEN cDNA 4930533P14 gene	lncRNA gene
+4930539C22Rik	current symbol	MGI:1922458	4930539C22Rik	RIKEN cDNA 4930539C22 gene	lncRNA gene
+4930539J05Rik	current symbol	MGI:1922477	4930539J05Rik	RIKEN cDNA 4930539J05 gene	lncRNA gene
+4930539M17Rik	current symbol	MGI:1922399	4930539M17Rik	RIKEN cDNA 4930539M17 gene	lncRNA gene
+4930539N22Rik	current symbol	MGI:1922453	4930539N22Rik	RIKEN cDNA 4930539N22 gene	lncRNA gene
+4930540M03Rik	current symbol	MGI:1925275	4930540M03Rik	RIKEN cDNA 4930540M03 gene	lncRNA gene
+4930542C21Rik	current symbol	MGI:1922425	4930542C21Rik	RIKEN cDNA 4930542C21 gene	lncRNA gene
+4930542D17Rik	current symbol	MGI:1922461	4930542D17Rik	RIKEN cDNA 4930542D17 gene	lncRNA gene
+4930543E12Rik	current symbol	MGI:1922489	4930543E12Rik	RIKEN cDNA 4930543E12 gene	lncRNA gene
+4930544M13Rik	current symbol	MGI:1922411	4930544M13Rik	RIKEN cDNA 4930544M13 gene	lncRNA gene
+4930545L23Rik	current symbol	MGI:1926055	4930545L23Rik	RIKEN cDNA 4930545L23 gene	lncRNA gene
+4930546C10Rik	current symbol	MGI:1926181	4930546C10Rik	RIKEN cDNA 4930546C10 gene	lncRNA gene
+4930546K05Rik	current symbol	MGI:1925444	4930546K05Rik	RIKEN cDNA 4930546K05 gene	lncRNA gene
+4930547E14Rik	current symbol	MGI:1922395	4930547E14Rik	RIKEN cDNA 4930547E14 gene	lncRNA gene
+4930548G14Rik	current symbol	MGI:1922531	4930548G14Rik	RIKEN cDNA 4930548G14 gene	lncRNA gene
+4930548K13Rik	current symbol	MGI:1922610	4930548K13Rik	RIKEN cDNA 4930548K13 gene	lncRNA gene
+4930549G23Rik	current symbol	MGI:1922536	4930549G23Rik	RIKEN cDNA 4930549G23 gene	lncRNA gene
+4930552N02Rik	current symbol	MGI:1922617	4930552N02Rik	RIKEN cDNA 4930552N02 gene	lncRNA gene
+4930552P12Rik	current symbol	MGI:1924844	4930552P12Rik	RIKEN cDNA 4930552P12 gene	lncRNA gene
+4930555B11Rik	current symbol	MGI:1922529	4930555B11Rik	RIKEN cDNA 4930555B11 gene	lncRNA gene
+4930556C24Rik	current symbol	MGI:1922560	4930556C24Rik	RIKEN cDNA 4930556C24 gene	lncRNA gene
+4930556G01Rik	current symbol	MGI:1922582	4930556G01Rik	RIKEN cDNA 4930556G01 gene	lncRNA gene
+4930556M19Rik	current symbol	MGI:1922509	4930556M19Rik	RIKEN cDNA 4930556M19 gene	lncRNA gene
+4930556N09Rik	current symbol	MGI:1922551	4930556N09Rik	RIKEN cDNA 4930556N09 gene	lncRNA gene
+4930557J02Rik	current symbol	MGI:1922607	4930557J02Rik	RIKEN cDNA 4930557J02 gene	lncRNA gene
+4930558C23Rik	old symbol	MGI:1914904	Ctxnd2	cortexin domain containing 2	protein coding gene
+4930558G05Rik	current symbol	MGI:1922524	4930558G05Rik	RIKEN cDNA 4930558G05 gene	lncRNA gene
+4930558J18Rik	current symbol	MGI:1922573	4930558J18Rik	RIKEN cDNA 4930558J18 gene	lncRNA gene
+4930563M20Rik	current symbol	MGI:1925463	4930563M20Rik	RIKEN cDNA 4930563M20 gene	lncRNA gene
+4930564G21Rik	old symbol	MGI:1922571	Grip1os2	glutamate receptor interacting protein 1, opposite strand 2	antisense lncRNA gene
+4930564K09Rik	old symbol	MGI:1925462	Rbm46os	RNA binding motif protein 46, opposite strand	antisense lncRNA gene
+4930564K09Rik:copy2		No associated gene			
+4930565D16Rik	current symbol	MGI:1922559	4930565D16Rik	RIKEN cDNA 4930565D16 gene	lncRNA gene
+4930565N06Rik	current symbol	MGI:1915556	4930565N06Rik	RIKEN cDNA 4930565N06 gene	lncRNA gene
+4930567H12Rik	current symbol	MGI:1923181	4930567H12Rik	RIKEN cDNA 4930567H12 gene	lncRNA gene
+4930567J20Rik	current symbol	MGI:1925471	4930567J20Rik	RIKEN cDNA 4930567J20 gene	lncRNA gene
+4930568E12Rik	current symbol	MGI:1925469	4930568E12Rik	RIKEN cDNA 4930568E12 gene	lncRNA gene
+4930568G15Rik	current symbol	MGI:1923107	4930568G15Rik	RIKEN cDNA 4930568G15 gene	lncRNA gene
+4930570G19Rik	current symbol	MGI:1923158	4930570G19Rik	RIKEN cDNA 4930570G19 gene	lncRNA gene
+4930570G19Rik:copy2		No associated gene			
+4930570G19Rik:copy3		No associated gene			
+4930572K03Rik	current symbol	MGI:1923166	4930572K03Rik	RIKEN cDNA 4930572K03 gene	lncRNA gene
+4930572O13Rik	current symbol	MGI:1923112	4930572O13Rik	RIKEN cDNA 4930572O13 gene	lncRNA gene
+4930573O16Rik	current symbol	MGI:1925299	4930573O16Rik	RIKEN cDNA 4930573O16 gene	lncRNA gene
+4930577N17Rik	current symbol	MGI:1914996	4930577N17Rik	RIKEN cDNA 4930577N17 gene	lncRNA gene
+4930578E11Rik	current symbol	MGI:1925308	4930578E11Rik	RIKEN cDNA 4930578E11 gene	lncRNA gene
+4930578N18Rik	current symbol	MGI:1925465	4930578N18Rik	RIKEN cDNA 4930578N18 gene	lncRNA gene
+4930581F22Rik	current symbol	MGI:1926184	4930581F22Rik	RIKEN cDNA 4930581F22 gene	lncRNA gene
+4930583P06Rik	current symbol	MGI:1923196	4930583P06Rik	RIKEN cDNA 4930583P06 gene	lncRNA gene
+4930584F24Rik	current symbol	MGI:1923192	4930584F24Rik	RIKEN cDNA 4930584F24 gene	lncRNA gene
+4930590L20Rik	current symbol	MGI:1923160	4930590L20Rik	RIKEN cDNA 4930590L20 gene	lncRNA gene
+4930592A05Rik	current symbol	MGI:1923130	4930592A05Rik	RIKEN cDNA 4930592A05 gene	lncRNA gene
+4930593A02Rik	current symbol	MGI:1923132	4930593A02Rik	RIKEN cDNA 4930593A02 gene	lncRNA gene
+4930596M17Rik	old symbol	MGI:1922634	Lyzl4os	lysozyme-like 4, opposite strand	antisense lncRNA gene
+4930597G03Rik	current symbol	MGI:1922627	4930597G03Rik	RIKEN cDNA 4930597G03 gene	lncRNA gene
+4930599N23Rik	current symbol	MGI:1922629	4930599N23Rik	RIKEN cDNA 4930599N23 gene	lncRNA gene
+4931402G19Rik	current symbol	MGI:1918183	4931402G19Rik	RIKEN cDNA 4931402G19 gene	lncRNA gene
+4931403E22Rik	current symbol	MGI:1918192	4931403E22Rik	RIKEN cDNA 4931403E22 gene	lncRNA gene
+4931403G20Rik	current symbol	MGI:1918184	4931403G20Rik	RIKEN cDNA 4931403G20 gene	lncRNA gene
+4931406H21Rik	current symbol	MGI:1924842	4931406H21Rik	RIKEN cDNA 4931406H21 gene	lncRNA gene
+4931408D14Rik	current symbol	MGI:1924309	4931408D14Rik	RIKEN cDNA 4931408D14 gene	lncRNA gene
+4931409K22Rik	old symbol	MGI:3045319	Iqca1l	IQ motif containing with AAA domain 1 like	protein coding gene
+4931419H13Rik	current symbol	MGI:1918220	4931419H13Rik	RIKEN cDNA 4931419H13 gene	lncRNA gene
+4931428L18Rik	current symbol	MGI:1918238	4931428L18Rik	RIKEN cDNA 4931428L18 gene	protein coding gene
+4931429P17Rik	current symbol	MGI:1918221	4931429P17Rik	RIKEN cDNA 4931429P17 gene	lncRNA gene
+4931431B13Rik	current symbol	MGI:1918223	4931431B13Rik	RIKEN cDNA 4931431B13 gene	lncRNA gene
+4931431C16Rik	current symbol	MGI:1921614	4931431C16Rik	RIKEN cDNA 4931431C16 gene	lncRNA gene
+4931440J10Rik	current symbol	MGI:1918250	4931440J10Rik	RIKEN cDNA 4931440J10 gene	lncRNA gene
+4931440L10Rik	old symbol	MGI:1918251	Mgat4e	MGAT4 family, member E	protein coding gene
+4931440P22Rik	current symbol	MGI:1918254	4931440P22Rik	RIKEN cDNA 4931440P22 gene	lncRNA gene
+4932412D23Rik	current symbol	MGI:1922972	4932412D23Rik	RIKEN cDNA 4932412D23 gene	lncRNA gene
+4932412D23Rik:copy2		No associated gene			
+4932413F04Rik	current symbol	MGI:2441690	4932413F04Rik	RIKEN cDNA 4932413F04 gene	lncRNA gene
+4932414J04Rik	current symbol	MGI:3605619	4932414J04Rik	RIKEN cDNA 4932414J04 gene	lncRNA gene
+4932415G12Rik	old symbol	MGI:1914973	Cep83os	centrosomal protein 83, opposite strand	bidirectional promoter lncRNA gene
+4932415M13Rik	current symbol	MGI:3608328	4932415M13Rik	RIKEN cDNA 4932415M13 gene	lncRNA gene
+4932416H05Rik	old symbol	MGI:3606162	Stk35os1	serine/threonine kinase 35, opposite strand 1	lncRNA gene
+4932435O22Rik	current symbol	MGI:2442791	4932435O22Rik	RIKEN cDNA 4932435O22 gene	lncRNA gene
+4932441J04Rik	current symbol	MGI:2441691	4932441J04Rik	RIKEN cDNA 4932441J04 gene	lncRNA gene
+4933400B14Rik	current symbol	MGI:1918302	4933400B14Rik	RIKEN cDNA 4933400B14 gene	lncRNA gene
+4933400C23Rik	current symbol	MGI:5439420	4933400C23Rik	RIKEN cDNA 4933400C23 gene	lncRNA gene
+4933400F21Rik	current symbol	MGI:1921653	4933400F21Rik	RIKEN cDNA 4933400F21 gene	lncRNA gene
+4933400L20Rik	current symbol	MGI:1918308	4933400L20Rik	RIKEN cDNA 4933400L20 gene	lncRNA gene
+4933401D09Rik	current symbol	MGI:1918258	4933401D09Rik	RIKEN cDNA 4933401D09 gene	lncRNA gene
+4933402C06Rik	current symbol	MGI:1918279	4933402C06Rik	RIKEN cDNA 4933402C06 gene	lncRNA gene
+4933402J10Rik	current symbol	MGI:1918307	4933402J10Rik	RIKEN cDNA 4933402J10 gene	lncRNA gene
+4933402J15Rik	current symbol	MGI:1921675	4933402J15Rik	RIKEN cDNA 4933402J15 gene	lncRNA gene
+4933404O12Rik	current symbol	MGI:1914002	4933404O12Rik	RIKEN cDNA 4933404O12 gene	lncRNA gene
+4933405D12Rik	current symbol	MGI:1921307	4933405D12Rik	RIKEN cDNA 4933405D12 gene	lncRNA gene
+4933405E24Rik	current symbol	MGI:1918306	4933405E24Rik	RIKEN cDNA 4933405E24 gene	lncRNA gene
+4933406C10Rik	current symbol	MGI:1921326	4933406C10Rik	RIKEN cDNA 4933406C10 gene	lncRNA gene
+4933406G16Rik	current symbol	MGI:1921309	4933406G16Rik	RIKEN cDNA 4933406G16 gene	lncRNA gene
+4933406I18Rik	current symbol	MGI:1918295	4933406I18Rik	RIKEN cDNA 4933406I18 gene	lncRNA gene
+4933406I18Rik:copy2		No associated gene			
+4933406J10Rik	current symbol	MGI:1921308	4933406J10Rik	RIKEN cDNA 4933406J10 gene	lncRNA gene
+4933406K04Rik	current symbol	MGI:1918283	4933406K04Rik	RIKEN cDNA 4933406K04 gene	lncRNA gene
+4933407E24Rik	current symbol	MGI:1918352	4933407E24Rik	RIKEN cDNA 4933407E24 gene	lncRNA gene
+4933407G14Rik	current symbol	MGI:1918375	4933407G14Rik	RIKEN cDNA 4933407G14 gene	lncRNA gene
+4933407I05Rik	current symbol	MGI:1921322	4933407I05Rik	RIKEN cDNA 4933407I05 gene	lncRNA gene
+4933407K13Rik	current symbol	MGI:1921646	4933407K13Rik	RIKEN cDNA 4933407K13 gene	lncRNA gene
+4933407L21Rik	current symbol	MGI:1918391	4933407L21Rik	RIKEN cDNA 4933407L21 gene	protein coding gene
+4933408J17Rik	current symbol	MGI:1921704	4933408J17Rik	RIKEN cDNA 4933408J17 gene	lncRNA gene
+4933409K07Rik:copy3		No associated gene			
+4933411E08Rik	current symbol	MGI:1918317	4933411E08Rik	RIKEN cDNA 4933411E08 gene	lncRNA gene
+4933412E12Rik	current symbol	MGI:1918336	4933412E12Rik	RIKEN cDNA 4933412E12 gene	lncRNA gene
+4933412O06Rik	current symbol	MGI:1918321	4933412O06Rik	RIKEN cDNA 4933412O06 gene	lncRNA gene
+4933413J09Rik	current symbol	MGI:1918356	4933413J09Rik	RIKEN cDNA 4933413J09 gene	lncRNA gene
+4933413L06Rik	current symbol	MGI:1918350	4933413L06Rik	RIKEN cDNA 4933413L06 gene	lncRNA gene
+4933416E03Rik	current symbol	MGI:1918331	4933416E03Rik	RIKEN cDNA 4933416E03 gene	lncRNA gene
+4933416M06Rik	current symbol	MGI:1918424	4933416M06Rik	RIKEN cDNA 4933416M06 gene	lncRNA gene
+4933416M07Rik	current symbol	MGI:1918332	4933416M07Rik	RIKEN cDNA 4933416M07 gene	lncRNA gene
+4933417D19Rik	current symbol	MGI:1918436	4933417D19Rik	RIKEN cDNA 4933417D19 gene	lncRNA gene
+4933417E11Rik	current symbol	MGI:1918384	4933417E11Rik	RIKEN cDNA 4933417E11 gene	lncRNA gene
+4933417O13Rik	current symbol	MGI:1918403	4933417O13Rik	RIKEN cDNA 4933417O13 gene	lncRNA gene
+4933421O10Rik	current symbol	MGI:1918323	4933421O10Rik	RIKEN cDNA 4933421O10 gene	lncRNA gene
+4933422A05Rik	current symbol	MGI:1918383	4933422A05Rik	RIKEN cDNA 4933422A05 gene	lncRNA gene
+4933424G05Rik	current symbol	MGI:1921706	4933424G05Rik	RIKEN cDNA 4933424G05 gene	lncRNA gene
+4933424G06Rik	current symbol	MGI:1918416	4933424G06Rik	RIKEN cDNA 4933424G06 gene	protein coding gene
+4933425B07Rik	current symbol	MGI:1921708	4933425B07Rik	RIKEN cDNA 4933425B07 gene	lncRNA gene
+4933425H06Rik	old symbol	MGI:1914010	Sox5os3	SRY (sex determining region Y)-box 5, opposite strand 3	antisense lncRNA gene
+4933426D04Rik	old symbol	MGI:1918411	Prkag2os1	protein kinase, AMP-activated, gamma 2 non-catalytic subunit, opposite strand 1	antisense lncRNA gene
+4933427E13Rik	current symbol	MGI:1918484	4933427E13Rik	RIKEN cDNA 4933427E13 gene	lncRNA gene
+4933427I22Rik	current symbol	MGI:1918485	4933427I22Rik	RIKEN cDNA 4933427I22 gene	lncRNA gene
+4933428C19Rik	current symbol	MGI:1918543	4933428C19Rik	RIKEN cDNA 4933428C19 gene	lncRNA gene
+4933429K18Rik	current symbol	MGI:1918482	4933429K18Rik	RIKEN cDNA 4933429K18 gene	lncRNA gene
+4933429O19Rik	current symbol	MGI:1914020	4933429O19Rik	RIKEN cDNA 4933429O19 gene	lncRNA gene
+4933430H16Rik	current symbol	MGI:1918535	4933430H16Rik	RIKEN cDNA 4933430H16 gene	lncRNA gene
+4933430M04Rik	current symbol	MGI:1918566	4933430M04Rik	RIKEN cDNA 4933430M04 gene	lncRNA gene
+4933430N04Rik	current symbol	MGI:1918499	4933430N04Rik	RIKEN cDNA 4933430N04 gene	lncRNA gene
+4933431E20Rik	current symbol	MGI:3584041	4933431E20Rik	RIKEN cDNA 4933431E20 gene	lncRNA gene
+4933431G14Rik	current symbol	MGI:1918515	4933431G14Rik	RIKEN cDNA 4933431G14 gene	lncRNA gene
+4933432G23Rik	current symbol	MGI:1918446	4933432G23Rik	RIKEN cDNA 4933432G23 gene	lncRNA gene
+4933432I03Rik	current symbol	MGI:1918514	4933432I03Rik	RIKEN cDNA 4933432I03 gene	lncRNA gene
+4933432K03Rik	current symbol	MGI:1918562	4933432K03Rik	RIKEN cDNA 4933432K03 gene	lncRNA gene
+4933433G15Rik	current symbol	MGI:1918524	4933433G15Rik	RIKEN cDNA 4933433G15 gene	lncRNA gene
+4933433G19Rik	current symbol	MGI:1918476	4933433G19Rik	RIKEN cDNA 4933433G19 gene	lncRNA gene
+4933433H22Rik	current symbol	MGI:1921723	4933433H22Rik	RIKEN cDNA 4933433H22 gene	lncRNA gene
+4933436C20Rik	old symbol	MGI:1918546	Crnde	colorectal neoplasia differentially expressed (non-protein coding)	lncRNA gene
+4933436E23Rik	current symbol	MGI:1918459	4933436E23Rik	RIKEN cDNA 4933436E23 gene	lncRNA gene
+4933436H12Rik	current symbol	MGI:1918494	4933436H12Rik	RIKEN cDNA 4933436H12 gene	lncRNA gene
+4933438B17Rik	current symbol	MGI:1918497	4933438B17Rik	RIKEN cDNA 4933438B17 gene	lncRNA gene
+4933439C10Rik	current symbol	MGI:1921726	4933439C10Rik	RIKEN cDNA 4933439C10 gene	lncRNA gene
+4933439K11Rik	current symbol	MGI:1918569	4933439K11Rik	RIKEN cDNA 4933439K11 gene	lncRNA gene
+4933440J02Rik	current symbol	MGI:1918571	4933440J02Rik	RIKEN cDNA 4933440J02 gene	lncRNA gene
+4933440M02Rik	current symbol	MGI:1918458	4933440M02Rik	RIKEN cDNA 4933440M02 gene	lncRNA gene
+5031425E22Rik	current symbol	MGI:1923227	5031425E22Rik	RIKEN cDNA 5031425E22 gene	lncRNA gene
+5031425F14Rik	current symbol	MGI:2442533	5031425F14Rik	RIKEN cDNA 5031425F14 gene	lncRNA gene
+5031426D15Rik	current symbol	MGI:1915394	5031426D15Rik	RIKEN cDNA 5031426D15 gene	lncRNA gene
+5031434O11Rik	current symbol	MGI:1923230	5031434O11Rik	RIKEN cDNA 5031434O11 gene	lncRNA gene
+5033403H07Rik	current symbol	MGI:1923204	5033403H07Rik	RIKEN cDNA 5033403H07 gene	lncRNA gene
+5330413P13Rik	current symbol	MGI:3041161	5330413P13Rik	RIKEN cDNA 5330413P13 gene	lncRNA gene
+5330434G04Rik	current symbol	MGI:1925519	5330434G04Rik	RIKEN cDNA 5330434G04 gene	lncRNA gene
+5330439B14Rik	current symbol	MGI:2447824	5330439B14Rik	RIKEN cDNA 5330439B14 gene	lncRNA gene
+5430402O13Rik	current symbol	MGI:1918631	5430402O13Rik	RIKEN cDNA 5430402O13 gene	lncRNA gene
+5430403N17Rik	current symbol	MGI:5439418	5430403N17Rik	RIKEN cDNA 5430403N17 gene	lncRNA gene
+5430405H02Rik	current symbol	MGI:1921737	5430405H02Rik	RIKEN cDNA 5430405H02 gene	lncRNA gene
+5430416N02Rik	current symbol	MGI:1918676	5430416N02Rik	RIKEN cDNA 5430416N02 gene	lncRNA gene
+5430417L22Rik	old symbol	MGI:1915354	Inafm2	InaF motif containing 2	protein coding gene
+5430421F17Rik	current symbol	MGI:1921739	5430421F17Rik	RIKEN cDNA 5430421F17 gene	lncRNA gene
+5430425K12Rik	current symbol	MGI:1918666	5430425K12Rik	RIKEN cDNA 5430425K12 gene	lncRNA gene
+5430428K19Rik	current symbol	MGI:1918672	5430428K19Rik	RIKEN cDNA 5430428K19 gene	lncRNA gene
+5430434I15Rik	current symbol	MGI:1918592	5430434I15Rik	RIKEN cDNA 5430434I15 gene	lncRNA gene
+5430437J10Rik	current symbol	MGI:1918682	5430437J10Rik	RIKEN cDNA 5430437J10 gene	lncRNA gene
+5430440P10Rik	current symbol	MGI:1918612	5430440P10Rik	RIKEN cDNA 5430440P10 gene	lncRNA gene
+5530401A14Rik	current symbol	MGI:1918638	5530401A14Rik	RIKEN cDNA 5530401A14 gene	protein coding gene
+5530601H04Rik	current symbol	MGI:1918695	5530601H04Rik	RIKEN cDNA 5530601H04 gene	lncRNA gene
+5730403I07Rik	current symbol	MGI:1917737	5730403I07Rik	RIKEN cDNA 5730403I07 gene	lncRNA gene
+5730412P04Rik	current symbol	MGI:1917741	5730412P04Rik	RIKEN cDNA 5730412P04 gene	lncRNA gene
+5730420D15Rik	current symbol	MGI:1917773	5730420D15Rik	RIKEN cDNA 5730420D15 gene	lncRNA gene
+5730422E09Rik	old symbol	MGI:1917793	Mm2pr	macrophage M2 polarization regulator	lncRNA gene
+5730435O14Rik	current symbol	MGI:1917788	5730435O14Rik	RIKEN cDNA 5730435O14 gene	lncRNA gene
+5730457N03Rik	old symbol	MGI:1917843	Evx1os	even skipped homeotic gene 1, opposite strand	antisense lncRNA gene
+5730480H06Rik	current symbol	MGI:1917842	5730480H06Rik	RIKEN cDNA 5730480H06 gene	lncRNA gene
+5730488B01Rik	current symbol	MGI:1917852	5730488B01Rik	RIKEN cDNA 5730488B01 gene	lncRNA gene
+5730522E02Rik	current symbol	MGI:1917876	5730522E02Rik	RIKEN cDNA 5730522E02 gene	protein coding gene
+5830403M04Rik	old symbol	MGI:1923253	Tmem150cos	transmembrane protein 150C, opposite strand	antisense lncRNA gene
+5830416P10Rik	old symbol	MGI:1922001	Mirt1	myocardial infarction associated transcript 1	lncRNA gene
+5830417I10Rik	current symbol	MGI:1923272	5830417I10Rik	RIKEN cDNA 5830417I10 gene	pseudogene
+5830418P13Rik	current symbol	MGI:3604110	5830418P13Rik	RIKEN cDNA 5830418P13 gene	lncRNA gene
+5830428M24Rik	current symbol	MGI:1923312	5830428M24Rik	RIKEN cDNA 5830428M24 gene	lncRNA gene
+5830432E09Rik	current symbol	MGI:1915015	5830432E09Rik	RIKEN cDNA 5830432E09 gene	lncRNA gene
+5830444B04Rik	current symbol	MGI:3603170	5830444B04Rik	RIKEN cDNA 5830444B04 gene	lncRNA gene
+5930403L14Rik	current symbol	MGI:2445083	5930403L14Rik	RIKEN cDNA 5930403L14 gene	lncRNA gene
+5930412G12Rik	old symbol	MGI:2442398	Fzd10os	frizzled class receptor 10, opposite strand	lncRNA gene
+5930430L01Rik	current symbol	MGI:2443110	5930430L01Rik	RIKEN cDNA 5930430L01 gene	lncRNA gene
+5930438M14Rik	current symbol	MGI:5439408	5930438M14Rik	RIKEN cDNA 5930438M14 gene	lncRNA gene
+6030407O03Rik	current symbol	MGI:1924410	6030407O03Rik	RIKEN cDNA 6030407O03 gene	lncRNA gene
+6030440G07Rik	current symbol	MGI:1925128	6030440G07Rik	RIKEN cDNA 6030440G07 gene	lncRNA gene
+6030443J06Rik	current symbol	MGI:2444595	6030443J06Rik	RIKEN cDNA 6030443J06 gene	lncRNA gene
+6030466F02Rik	current symbol	MGI:3045390	6030466F02Rik	RIKEN cDNA 6030466F02 gene	lncRNA gene
+6030469F06Rik	current symbol	MGI:3588235	6030469F06Rik	RIKEN cDNA 6030469F06 gene	lncRNA gene
+6330410L21Rik	current symbol	MGI:2441710	6330410L21Rik	RIKEN cDNA 6330410L21 gene	lncRNA gene
+6330549D23Rik	current symbol	MGI:2442586	6330549D23Rik	RIKEN cDNA 6330549D23 gene	pseudogene
+6430411K18Rik	current symbol	MGI:1924130	6430411K18Rik	RIKEN cDNA 6430411K18 gen	lncRNA gene
+6430562O15Rik	current symbol	MGI:2444982	6430562O15Rik	RIKEN cDNA 6430562O15 gene	lncRNA gene
+6430584L05Rik	current symbol	MGI:5439415	6430584L05Rik	RIKEN cDNA 6430584L05 gene	lncRNA gene
+6430710C18Rik	current symbol	MGI:1923468	6430710C18Rik	RIKEN cDNA 6430710C18 gene	lncRNA gene
+6430710C18Rik:copy2		No associated gene			
+6530402F18Rik	current symbol	MGI:1923470	6530402F18Rik	RIKEN cDNA 6530402F18 gene	lncRNA gene
+6530411M01Rik	current symbol	MGI:1915041	6530411M01Rik	RIKEN cDNA 6530411M01 gene	lncRNA gene
+6720401G13Rik	old symbol	MGI:2147989	Firre	functional intergenic repeating RNA element	lncRNA gene
+6720401G13Rik:copy2		No associated gene			
+6720468P15Rik	current symbol	MGI:1925323	6720468P15Rik	RIKEN cDNA 6720468P15 gene	lncRNA gene
+6720468P15Rik:copy2		No associated gene			
+6820431F20Rik	current symbol	MGI:3694236	6820431F20Rik	RIKEN cDNA 6820431F20 gene	pseudogene
+7420700N18Rik	current symbol	MGI:1921767	7420700N18Rik	RIKEN cDNA 7420700N18 gene	lncRNA gene
+7420701I03Rik	current symbol	MGI:1918707	7420701I03Rik	RIKEN cDNA 7420701I03 gene	lncRNA gene
+7530420F21Rik	old symbol	MGI:2443180	Ptgs2os	prostaglandin-endoperoxide synthase 2, opposite strand	lncRNA gene
+7630403G23Rik	current symbol	MGI:1924369	7630403G23Rik	RIKEN cDNA 7630403G23 gene	lncRNA gene
+8030423F21Rik	current symbol	MGI:2443206	8030423F21Rik	RIKEN cDNA 8030423F21 gene	lncRNA gene
+8030442B05Rik	current symbol	MGI:1924793	8030442B05Rik	RIKEN cDNA 8030442B05 gene	lncRNA gene
+8030443G20Rik	current symbol	MGI:1924423	8030443G20Rik	RIKEN cDNA 8030443G20 gene	lncRNA gene
+8430403D17Rik	old symbol	MGI:1918739	Bcas3os1	BCAS3 microtubule associated cell migration factor, opposite strand 1	antisense lncRNA gene
+8430422H06Rik	current symbol	MGI:1921779	8430422H06Rik	RIKEN cDNA 8430422H06 gene	lncRNA gene
+8430426J06Rik	current symbol	MGI:1925352	8430426J06Rik	RIKEN cDNA 8430426J06 gene	lncRNA gene
+8430429K09Rik	current symbol	MGI:1918773	8430429K09Rik	RIKEN cDNA 8430429K09 gene	lncRNA gene
+8430436N08Rik	current symbol	MGI:1918760	8430436N08Rik	RIKEN cDNA 8430436N08 gene	lncRNA gene
+8430437L04Rik	current symbol	MGI:1921791	8430437L04Rik	RIKEN cDNA 8430437L04 gene	lncRNA gene
+9030204H09Rik	current symbol	MGI:1924915	9030204H09Rik	RIKEN cDNA 9030204H09 gene	lncRNA gene
+9030404E10Rik	current symbol	MGI:1918778	9030404E10Rik	RIKEN cDNA 9030404E10 gene	lncRNA gene
+9130015A21Rik	current symbol	MGI:1918831	9130015A21Rik	RIKEN cDNA 9130015A21 gene	lncRNA gene
+9130015L21Rik	current symbol	MGI:1918863	9130015L21Rik	RIKEN cDNA 9130015L21 gene	lncRNA gene
+9130019P16Rik	current symbol	MGI:1918824	9130019P16Rik	RIKEN cDNA 9130019P16 gene	lncRNA gene
+9130024F11Rik	current symbol	MGI:1926150	9130024F11Rik	RIKEN cDNA 9130024F11 gene	lncRNA gene
+9130206I24Rik	old symbol	MGI:2444065	Foxd2os	forkhead box D2, opposite strand	lncRNA gene
+9130209A04Rik	current symbol	MGI:1924918	9130209A04Rik	RIKEN cDNA 9130209A04 gene	lncRNA gene
+9130221F21Rik	current symbol	MGI:4840488	9130221F21Rik	RIKEN cDNA 9130221F21 gene	lncRNA gene
+9130227L01Rik	current symbol	MGI:2445084	9130227L01Rik	RIKEN cDNA 9130227L01 gene	lncRNA gene
+9130230L23Rik	current symbol	MGI:3041166	9130230L23Rik	RIKEN cDNA 9130230L23 gene	protein coding gene
+9230009I02Rik	current symbol	MGI:3588229	9230009I02Rik	RIKEN cDNA 9230009I02 gene	lncRNA gene
+9230102K24Rik	current symbol	MGI:1925931	9230102K24Rik	RIKEN cDNA 9230102K24 gene	lncRNA gene
+9230102O04Rik	current symbol	MGI:1924932	9230102O04Rik	RIKEN cDNA 9230102O04 gene	protein coding gene
+9230105E05Rik	current symbol	MGI:2444388	9230105E05Rik	RIKEN cDNA 9230105E05 gene	lncRNA gene
+9230112J17Rik	current symbol	MGI:1924999	9230112J17Rik	RIKEN cDNA 9230112J17 gene	lncRNA gene
+9230115E21Rik	old symbol	MGI:3027124	Arhgap20os	Rho GTPase activating protein 20, opposite strand	antisense lncRNA gene
+9330020H09Rik	current symbol	MGI:3704457	9330020H09Rik	RIKEN cDNA 9330020H09 gene	lncRNA gene
+9330102E08Rik	current symbol	MGI:3026973	9330102E08Rik	RIKEN cDNA 9330102E08 gene	lncRNA gene
+9330111N05Rik	current symbol	MGI:2443112	9330111N05Rik	RIKEN cDNA 9330111N05 gene	lncRNA gene
+9330117O12Rik	current symbol	MGI:5439411	9330117O12Rik	RIKEN cDNA 9330117O12 gene	lncRNA gene
+9330133O14Rik	current symbol	MGI:2442309	9330133O14Rik	RIKEN cDNA 9330133O14 gene	lncRNA gene
+9330151L19Rik	current symbol	MGI:3041168	9330151L19Rik	RIKEN cDNA 9330151L19 gene	lncRNA gene
+9330158H04Rik	current symbol	MGI:2442094	9330158H04Rik	RIKEN cDNA 9330158H04 gene	lncRNA gene
+9330159M07Rik	current symbol	MGI:2442519	9330159M07Rik	RIKEN cDNA 9330159M07 gene	lncRNA gene
+9330162012Rik	current symbol	MGI:3604449	9330162012Rik	cDNA RIKEN 9330162012 gene	lncRNA gene
+9330175M20Rik	current symbol	MGI:3045285	9330175M20Rik	RIKEN cDNA 9330175M20 gene	lncRNA gene
+9330178D15Rik	current symbol	MGI:4437729	9330178D15Rik	RIKEN cDNA 9330178D15 gene	lncRNA gene
+9330179D12Rik	current symbol	MGI:1924808	9330179D12Rik	RIKEN cDNA 9330179D12 gene	lncRNA gene
+9430008C03Rik	old symbol	MGI:1915358	Snhg17	small nucleolar RNA host gene 17	lncRNA gene
+9430014N10Rik	current symbol	MGI:1924498	9430014N10Rik	RIKEN cDNA 9430014N10 gene	lncRNA gene
+9430018G01Rik	current symbol	MGI:2442776	9430018G01Rik	RIKEN cDNA 9430018G01 gene	lncRNA gene
+9430019J16Rik	current symbol	MGI:1924519	9430019J16Rik	RIKEN cDNA 9430019J16 gene	lncRNA gene
+9430021M05Rik	current symbol	MGI:1924538	9430021M05Rik	RIKEN cDNA 9430021M05 gene	lncRNA gene
+9430041J12Rik	current symbol	MGI:1924573	9430041J12Rik	RIKEN cDNA 9430041J12 gene	lncRNA gene
+9430060I03Rik	current symbol	MGI:3702484	9430060I03Rik	RIKEN cDNA 9430060I03 gene	lncRNA gene
+9430076C15Rik	old symbol	MGI:2443973	Creb5	cAMP responsive element binding protein 5	protein coding gene
+9430076G02Rik	old symbol	MGI:1924683	Redrum	Redrum, erythroid developmental long intergenic non-protein coding transcript	lncRNA gene
+9430083A17Rik	current symbol	MGI:1924678	9430083A17Rik	RIKEN cDNA 9430083A17 gene	lncRNA gene
+9430091E24Rik	current symbol	MGI:1924618	9430091E24Rik	RIKEN cDNA 9430091E24 gene	lncRNA gene
+9530026F06Rik	current symbol	MGI:1924591	9530026F06Rik	RIKEN cDNA 9530026F06 gene	lncRNA gene
+9530026P05Rik	current symbol	MGI:1924659	9530026P05Rik	RIKEN cDNA 9530026P05 gene	lncRNA gene
+9530027J09Rik	current symbol	MGI:4820557	9530027J09Rik	RIKEN cDNA 9530027J09 gene	lncRNA gene
+9530036O11Rik	current symbol	MGI:2444607	9530036O11Rik	RIKEN cDNA 9530036O11Rik	lncRNA gene
+9530048J24Rik	old symbol	MGI:1925670	Bcas3os2	BCAS3 microtubule associated cell migration factor, opposite strand 2	antisense lncRNA gene
+9530051G07Rik	current symbol	MGI:2442715	9530051G07Rik	RIKEN cDNA 9530051G07 gene	lncRNA gene
+9530052E02Rik	current symbol	MGI:3588277	9530052E02Rik	RIKEN cDNA 9530052E02 gene	lncRNA gene
+9530059O14Rik	current symbol	MGI:2442421	9530059O14Rik	RIKEN cDNA 9530059O14 gene	lncRNA gene
+9530080O11Rik	current symbol	MGI:2441751	9530080O11Rik	RIKEN cDNA 9530080O11 gene	lncRNA gene
+9530082P21Rik	current symbol	MGI:3603340	9530082P21Rik	RIKEN cDNA 9530082P21 gene	lncRNA gene
+9630001P10Rik	current symbol	MGI:2441755	9630001P10Rik	RIKEN cDNA 9630001P10 gene	lncRNA gene
+9630013A20Rik	current symbol	MGI:2442953	9630013A20Rik	RIKEN cDNA 9630013A20 gene	lncRNA gene
+9630028B13Rik	current symbol	MGI:2442281	9630028B13Rik	RIKEN cDNA 9630028B13 gene	lncRNA gene
+9830132P13Rik	current symbol	MGI:5439414	9830132P13Rik	RIKEN cDNA 9830132P13 gene	lncRNA gene
+9830166K06Rik	current symbol	MGI:3028064	9830166K06Rik	RIKEN cDNA 9830166K06 gene	lncRNA gene
+9930014A18Rik	current symbol	MGI:2444091	9930014A18Rik	RIKEN cDNA 9930014A18 gene	lncRNA gene
+A030009H04Rik	old symbol	MGI:1915359	Rnf227	ring finger protein 227	protein coding gene
+A230001M10Rik	current symbol	MGI:2443043	A230001M10Rik	RIKEN cDNA A230001M10 gene	lncRNA gene
+A230009B12Rik	current symbol	MGI:2442666	A230009B12Rik	RIKEN cDNA A230009B12 gene	lncRNA gene
+A230020J21Rik	current symbol	MGI:3704207	A230020J21Rik	RIKEN cDNA A230020J21 gene	lncRNA gene
+A230028O05Rik	current symbol	MGI:2442126	A230028O05Rik	RIKEN cDNA A230028O05 gene	lncRNA gene
+A230056P14Rik	current symbol	MGI:2444856	A230056P14Rik	RIKEN cDNA A230056P14 gene	lncRNA gene
+A230057D06Rik	current symbol	MGI:2442922	A230057D06Rik	RIKEN cDNA A230057D06 gene	lncRNA gene
+A230070E04Rik	current symbol	MGI:3603403	A230070E04Rik	RIKEN cDNA A230070E04 gene	lncRNA gene
+A230072C01Rik	current symbol	MGI:2444644	A230072C01Rik	RIKEN cDNA A230072C01 gene	lncRNA gene
+A230072E10Rik	current symbol	MGI:3603753	A230072E10Rik	RIKEN cDNA A230072E10 gene	lncRNA gene
+A230077H06Rik	current symbol	MGI:2443592	A230077H06Rik	RIKEN cDNA A230077H06 gene	lncRNA gene
+A230108P19Rik	current symbol	MGI:2443444	A230108P19Rik	RIKEN cDNA A230108P19 gene	lncRNA gene
+A330009N23Rik	current symbol	MGI:2443491	A330009N23Rik	RIKEN cDNA A330009N23 gene	lncRNA gene
+A330023F24Rik	current symbol	MGI:2443958	A330023F24Rik	RIKEN cDNA A330023F24 gene	lncRNA gene
+A330032B11Rik	current symbol	MGI:2443002	A330032B11Rik	RIKEN cDNA A330032B11 gene	lncRNA gene
+A330033J07Rik	current symbol	MGI:2444369	A330033J07Rik	RIKEN cDNA A330033J07 gene	lncRNA gene
+A330035P11Rik	current symbol	MGI:2442610	A330035P11Rik	RIKEN cDNA A330035P11 gene	lncRNA gene
+A330040F15Rik	current symbol	MGI:3698434	A330040F15Rik	RIKEN cDNA A330040F15 gene	lncRNA gene
+A330041J22Rik	current symbol	MGI:2442269	A330041J22Rik	RIKEN cDNA A330041J22 gene	lncRNA gene
+A330049N07Rik	current symbol	MGI:3041175	A330049N07Rik	RIKEN cDNA A330049N07 gene	lncRNA gene
+A330050B17Rik	old symbol	MGI:3590669	Mccc1os	methylcrotonoyl-Coenzyme A carboxylase 1 (alpha), opposite strand	antisense lncRNA gene
+A330076C08Rik	current symbol	MGI:2443693	A330076C08Rik	RIKEN cDNA A330076C08 gene	lncRNA gene
+A330076H08Rik	current symbol	MGI:2443193	A330076H08Rik	RIKEN cDNA A330076H08 gene	lncRNA gene
+A330093E20Rik	current symbol	MGI:2147325	A330093E20Rik	RIKEN cDNA A330093E20 gene	lncRNA gene
+A330102I10Rik	current symbol	MGI:1925170	A330102I10Rik	RIKEN cDNA A330102I10 gene	lncRNA gene
+A430071A18Rik	old symbol	MGI:2442055	Rptoros	regulatory associated protein of MTOR, complex 1, opposite strand	antisense lncRNA gene
+A430088P11Rik	current symbol	MGI:3605804	A430088P11Rik	RIKEN cDNA A430088P11 gene	lncRNA gene
+A430090L17Rik	current symbol	MGI:2442754	A430090L17Rik	RIKEN cDNA A430090L17 gene	lncRNA gene
+A430093F15Rik	current symbol	MGI:2685520	A430093F15Rik	RIKEN cDNA A430093F15 gene	lncRNA gene
+A530013C23Rik	current symbol	MGI:3041178	A530013C23Rik	RIKEN cDNA A530013C23 gene	lncRNA gene
+A530046M15Rik	current symbol	MGI:5439406	A530046M15Rik	RIKEN cDNA A530046M15 gene	lncRNA gene
+A530050N04Rik	old symbol	MGI:3045386	Lncbate10	brown adipose tissue enriched long noncoding RNA 10	lncRNA gene
+A530053G22Rik	current symbol	MGI:2443347	A530053G22Rik	RIKEN cDNA A530053G22 gene	lncRNA gene
+A530058N18Rik	current symbol	MGI:2444858	A530058N18Rik	RIKEN cDNA A530058N18 gene	lncRNA gene
+A530065N20Rik	current symbol	MGI:5439407	A530065N20Rik	RIKEN cDNA A530046M15 gene	lncRNA gene
+A530072M11Rik	current symbol	MGI:4440477	A530072M11Rik	RIKEN cDNA gene A530072M11	lncRNA gene
+A530088E08Rik	current symbol	MGI:3603459	A530088E08Rik	RIKEN cDNA A530088E08 gene	lncRNA gene
+A630010A05Rik	current symbol	MGI:3584518	A630010A05Rik	RIKEN cDNA A630010A05 gene	protein coding gene
+A630012P03Rik	current symbol	MGI:2442968	A630012P03Rik	RIKEN cDNA A630012P03 gene	lncRNA gene
+A630019I02Rik	current symbol	MGI:5439422	A630019I02Rik	RIKEN cDNA A630019I02 gene	lncRNA gene
+A630020A06		No associated gene			
+A630023P12Rik	current symbol	MGI:2445162	A630023P12Rik	RIKEN cDNA A630023P12 gene	lncRNA gene
+A630072M18Rik	current symbol	MGI:2444702	A630072M18Rik	RIKEN cDNA A630072M18 gene	lncRNA gene
+A630075F10Rik	current symbol	MGI:3604957	A630075F10Rik	RIKEN cDNA A630075F10 gene	lncRNA gene
+A630077J23Rik	current symbol	MGI:2443089	A630077J23Rik	RIKEN cDNA A630077J23 gene	lncRNA gene
+A630089N07Rik	current symbol	MGI:2444323	A630089N07Rik	RIKEN cDNA A630089N07 gene	protein coding gene
+A730017C20Rik	old symbol	MGI:2442934	Minar2	membrane integral NOTCH2 associated receptor 2	protein coding gene
+A730017L22Rik	current symbol	MGI:3584452	A730017L22Rik	RIKEN cDNA A730017L22 gene	lncRNA gene
+A730018C14Rik	current symbol	MGI:2442339	A730018C14Rik	RIKEN cDNA A730018C14 gene	lncRNA gene
+A730020E08Rik	current symbol	MGI:2444999	A730020E08Rik	RIKEN cDNA A730020E08 gene	lncRNA gene
+A730020M07Rik:copy2		No associated gene			
+A730036I17Rik	current symbol	MGI:3041182	A730036I17Rik	RIKEN cDNA A730036I17 gene	lncRNA gene
+A730046J19Rik	current symbol	MGI:2442684	A730046J19Rik	RIKEN cDNA A730046J19 gene	protein coding gene
+A730056A06Rik	current symbol	MGI:2442718	A730056A06Rik	RIKEN cDNA A730056A06 gene	lncRNA gene
+A730082K24Rik	current symbol	MGI:2142163	A730082K24Rik	RIKEN cDNA A730082K24 gene	lncRNA gene
+A730082K24Rik:copy2		No associated gene			
+A730085A09Rik	old symbol	MGI:3026921	Kank4os	KN motif and ankyrin repeat domains 4, opposite strand	antisense lncRNA gene
+A730085K08Rik	current symbol	MGI:3605633	A730085K08Rik	RIKEN cDNA A730085K08 gene	lncRNA gene
+A730090H04Rik	old symbol	MGI:2444057	Dlx4os	distal-less homeobox 4, opposite strand	antisense lncRNA gene
+A730090N16Rik	current symbol	MGI:2442748	A730090N16Rik	RIKEN cDNA A730090N16 gene	lncRNA gene
+A830009L08Rik	current symbol	MGI:2443762	A830009L08Rik	RIKEN cDNA A830009L08 gene	lncRNA gene
+A830019L24Rik	current symbol	MGI:2443282	A830019L24Rik	RIKEN cDNA A830019L24 gene	lncRNA gene
+A830052D11Rik	current symbol	MGI:3028074	A830052D11Rik	RIKEN cDNA A830052D11 gene	lncRNA gene
+A830082K12Rik	current symbol	MGI:2443527	A830082K12Rik	RIKEN cDNA A830082K12 gene	lncRNA gene
+A830082N09Rik	current symbol	MGI:3041184	A830082N09Rik	RIKEN cDNA A830082N09 gene	lncRNA gene
+A930001A20Rik	current symbol	MGI:1924377	A930001A20Rik	RIKEN cDNA A930001A20 gene	lncRNA gene
+A930001C03Rik	current symbol	MGI:2441838	A930001C03Rik	RIKEN cDNA A930001C03 gene	lncRNA gene
+A930003O13Rik	current symbol	MGI:3612704	A930003O13Rik	RIKEN cDNA A930003O13 gene	lncRNA gene
+A930004D18Rik	current symbol	MGI:1925190	A930004D18Rik	RIKEN cDNA A930004D18 gene	protein coding gene
+A930006I01Rik	current symbol	MGI:2442861	A930006I01Rik	RIKEN cDNA A930006I01 gene	lncRNA gene
+A930006K02Rik	current symbol	MGI:1925683	A930006K02Rik	RIKEN cDNA A930006K02 gene	lncRNA gene
+A930007I19Rik	current symbol	MGI:1925029	A930007I19Rik	RIKEN cDNA A930007I19 gene	lncRNA gene
+A930011G23Rik	current symbol	MGI:2442790	A930011G23Rik	RIKEN cDNA A930011G23 gene	lncRNA gene
+A930011O12Rik	old symbol	MGI:2442197	Mir124a-1hg	Mir124-1 host gene (non-protein coding)	lncRNA gene
+A930012L18Rik	current symbol	MGI:2442887	A930012L18Rik	RIKEN cDNA A930012L18 gene	lncRNA gene
+A930015D03Rik	current symbol	MGI:1925060	A930015D03Rik	RIKEN cDNA A930015D03 gene	lncRNA gene
+A930016O22Rik	current symbol	MGI:3605623	A930016O22Rik	RIKEN cDNA A930016O22 gene	lncRNA gene
+A930017M01Rik	current symbol	MGI:2685151	A930017M01Rik	RIKEN cDNA A930017M01 gene	pseudogene
+A930024E05Rik	current symbol	MGI:1924414	A930024E05Rik	RIKEN cDNA A930024E05 gene	lncRNA gene
+AA387883	current symbol	MGI:3035466	AA387883	expressed sequence AA387883	lncRNA gene
+AA465934	current symbol	MGI:2671018	AA465934	expressed sequence AA465934	lncRNA gene
+AA474331	old symbol	MGI:3035041	Mfsd4b4	major facilitator superfamily domain containing 4B4	protein coding gene
+AA543186	current symbol	MGI:3035233	AA543186	expressed sequence AA543186	lncRNA gene
+AA619741	current symbol	MGI:3035322	AA619741	expressed sequence AA619741	pseudogene
+Abhd1	current symbol	MGI:1931013	Abhd1	abhydrolase domain containing 1	polymorphic pseudogene
+Abhd10	current symbol	MGI:2442422	Abhd10	abhydrolase domain containing 10	protein coding gene
+Adam17	current symbol	MGI:1096335	Adam17	a disintegrin and metallopeptidase domain 17	protein coding gene
+Adam28	zebrafish symbol	MGI:107247	Adam7	a disintegrin and metallopeptidase domain 7	protein coding gene
+Adam28	current symbol	MGI:105988	Adam28	a disintegrin and metallopeptidase domain 28	protein coding gene
+Adam28	zebrafish symbol	MGI:1917650	Adamdec1	ADAM-like, decysin 1	protein coding gene
+Adarb1	current symbol	MGI:891999	Adarb1	adenosine deaminase, RNA-specific, B1	protein coding gene
+Adck5	current symbol	MGI:2679274	Adck5	aarF domain containing kinase 5	protein coding gene
+Adh6-ps1	current symbol	MGI:1918999	Adh6-ps1	alcohol dehydrogenase 6 (class V), pseudogene 1	pseudogene
+Afg3l1	current symbol	MGI:1928277	Afg3l1	AFG3-like AAA ATPase 1	protein coding gene
+Ager	current symbol	MGI:893592	Ager	advanced glycosylation end product-specific receptor	protein coding gene
+Ahsg	current symbol	MGI:107189	Ahsg	alpha-2-HS-glycoprotein	protein coding gene
+AI115009	current symbol	MGI:2139623	AI115009	expressed sequence AI115009	lncRNA gene
+AI197445	current symbol	MGI:2145191	AI197445	expressed sequence AI197445	lncRNA gene
+AI314278	current symbol	MGI:2141898	AI314278	expressed sequence AI314278	lncRNA gene
+AI314831	old symbol	MGI:2138884	Wt1os	WT1 transcription factor, opposite strand	antisense lncRNA gene
+AI414108	old symbol	MGI:2685354	Igsf9b	immunoglobulin superfamily, member 9B	protein coding gene
+AI427809	old symbol	MGI:2140270	Mexis	macrophage expressed LXRa(NR1H3)-dependent amplifier of Abca1 transcription lncRNA	lncRNA gene
+AI504432	current symbol	MGI:2139742	AI504432	expressed sequence AI504432	lncRNA gene
+AI506816	current symbol	MGI:2140929	AI506816	expressed sequence AI506816	lncRNA gene
+AI506816:copy2		No associated gene			
+AI507597	current symbol	MGI:2140323	AI507597	expressed sequence AI507597	lncRNA gene
+AI606473	current symbol	MGI:2139767	AI606473	expressed sequence AI606473	lncRNA gene
+AI646519	current symbol	MGI:2139024	AI646519	expressed sequence AI646519	lncRNA gene
+AI839979	current symbol	MGI:2140975	AI839979	expressed sequence AI839979	lncRNA gene
+AI854517	old symbol	MGI:2142071	Mir9-3hg	Mir9-3 host gene	lncRNA gene
+AI854517:copy2		No associated gene			
+AI854703	current symbol	MGI:2141510	AI854703	expressed sequence AI854703	protein coding gene
+Airn	current symbol	MGI:1353471	Airn	antisense Igf2r RNA	antisense lncRNA gene
+Alms1-ps2	current symbol	MGI:3779593	Alms1-ps2	ALMS1, centrosome and basal body associated, pseudogene 2	pseudogene
+Ank1:copy3		No associated gene			
+Ankrd11	current symbol	MGI:1924337	Ankrd11	ankyrin repeat domain 11	protein coding gene
+Ankzf1	current symbol	MGI:1098746	Ankzf1	ankyrin repeat and zinc finger domain containing 1	protein coding gene
+Ano4	current symbol	MGI:2443344	Ano4	anoctamin 4	protein coding gene
+Ano5	current symbol	MGI:3576659	Ano5	anoctamin 5	protein coding gene
+Apol7d	current symbol	MGI:3723449	Apol7d	apolipoprotein L 7d	lncRNA gene
+Arfrp1	current symbol	MGI:1923938	Arfrp1	ADP-ribosylation factor related protein 1	protein coding gene
+Arid5a	current symbol	MGI:2443039	Arid5a	AT rich interactive domain 5A (MRF1-like)	protein coding gene
+Atp10d	current symbol	MGI:2450125	Atp10d	ATPase, class V, type 10D	polymorphic pseudogene
+AU015836	current symbol	MGI:2147954	AU015836	expressed sequence AU015836	protein coding gene
+AU016765	current symbol	MGI:3034888	AU016765	expressed sequence AU016765	lncRNA gene
+AU019990	current symbol	MGI:3034641	AU019990	expressed sequence AU019990	lncRNA gene
+AU022754	current symbol	MGI:2146143	AU022754	expressed sequence AU022754	lncRNA gene
+AU022793	current symbol	MGI:2146144	AU022793	expressed sequence AU022793	lncRNA gene
+AU023762	current symbol	MGI:2143225	AU023762	expressed sequence AU023762	lncRNA gene
+AU040972	current symbol	MGI:2144426	AU040972	expressed sequence AU040972	lncRNA gene
+AV039307	current symbol	MGI:2139243	AV039307	expressed sequence AV039307	lncRNA gene
+AW011738	current symbol	MGI:2140540	AW011738	expressed sequence AW011738	lncRNA gene
+AW046200	current symbol	MGI:2142745	AW046200	expressed sequence AW046200	lncRNA gene
+AW495222	current symbol	MGI:2145435	AW495222	expressed sequence AW495222	lncRNA gene
+AW549542	current symbol	MGI:2141225	AW549542	expressed sequence AW549542	lncRNA gene
+AY512915	current symbol	MGI:3041245	AY512915	cDNA sequence AY512915	lncRNA gene
+B020018J22Rik	current symbol	MGI:3761288	B020018J22Rik	Riken cDNA B020018J22 gene	lncRNA gene
+B130024G19Rik	current symbol	MGI:3604353	B130024G19Rik	RIKEN cDNA B130024G19 gene	lncRNA gene
+B130034C11Rik	current symbol	MGI:3041186	B130034C11Rik	RIKEN cDNA B130034C11 gene	lncRNA gene
+B230208H11Rik	current symbol	MGI:2443719	B230208H11Rik	RIKEN cDNA B230208H11 gene	lncRNA gene
+B230209E15Rik	current symbol	MGI:2442668	B230209E15Rik	RIKEN cDNA B230209E15 gene	lncRNA gene
+B230209K01Rik	old symbol	MGI:2685664	Celrr	cerebellum expressed regulatory RNA	lncRNA gene
+B230214G05Rik	current symbol	MGI:5439409	B230214G05Rik	RIKEN cDNA B230214G05 gene	lncRNA gene
+B230216N24Rik	current symbol	MGI:1925853	B230216N24Rik	RIKEN cDNA B230216N24 gene	lncRNA gene
+B230217O12Rik	current symbol	MGI:2444948	B230217O12Rik	RIKEN cDNA B230217O12 gene	lncRNA gene
+B230312C02Rik	current symbol	MGI:2444130	B230312C02Rik	RIKEN cDNA B230312C02 gene	lncRNA gene
+B230323A14Rik	current symbol	MGI:2443084	B230323A14Rik	RIKEN cDNA B230323A14 gene	lncRNA gene
+B230378P21Rik	old symbol	MGI:2442851	Plxna4os1	plexin A4, opposite strand 1	antisense lncRNA gene
+B330016D10Rik	current symbol	MGI:2444063	B330016D10Rik	RIKEN cDNA B330016D10 gene	lncRNA gene
+B430010I23Rik	current symbol	MGI:1926099	B430010I23Rik	RIKEN cDNA B430010I23 gene	lncRNA gene
+B430212C06Rik	current symbol	MGI:2442134	B430212C06Rik	RIKEN cDNA B430212C06 gene	lncRNA gene
+B430319G15Rik	current symbol	MGI:3603454	B430319G15Rik	RIKEN cDNA B430319G15 gene	lncRNA gene
+B630019K06Rik	current symbol	MGI:2147918	B630019K06Rik	RIKEN cDNA B630019K06 gene	protein coding gene
+B830017H08Rik	current symbol	MGI:3045365	B830017H08Rik	RIKEN cDNA B830017H08 gene	protein coding gene
+B930018H19Rik	current symbol	MGI:5439417	B930018H19Rik	RIKEN cDNA B930018H19 gene	lncRNA gene
+B930025P03Rik	current symbol	MGI:2443166	B930025P03Rik	RIKEN cDNA B930025P03 gene	lncRNA gene
+B930059L03Rik	current symbol	MGI:2442724	B930059L03Rik	RIKEN cDNA B930059L03 gene	lncRNA gene
+B930092H01Rik	current symbol	MGI:4437738	B930092H01Rik	RIKEN cDNA B930092H01 gene	lncRNA gene
+BB014433	current symbol	MGI:2142823	BB014433	expressed sequence BB014433	protein coding gene
+BB019430	current symbol	MGI:2143891	BB019430	expressed sequence BB019430	lncRNA gene
+BB031773	current symbol	MGI:2140631	BB031773	expressed sequence BB031773	lncRNA gene
+BB123696	current symbol	MGI:2145475	BB123696	expressed sequence BB123696	lncRNA gene
+BB283400	current symbol	MGI:3034268	BB283400	expressed sequence BB283400	lncRNA gene
+BB557941	current symbol	MGI:3034820	BB557941	expressed sequence BB557941	lncRNA gene
+BC005764:copy2		No associated gene			
+BC006965	current symbol	MGI:2384955	BC006965	cDNA sequence BC006965	lncRNA gene
+BC018473	current symbol	MGI:3039625	BC018473	cDNA sequence BC018473	lncRNA gene
+BC020402	current symbol	MGI:3039621	BC020402	cDNA sequence BC020402	lncRNA gene
+BC021767	current symbol	MGI:3615512	BC021767	cDNA sequence BC021767	pseudogene
+BC024582	old symbol	MGI:3041246	Bach2os	BTB and CNC homology 2, opposite strand	antisense lncRNA gene
+BC030870	old symbol	MGI:3039572	Smim31	small integral membrane protein 31	protein coding gene
+BC031361	current symbol	MGI:3041250	BC031361	cDNA sequence BC031361	lncRNA gene
+BC037032	current symbol	MGI:3040924	BC037032	cDNA Sequence BC037032	lncRNA gene
+BC037704	current symbol	MGI:2652856	BC037704	cDNA sequence BC037704	lncRNA gene
+BC039771	current symbol	MGI:3040676	BC039771	cDNA sequence BC039771	lncRNA gene
+BC048602	current symbol	MGI:3758910	BC048602	cDNA sequence BC048602	lncRNA gene
+BC051537	current symbol	MGI:3041255	BC051537	cDNA sequence BC051537	lncRNA gene
+BC055402	current symbol	MGI:3039597	BC055402	cDNA sequence BC055402	lncRNA gene
+BC064078	current symbol	MGI:3040692	BC064078	cDNA sequence BC064078	pseudogene
+BC065397	current symbol	MGI:3584520	BC065397	cDNA sequence BC065397	lncRNA gene
+Bc1	current symbol	MGI:104905	Bc1	brain cytoplasmic RNA 1	lncRNA gene
+Bc1:copy2		No associated gene			
+Bend5	current symbol	MGI:1914871	Bend5	BEN domain containing 5	protein coding gene
+Brd2	current symbol	MGI:99495	Brd2	bromodomain containing 2	protein coding gene
+Btbd19	current symbol	MGI:1925861	Btbd19	BTB (POZ) domain containing 19	protein coding gene
+Btnl5	rat symbol	MGI:1932036	Btnl4	butyrophilin-like 4	protein coding gene
+Btnl5	old symbol	MGI:1932037	Btnl5-ps	butyrophilin-like 5, pseudogene	pseudogene
+C030007H22Rik	current symbol	MGI:1924581	C030007H22Rik	RIKEN cDNA C030007H22 gene	lncRNA gene
+C030013G03Rik	current symbol	MGI:1924664	C030013G03Rik	RIKEN cDNA C030013G03 gene	lncRNA gene
+C030018K13Rik	current symbol	MGI:1924632	C030018K13Rik	RIKEN cDNA C030018K13 gene	lncRNA gene
+C030029H02Rik	current symbol	MGI:1924633	C030029H02Rik	RIKEN cDNA C030029H02 gene	lncRNA gene
+C030034I22Rik	current symbol	MGI:1924783	C030034I22Rik	RIKEN cDNA C030034I22 gene	lncRNA gene
+C030034L19Rik	current symbol	MGI:2444519	C030034L19Rik	RIKEN cDNA C030034L19 gene	lncRNA gene
+C030037D09Rik	current symbol	MGI:1924865	C030037D09Rik	RIKEN cDNA C030037D09 gene	lncRNA gene
+C130021I20Rik	current symbol	MGI:3639863	C130021I20Rik	Riken cDNA C130021I20  gene	lncRNA gene
+C130026L21Rik	current symbol	MGI:3041189	C130026L21Rik	RIKEN cDNA C130026L21 gene	lncRNA gene
+C130036L24Rik	current symbol	MGI:2441877	C130036L24Rik	RIKEN cDNA C130036L24 gene	lncRNA gene
+C130046K22Rik	current symbol	MGI:3026935	C130046K22Rik	RIKEN cDNA C130046K22 gene	lncRNA gene
+C130060C02Rik	current symbol	MGI:3041192	C130060C02Rik	RIKEN cDNA C130060C02 gene	lncRNA gene
+C130071C03Rik	current symbol	MGI:2443574	C130071C03Rik	RIKEN cDNA C130071C03 gene	lncRNA gene
+C130080G10Rik	current symbol	MGI:4844008	C130080G10Rik	RIKEN cDNA C130080G10 gene	lncRNA gene
+C130083M11Rik	current symbol	MGI:3041216	C130083M11Rik	RIKEN cDNA C130083M11 gene	lncRNA gene
+C230004F18Rik	old symbol	MGI:5637821	Cdr1os	cerebellar degeneration related antigen 1, opposite strand	lncRNA gene
+C230024C17Rik	current symbol	MGI:5439413	C230024C17Rik	RIKEN cDNA C230024C17 gene	lncRNA gene
+C230035I16Rik	current symbol	MGI:2444850	C230035I16Rik	RIKEN cDNA C230035I16 gene	lncRNA gene
+C230079O03Rik	current symbol	MGI:5439416	C230079O03Rik	RIKEN cDNA C230079O03 gene	lncRNA gene
+C230091D08Rik	old symbol	MGI:1289201	Snhg14	small nucleolar RNA host gene 14	lncRNA gene
+C330011F03Rik	current symbol	MGI:5439410	C330011F03Rik	RIKEN cDNA C330011F03 gene	lncRNA gene
+C330013F16Rik	old symbol	MGI:1925776	Platr21	pluripotency associated transcript 21	lncRNA gene
+C330013F16Rik:copy2		No associated gene			
+C330022C24Rik	current symbol	MGI:1925770	C330022C24Rik	RIKEN cDNA C330022C24 gene	lncRNA gene
+C330024C12Rik	current symbol	MGI:3026976	C330024C12Rik	RIKEN cDNA C330024C12 gene	lncRNA gene
+C330024D21Rik	current symbol	MGI:2444116	C330024D21Rik	RIKEN cDNA C330024D21 gene	lncRNA gene
+C330046G13Rik	old symbol	MGI:3045387	Platr7	pluripotency associated transcript 7	lncRNA gene
+C430002E04Rik	old symbol	MGI:1925956	Platr4	pluripotency associated transcript 4	lncRNA gene
+C430002N11Rik	current symbol	MGI:2442576	C430002N11Rik	RIKEN cDNA C430002N11 gene	lncRNA gene
+C430049B03Rik	current symbol	MGI:1924903	C430049B03Rik	RIKEN cDNA C430049B03 gene	lncRNA gene
+C4bp-ps1	current symbol	MGI:99594	C4bp-ps1	complement component 4 binding protein, pseudogene 1	pseudogene
+C530005A16Rik	current symbol	MGI:3612454	C530005A16Rik	RIKEN cDNA C530005A16 gene	lncRNA gene
+C530044C16Rik	current symbol	MGI:2443109	C530044C16Rik	RIKEN cDNA C530044C16 gene	lncRNA gene
+C630020P19Rik	old symbol	MGI:3605632	Pcsk2os1	proprotein convertase subtilisin/kexin type 2, opposite strand 1	antisense lncRNA gene
+C630028M04Rik	current symbol	MGI:3045376	C630028M04Rik	RIKEN cDNA C630028M04 gene	lncRNA gene
+C630031E19Rik	current symbol	MGI:5439405	C630031E19Rik	RIKEN cDNA C630031E19 gene	lncRNA gene
+C730002L08Rik	current symbol	MGI:2443493	C730002L08Rik	RIKEN cDNA C730002L08 gene	lncRNA gene
+C730027H18Rik	current symbol	MGI:2442303	C730027H18Rik	RIKEN cDNA C730027H18 gene	lncRNA gene
+C920006O11Rik	current symbol	MGI:2443759	C920006O11Rik	RIKEN cDNA C920006O11 gene	lncRNA gene
+C920021L13Rik	current symbol	MGI:1923991	C920021L13Rik	RIKEN cDNA C920021L13 gene	lncRNA gene
+Cacnb2:copy3		No associated gene			
+Ccdc11	old symbol	MGI:1921703	Cfap53	cilia and flagella associated protein 53	protein coding gene
+Ccl25	current symbol	MGI:1099448	Ccl25	chemokine (C-C motif) ligand 25	protein coding gene
+Cdk3-ps	old symbol	MGI:1916931	Cdk3	cyclin-dependent kinase 3	polymorphic pseudogene
+Ceacam-ps1	current symbol	MGI:3610557	Ceacam-ps1	CEA cell adhesion molecule, pseudogene 1	pseudogene
+Cep57	current symbol	MGI:1915551	Cep57	centrosomal protein 57	protein coding gene
+Ces2d-ps	current symbol	MGI:3704319	Ces2d-ps	carboxylesterase 2D, pseudogene	pseudogene
+Chka	synonym	MGI:1926943	Atp12a	ATPase, H+/K+ transporting, nongastric, alpha polypeptide	protein coding gene
+Chka	current symbol	MGI:107760	Chka	choline kinase alpha	protein coding gene
+Cldn25	current symbol	MGI:3642767	Cldn25	claudin 25	protein coding gene
+Cldn25	old symbol	MGI:2447860	Cldnd1	claudin domain containing 1	protein coding gene
+Cnot2	current symbol	MGI:1919318	Cnot2	CCR4-NOT transcription complex, subunit 2	protein coding gene
+Cops5	current symbol	MGI:1349415	Cops5	COP9 signalosome subunit 5	protein coding gene
+Cox18	current symbol	MGI:2448532	Cox18	cytochrome c oxidase assembly protein 18	protein coding gene
+Crebzf	current symbol	MGI:2675296	Crebzf	CREB/ATF bZIP transcription factor	protein coding gene
+Crxos1	old symbol	MGI:2451355	Crxos	cone-rod homeobox, opposite strand	protein coding gene
+Ctc1	current symbol	MGI:1916214	Ctc1	CTS telomere maintenance complex component 1	protein coding gene
+Cts8-ps	current symbol	MGI:2151708	Cts8-ps	cathepsin 8, pseudogene	pseudogene
+Cyp2c53-ps	current symbol	MGI:3646306	Cyp2c53-ps	cytochrome P450, family 2, subfamily c, polypeptide 53, pseudogene	pseudogene
+Cyp2d13	current symbol	MGI:88605	Cyp2d13	cytochrome P450, family 2, subfamily d, polypeptide 13	polymorphic pseudogene
+Cyp2d13	rat synonym	MGI:1919004	Cyp2d40	cytochrome P450, family 2, subfamily d, polypeptide 40	protein coding gene
+Cyp4f41-ps	current symbol	MGI:1925125	Cyp4f41-ps	cytochrome P450, family 4, subfamily f, polypeptide 41 pseudogene	pseudogene
+D030018L15Rik	current symbol	MGI:3028082	D030018L15Rik	RIKEN cDNA D030018L15 gene	lncRNA gene
+D030024E09Rik	current symbol	MGI:3041198	D030024E09Rik	RIKEN cDNA D030024E09 gene	lncRNA gene
+D030025E07Rik	current symbol	MGI:3028083	D030025E07Rik	RIKEN cDNA D030025E07 gene	lncRNA gene
+D030025P21Rik	current symbol	MGI:3698049	D030025P21Rik	RIKEN cDNA D030025P21 gene	lncRNA gene
+D030028A08Rik	current symbol	MGI:2441931	D030028A08Rik	RIKEN cDNA D030028A08 gene	lncRNA gene
+D030045P18Rik	current symbol	MGI:2443891	D030045P18Rik	RIKEN cDNA D030045P18 gene	lncRNA gene
+D030047H15Rik	current symbol	MGI:3698136	D030047H15Rik	RIKEN cDNA D030047H15 gene	lncRNA gene
+D130009I18Rik	current symbol	MGI:2443663	D130009I18Rik	RIKEN cDNA D130009I18 gene	lncRNA gene
+D130017N08Rik	current symbol	MGI:2443273	D130017N08Rik	RIKEN cDNA D130017N08 gene	lncRNA gene
+D130020L05Rik	current symbol	MGI:2450270	D130020L05Rik	RIKEN cDNA D130020L05 gene	lncRNA gene
+D16Ertd519e	current symbol	MGI:1261885	D16Ertd519e	DNA segment, Chr 16, ERATO Doi 519, expressed	lncRNA gene
+D17Ertd648e	current symbol	MGI:1277213	D17Ertd648e	DNA segment, Chr 17, ERATO Doi 648, expressed	lncRNA gene
+D230030E09Rik	current symbol	MGI:4438394	D230030E09Rik	Riken cDNA D230030E09 gene	lncRNA gene
+D330022K07Rik	old symbol	MGI:2443013	Sorbs2os	sorbin and SH3 domain containing 2, opposite strand	antisense lncRNA gene
+D330023K18Rik	current symbol	MGI:2445152	D330023K18Rik	RIKEN cDNA D330023K18 gene	lncRNA gene
+D330050G23Rik	current symbol	MGI:2445155	D330050G23Rik	RIKEN cDNA D330050G23 gene	lncRNA gene
+D430036J16Rik	current symbol	MGI:2441977	D430036J16Rik	RIKEN cDNA D430036J16 gene	lncRNA gene
+D530049I02Rik	current symbol	MGI:1925968	D530049I02Rik	RIKEN cDNA D530049I02 gene	lncRNA gene
+D630010B17Rik	current symbol	MGI:2685657	D630010B17Rik	RIKEN cDNA D630010B17 gene	lncRNA gene
+D630013N20Rik	current symbol	MGI:2442462	D630013N20Rik	RIKEN cDNA D630013N20 gene	lncRNA gene
+D630024D03Rik	current symbol	MGI:3041224	D630024D03Rik	RIKEN cDNA D630024D03 gene	lncRNA gene
+D630024D03Rik:copy2		No associated gene			
+D630029K05Rik	current symbol	MGI:2143561	D630029K05Rik	RIKEN cDNA D630029K05 gene	lncRNA gene
+D6Ertd474e	current symbol	MGI:1196315	D6Ertd474e	DNA segment, Chr 6, ERATO Doi 474, expressed	lncRNA gene
+D730001G18Rik	old symbol	MGI:1925975	Ly6g6g	lymphocyte antigen 6 complex, locus G6G	protein coding gene
+D730005E14Rik	current symbol	MGI:1926118	D730005E14Rik	RIKEN cDNA D730005E14 gene	lncRNA gene
+D730045A05Rik	current symbol	MGI:1925105	D730045A05Rik	RIKEN cDNA D730045A05 gene	lncRNA gene
+D730050B12Rik	current symbol	MGI:1925696	D730050B12Rik	RIKEN cDNA D730050B12 gene	lncRNA gene
+D830005E20Rik	current symbol	MGI:3045284	D830005E20Rik	RIKEN cDNA D830005E20 gene	lncRNA gene
+D830013O20Rik	current symbol	MGI:2685737	D830013O20Rik	RIKEN cDNA D830013O20 gene	lncRNA gene
+D830015G02Rik	old symbol	MGI:3642848	Mhrt	myosin heavy chain associated RNA transcript	lncRNA gene
+D830026I12Rik	current symbol	MGI:2442531	D830026I12Rik	RIKEN cDNA D830026I12 gene	lncRNA gene
+D830032E09Rik	current symbol	MGI:2442347	D830032E09Rik	RIKEN cDNA D830032E09 gene	lncRNA gene
+D830046C22Rik	current symbol	MGI:2443565	D830046C22Rik	RIKEN cDNA D830046C22 gene	lncRNA gene
+D930007P13Rik	current symbol	MGI:3715731	D930007P13Rik	Riken cDNA D930007P13 gene	lncRNA gene
+D930015M05Rik	current symbol	MGI:3612068	D930015M05Rik	RIKEN cDNA D930015M05 gene	lncRNA gene
+D930016D06Rik	old symbol	MGI:3040669	Thoc2l	THO complex subunit 2-like	protein coding gene
+D930032P07Rik	current symbol	MGI:2443529	D930032P07Rik	RIKEN cDNA D930032P07 gene	lncRNA gene
+D930048N14Rik	current symbol	MGI:2144709	D930048N14Rik	RIKEN cDNA D930048N14 gene	protein coding gene
+Dancr	current symbol	MGI:1917286	Dancr	differentiation antagonizing non-protein coding RNA	lncRNA gene
+Dcaf11	current symbol	MGI:90168	Dcaf11	DDB1 and CUL4 associated factor 11	protein coding gene
+Defb44-ps	current symbol	MGI:3646526	Defb44-ps	defensin beta 44, pseudogene	pseudogene
+Dennd2d	current symbol	MGI:2181193	Dennd2d	DENN domain containing 2D	protein coding gene
+Dgkh	current symbol	MGI:2444188	Dgkh	diacylglycerol kinase, eta	protein coding gene
+Dio3os	current symbol	MGI:2664395	Dio3os	deiodinase, iodothyronine type III, opposite strand	bidirectional promoter lncRNA gene
+Dleu2	current symbol	MGI:1934030	Dleu2	deleted in lymphocytic leukemia, 2	lncRNA gene
+Dlk1	current symbol	MGI:94900	Dlk1	delta like non-canonical Notch ligand 1	protein coding gene
+Dlx1as	current symbol	MGI:1195983	Dlx1as	distal-less homeobox 1, antisense	antisense lncRNA gene
+Dlx6as1	old symbol	MGI:2443217	Dlx6os1	distal-less homeobox 6, opposite strand 1	antisense lncRNA gene
+Dlx6as2	old symbol	MGI:1195963	Dlx6os2	distal-less homeobox 6, opposite strand 2	antisense lncRNA gene
+Dmr	old symbol	MGI:4887388	Dmrt1i	Dmrt1 interacting ncRNA	lncRNA gene
+Dmr	human synonym	MGI:1916891	Wdr20	WD repeat domain 20	protein coding gene
+Dmr	human synonym	MGI:1918198	Wdr20rt	WD repeat domain 20, retrogene	protein coding gene
+Dnajc24	current symbol	MGI:1919522	Dnajc24	DnaJ heat shock protein family (Hsp40) member C24	protein coding gene
+Dnajc5	current symbol	MGI:892995	Dnajc5	DnaJ heat shock protein family (Hsp40) member C5	protein coding gene
+Dnm1l	current symbol	MGI:1921256	Dnm1l	dynamin 1-like	protein coding gene
+Dnm3os	current symbol	MGI:3052332	Dnm3os	dynamin 3, opposite strand	antisense lncRNA gene
+E030003E18Rik	current symbol	MGI:2443348	E030003E18Rik	RIKEN cDNA E030003E18 gene	lncRNA gene
+E030011O05Rik	current symbol	MGI:2442867	E030011O05Rik	RIKEN cDNA E030011O05 gene	lncRNA gene
+E030013I19Rik	current symbol	MGI:2443735	E030013I19Rik	RIKEN cDNA E030013I19 gene	lncRNA gene
+E030019B13Rik	old symbol	MGI:2144804	Sfta3-ps	surfactant associated 3, pseudogene	lncRNA gene
+E030025P04Rik	current symbol	MGI:2685510	E030025P04Rik	RIKEN cDNA E030025P04 gene	protein coding gene
+E030044B06Rik	current symbol	MGI:2686464	E030044B06Rik	RIKEN cDNA E030044B06 gene	lncRNA gene
+E130006D01Rik	current symbol	MGI:2685527	E130006D01Rik	RIKEN cDNA E130006D01 gene	lncRNA gene
+E130008D07Rik	current symbol	MGI:3584523	E130008D07Rik	RIKEN cDNA E130008D07 gene	lncRNA gene
+E130102H24Rik	current symbol	MGI:1925116	E130102H24Rik	RIKEN cDNA E130102H24 gene	lncRNA gene
+E130112N10Rik	current symbol	MGI:1925933	E130112N10Rik	RIKEN cDNA E130112N10 gene	lncRNA gene
+E130114P18Rik	current symbol	MGI:2442873	E130114P18Rik	RIKEN cDNA E130114P18 gene	protein coding gene
+E130201H02Rik	current symbol	MGI:1925802	E130201H02Rik	RIKEN cDNA E130201H02 gene	pseudogene
+E130218I03Rik	current symbol	MGI:3528958	E130218I03Rik	RIKEN cDNA E130218I03 gene	protein coding gene
+E130304I02Rik	current symbol	MGI:1925797	E130304I02Rik	RIKEN cDNA E130304I02 gene	lncRNA gene
+E130307A14Rik	current symbol	MGI:3036287	E130307A14Rik	RIKEN cDNA E130307A14 gene	lncRNA gene
+E130310I04Rik	current symbol	MGI:3046461	E130310I04Rik	RIKEN cDNA E130310I04 gene	lncRNA gene
+E130310I04Rik:copy2		No associated gene			
+E130317F20Rik	current symbol	MGI:3041202	E130317F20Rik	RIKEN cDNA E130317F20 gene	lncRNA gene
+E230016K23Rik	current symbol	MGI:3041204	E230016K23Rik	RIKEN cDNA E230016K23 gene	lncRNA gene
+E230016M11Rik	current symbol	MGI:2443524	E230016M11Rik	RIKEN cDNA E230016M11 gene	lncRNA gene
+E230029C05Rik	current symbol	MGI:2442580	E230029C05Rik	RIKEN cDNA E230029C05 gene	lncRNA gene
+E330012B07Rik	current symbol	MGI:3028086	E330012B07Rik	RIKEN cDNA E330012B07 gene	lncRNA gene
+E330013P04Rik	current symbol	MGI:2147732	E330013P04Rik	RIKEN cDNA E330013P04 gene	lncRNA gene
+E330020D12Rik	current symbol	MGI:3761270	E330020D12Rik	Riken cDNA E330020D12 gene	lncRNA gene
+E330023G01Rik	current symbol	MGI:5439421	E330023G01Rik	RIKEN cDNA E330023G01 gene	lncRNA gene
+E330033B04Rik	current symbol	MGI:2442603	E330033B04Rik	RIKEN cDNA E330033B04 gene	lncRNA gene
+E430016F16Rik	current symbol	MGI:3041232	E430016F16Rik	RIKEN cDNA E430016F16 gene	lncRNA gene
+E530011L22Rik	current symbol	MGI:2443770	E530011L22Rik	RIKEN cDNA E530011L22 gene	lncRNA gene
+Efcab8	current symbol	MGI:3644206	Efcab8	EF-hand calcium binding domain 8	protein coding gene
+Elmo1:copy2		No associated gene			
+Emx2os	current symbol	MGI:3052329	Emx2os	Emx2 opposite strand/antisense transcript (non-protein coding)	antisense lncRNA gene
+Etd	current symbol	MGI:1916751	Etd	embryonic testis differentiation	protein coding gene
+Etfb	current symbol	MGI:106098	Etfb	electron transferring flavoprotein, beta polypeptide	protein coding gene
+Etohd2	current symbol	MGI:1261417	Etohd2	ethanol decreased 2	lncRNA gene
+F420014N23Rik	current symbol	MGI:3642477	F420014N23Rik	RIKEN cDNA F420014N23 gene	lncRNA gene
+F630028O10Rik	current symbol	MGI:3641813	F630028O10Rik	RIKEN cDNA F630028O10 gene	lncRNA gene
+F630042J09Rik	current symbol	MGI:3642133	F630042J09Rik	RIKEN cDNA F630042J09 gene	lncRNA gene
+F630111L10Rik	current symbol	MGI:2444074	F630111L10Rik	RIKEN cDNA F630111L10 gene	lncRNA gene
+F630206G17Rik	current symbol	MGI:3665471	F630206G17Rik	RIKEN cDNA F630206G17 gene	lncRNA gene
+F730035M05Rik	current symbol	MGI:3041236	F730035M05Rik	RIKEN cDNA F730035M05 gene	lncRNA gene
+F730043M19Rik	current symbol	MGI:2443237	F730043M19Rik	RIKEN cDNA F730043M19 gene	lncRNA gene
+F830002L21Rik	old symbol	MGI:3822538	F930017D23Rik	RIKEN cDNA F930017D23 gene	lncRNA gene
+F930015N05Rik	current symbol	MGI:3606161	F930015N05Rik	RIKEN cDNA F930015N05 gene	lncRNA gene
+Fam120aos	current symbol	MGI:1915378	Fam120aos	family with sequence similarity 120A, opposite strand	lncRNA gene
+Fam120b	current symbol	MGI:1914794	Fam120b	family with sequence similarity 120, member B	protein coding gene
+Fam172a	current symbol	MGI:1915925	Fam172a	family with sequence similarity 172, member A	protein coding gene
+Fam187b	current symbol	MGI:1923665	Fam187b	family with sequence similarity 187, member B	protein coding gene
+Fam19a2	old symbol	MGI:2143691	Tafa2	TAFA chemokine like family member 2	protein coding gene
+Fam19a5:copy3		No associated gene			
+Fance	current symbol	MGI:1920025	Fance	Fanconi anemia, complementation group E	protein coding gene
+Fancl	current symbol	MGI:1914280	Fancl	Fanconi anemia, complementation group L	protein coding gene
+Fcho1	current symbol	MGI:1921265	Fcho1	FCH domain only 1	protein coding gene
+Fendrr	current symbol	MGI:1916040	Fendrr	Foxf1 adjacent non-coding developmental regulatory RNA	lncRNA gene
+Fgf18	current symbol	MGI:1277980	Fgf18	fibroblast growth factor 18	protein coding gene
+Fgf18	synonym	MGI:5883733	Fgf23lq4	FGF23 serum level QTL 4	QTL
+Flt3l	current symbol	MGI:95560	Flt3l	FMS-like tyrosine kinase 3 ligand	protein coding gene
+Foxl2os	current symbol	MGI:3614944	Foxl2os	forkhead box L2, opposite strand	lncRNA gene
+Fth1	current symbol	MGI:95588	Fth1	ferritin heavy polypeptide 1	protein coding gene
+Ftx	current symbol	MGI:1926128	Ftx	Ftx transcript, Xist regulator (non-protein coding)	lncRNA gene
+Ftx:copy2		No associated gene			
+Fut4-ps1	current symbol	MGI:104647	Fut4-ps1	fucosyltransferase 4, pseudogene 1	pseudogene
+Fxyd2	current symbol	MGI:1195260	Fxyd2	FXYD domain-containing ion transport regulator 2	protein coding gene
+G630025P09Rik	current symbol	MGI:3696719	G630025P09Rik	RIKEN cDNA G630025P09 gene	lncRNA gene
+G630055G22Rik	current symbol	MGI:3041240	G630055G22Rik	RIKEN cDNA G630055G22 gene	lncRNA gene
+G630071F17Rik	current symbol	MGI:5439412	G630071F17Rik	RIKEN cDNA G630071F17 gene	lncRNA gene
+G630093K05Rik	current symbol	MGI:3588274	G630093K05Rik	RIKEN cDNA G630093K05 gene	lncRNA gene
+G730013B05Rik	current symbol	MGI:3588276	G730013B05Rik	RIKEN cDNA G730013B05 gene	lncRNA gene
+Gabpb1:copy2		No associated gene			
+Gas5	current symbol	MGI:95659	Gas5	growth arrest specific 5	lncRNA gene
+Gdap10	current symbol	MGI:1338008	Gdap10	ganglioside-induced differentiation-associated-protein 10	lncRNA gene
+Gm10033	current symbol	MGI:3642803	Gm10033	predicted gene 10033	protein coding gene
+Gm10046	current symbol	MGI:3797981	Gm10046	predicted gene 10046	pseudogene
+Gm10069	current symbol	MGI:3641875	Gm10069	predicted gene 10069	lncRNA gene
+Gm10125	current symbol	MGI:3642044	Gm10125	predicted gene 10125	lncRNA gene
+Gm10190	current symbol	MGI:3642237	Gm10190	predicted gene 10190	lncRNA gene
+Gm10248	current symbol	MGI:3641931	Gm10248	predicted gene 10248	lncRNA gene
+Gm10280	current symbol	MGI:3642651	Gm10280	predicted gene 10280	lncRNA gene
+Gm10319	current symbol	MGI:3643520	Gm10319	predicted pseudogene 10319	pseudogene
+Gm10336	current symbol	MGI:3642355	Gm10336	predicted gene 10336	lncRNA gene
+Gm10364	current symbol	MGI:3643153	Gm10364	predicted pseudogene 10364	pseudogene
+Gm10373	current symbol	MGI:3642805	Gm10373	predicted gene 10373	lncRNA gene
+Gm10389	current symbol	MGI:3641773	Gm10389	predicted gene 10389	lncRNA gene
+Gm10390	current symbol	MGI:3708725	Gm10390	predicted gene 10390	lncRNA gene
+Gm10415	current symbol	MGI:3641661	Gm10415	predicted gene 10415	lncRNA gene
+Gm10432	current symbol	MGI:3642011	Gm10432	predicted gene 10432	lncRNA gene
+Gm10440	current symbol	MGI:3641803	Gm10440	predicted gene 10440	lncRNA gene
+Gm10445	current symbol	MGI:3642570	Gm10445	predicted gene 10445	lncRNA gene
+Gm10451	current symbol	MGI:3641898	Gm10451	predicted gene 10451	lncRNA gene
+Gm10466	current symbol	MGI:3641991	Gm10466	predicted gene 10466	lncRNA gene
+Gm10474	old symbol	MGI:3642368	Fmr1os	FMRP translational regulator 1, opposite strand	lncRNA gene
+Gm10485	old symbol	MGI:3641689	Dnmt3aos	DNA methyltransferase 3A, opposite strand	antisense lncRNA gene
+Gm10494	current symbol	MGI:3642373	Gm10494	predicted gene 10494	lncRNA gene
+Gm10510	current symbol	MGI:3642174	Gm10510	predicted gene 10510	lncRNA gene
+Gm10516	current symbol	MGI:3641979	Gm10516	predicted gene 10516	lncRNA gene
+Gm10532	current symbol	MGI:3641671	Gm10532	predicted gene 10532	lncRNA gene
+Gm10548	current symbol	MGI:3641893	Gm10548	predicted gene 10548	pseudogene
+Gm10549	current symbol	MGI:3641986	Gm10549	predicted gene 10549	lncRNA gene
+Gm10556	current symbol	MGI:3642809	Gm10556	predicted gene 10556	lncRNA gene
+Gm10578	current symbol	MGI:3642555	Gm10578	predicted gene 10578	lncRNA gene
+Gm10584	current symbol	MGI:3641800	Gm10584	predicted gene 10584	lncRNA gene
+Gm10619	current symbol	MGI:3708756	Gm10619	predicted gene 10619	lncRNA gene
+Gm10635	current symbol	MGI:3641740	Gm10635	predicted gene 10635	lncRNA gene
+Gm10636	current symbol	MGI:3641739	Gm10636	predicted gene 10636	lncRNA gene
+Gm10637	current symbol	MGI:3641741	Gm10637	predicted gene 10637	lncRNA gene
+Gm10638	current symbol	MGI:3704316	Gm10638	predicted gene 10638	lncRNA gene
+Gm10640	current symbol	MGI:3648835	Gm10640	predicted gene 10640	lncRNA gene
+Gm10649	current symbol	MGI:3642042	Gm10649	predicted gene 10649	lncRNA gene
+Gm10653	current symbol	MGI:3642572	Gm10653	predicted gene 10653	pseudogene
+Gm10658	current symbol	MGI:3642856	Gm10658	predicted gene 10658	lncRNA gene
+Gm10664	old symbol	MGI:3642370	Apela	apelin receptor early endogenous ligand	protein coding gene
+Gm10677	current symbol	MGI:3641629	Gm10677	predicted gene 10677	lncRNA gene
+Gm10684	current symbol	MGI:3641851	Gm10684	predicted gene 10684	lncRNA gene
+Gm10714	current symbol	MGI:3641975	Gm10714	predicted gene 10714	lncRNA gene
+Gm10745	current symbol	MGI:3642274	Gm10745	predicted gene 10745	lncRNA gene
+Gm10754	current symbol	MGI:3642925	Gm10754	predicted gene 10754	lncRNA gene
+Gm10782	current symbol	MGI:3642506	Gm10782	predicted gene 10782	lncRNA gene
+Gm10785	current symbol	MGI:3642149	Gm10785	predicted gene 10785	lncRNA gene
+Gm10787	current symbol	MGI:3642150	Gm10787	predicted gene 10787	lncRNA gene
+Gm10789	current symbol	MGI:3641846	Gm10789	predicted gene 10789	lncRNA gene
+Gm10790	current symbol	MGI:3641845	Gm10790	predicted gene 10790	lncRNA gene
+Gm10791	current symbol	MGI:3641949	Gm10791	predicted gene 10791	lncRNA gene
+Gm10804	current symbol	MGI:3641755	Gm10804	predicted gene 10804	lncRNA gene
+Gm10814	current symbol	MGI:3642580	Gm10814	predicted gene 10814	lncRNA gene
+Gm1082	old symbol	MGI:2685928	Arhgap33os	Rho GTPase activating protein 33, opposite strand	antisense lncRNA gene
+Gm10823	current symbol	MGI:3642050	Gm10823	predicted gene 10823	lncRNA gene
+Gm10845	current symbol	MGI:3641716	Gm10845	predicted gene 10845	lncRNA gene
+Gm10857	current symbol	MGI:3641733	Gm10857	predicted gene 10857	lncRNA gene
+Gm10863	current symbol	MGI:3641623	Gm10863	predicted gene 10863	lncRNA gene
+Gm10865	current symbol	MGI:3641626	Gm10865	predicted gene 10865	lncRNA gene
+Gm10872	old symbol	MGI:3642813	Mirt2	myocardial infraction associated transcript 2	lncRNA gene
+Gm11110	current symbol	MGI:3779362	Gm11110	predicted gene 11110	lncRNA gene
+Gm11149	current symbol	MGI:3642683	Gm11149	predicted gene 11149	lncRNA gene
+Gm11186	current symbol	MGI:3649729	Gm11186	predicted gene 11186	lncRNA gene
+Gm11190	current symbol	MGI:3651694	Gm11190	predicted gene 11190	lncRNA gene
+Gm11194	old symbol	MGI:3649278	Slc13a2os	solute carrier family 13 (sodium-dependent dicarboxylate transporter), member 2, opposite strand	antisense lncRNA gene
+Gm11201	current symbol	MGI:3649951	Gm11201	predicted gene 11201	lncRNA gene
+Gm11202	old symbol	MGI:3650027	Rab11fip4os1	RAB11 family interacting protein 4 (class II), opposite strand 1	antisense lncRNA gene
+Gm11213	old symbol	MGI:3701774	Tex53	testis expressed 53	protein coding gene
+Gm11351	current symbol	MGI:3649797	Gm11351	predicted gene 11351	lncRNA gene
+Gm1141	current symbol	MGI:2685987	Gm1141	predicted gene 1141	protein coding gene
+Gm11413	current symbol	MGI:3650701	Gm11413	predicted gene 11413	lncRNA gene
+Gm11468	current symbol	MGI:3649218	Gm11468	predicted gene 11468	lncRNA gene
+Gm11529	current symbol	MGI:3649352	Gm11529	predicted gene 11529	lncRNA gene
+Gm11548	current symbol	MGI:3650340	Gm11548	predicted gene 11548	lncRNA gene
+Gm11549	old symbol	MGI:3650339	Smim43	small integral membrane protein 43	protein coding gene
+Gm11602	old symbol	MGI:3651861	Ino80dos	INO80 complex subunit D, opposite strand	lncRNA gene
+Gm11627	current symbol	MGI:3650659	Gm11627	predicted gene 11627	protein coding gene
+Gm11648	old symbol	MGI:3650159	Arhgap27os3	Rho GTPase activating protein 27, opposite strand 3	antisense lncRNA gene
+Gm11696	current symbol	MGI:3701776	Gm11696	predicted gene 11696	lncRNA gene
+Gm11747	current symbol	MGI:3702093	Gm11747	predicted gene 11747	lncRNA gene
+Gm11762	current symbol	MGI:3651277	Gm11762	predicted gene 11762	lncRNA gene
+Gm11944	current symbol	MGI:3702312	Gm11944	predicted gene 11944	lncRNA gene
+Gm11961	current symbol	MGI:3652303	Gm11961	predicted gene 11961	lncRNA gene
+Gm11974	old symbol	MGI:3650059	Snhg15	small nucleolar RNA host gene 15	lncRNA gene
+Gm11978	current symbol	MGI:3650695	Gm11978	predicted gene 11978	pseudogene
+Gm11985	old symbol	MGI:3650614	Ccdc201	coiled coil domain 201	protein coding gene
+Gm12060	old symbol	MGI:3649370	Selenok-ps1	selenoprotein K, pseudogene 1	pseudogene
+Gm12130	current symbol	MGI:3651512	Gm12130	predicted gene 12130	lncRNA gene
+Gm12191	current symbol	MGI:3651293	Gm12191	predicted gene 12191	pseudogene
+Gm12216	current symbol	MGI:3650088	Gm12216	predicted gene 12216	protein coding gene
+Gm12298	current symbol	MGI:3649680	Gm12298	predicted gene 12298	lncRNA gene
+Gm12359	current symbol	MGI:3702436	Gm12359	predicted gene 12359	lncRNA gene
+Gm12360	old symbol	MGI:3649365	Pcsk2os2	proprotein convertase subtilisin/kexin type 2, opposite strand 2	antisense lncRNA gene
+Gm12505	current symbol	MGI:3651173	Gm12505	predicted gene 12505	lncRNA gene
+Gm12603	old symbol	MGI:3649757	Wincr1	WNT induced non-coding RNA 1	lncRNA gene
+Gm12709	current symbol	MGI:3651946	Gm12709	predicted gene 12709	lncRNA gene
+Gm12718	current symbol	MGI:3651516	Gm12718	predicted gene 12718	lncRNA gene
+Gm12830	current symbol	MGI:3649998	Gm12830	predicted gene 12830	lncRNA gene
+Gm12992	current symbol	MGI:3702644	Gm12992	predicted gene 12992	lncRNA gene
+Gm12992:copy2		No associated gene			
+Gm13003	current symbol	MGI:3650099	Gm13003	predicted gene 13003	lncRNA gene
+Gm13031	current symbol	MGI:3702680	Gm13031	predicted gene 13031	lncRNA gene
+Gm13032	current symbol	MGI:3702685	Gm13032	predicted gene 13032	lncRNA gene
+Gm13315	current symbol	MGI:3651096	Gm13315	predicted gene 13315	pseudogene
+Gm13375	current symbol	MGI:3649913	Gm13375	predicted gene 13375	lncRNA gene
+Gm13399	old symbol	MGI:3652314	Dbhos	dopamine beta hydroxylase, opposite strand	antisense lncRNA gene
+Gm13446	current symbol	MGI:3649869	Gm13446	predicted gene 13446	lncRNA gene
+Gm13483	current symbol	MGI:3651423	Gm13483	predicted gene 13483	lncRNA gene
+Gm13490	current symbol	MGI:3650821	Gm13490	predicted gene 13490	lncRNA gene
+Gm13497	current symbol	MGI:3650384	Gm13497	predicted gene 13497	lncRNA gene
+Gm13544	current symbol	MGI:3649668	Gm13544	predicted gene 13544	lncRNA gene
+Gm13546	current symbol	MGI:3649666	Gm13546	predicted gene 13546	lncRNA gene
+Gm13582	current symbol	MGI:3642495	Gm13582	predicted gene 13582	lncRNA gene
+Gm13629	current symbol	MGI:3650683	Gm13629	predicted gene 13629	lncRNA gene
+Gm13704	old symbol	MGI:3705094	Chn1os3	chimerin 1, opposite strand 3	antisense lncRNA gene
+Gm13710	current symbol	MGI:3650894	Gm13710	predicted gene 13710	lncRNA gene
+Gm13752	current symbol	MGI:3650596	Gm13752	predicted gene 13752	lncRNA gene
+Gm13807	current symbol	MGI:3650023	Gm13807	predicted gene 13807	lncRNA gene
+Gm13845	old symbol	MGI:3651306	Mkln1os	muskelin 1, intracellular mediator containing kelch motifs, opposite strand	lncRNA gene
+Gm13939	old symbol	MGI:3652122	Platr8	pluripotency associated transcript 8	lncRNA gene
+Gm13944	current symbol	MGI:3650359	Gm13944	predicted gene 13944	lncRNA gene
+Gm14005	old symbol	MGI:3652191	Morrbid	myeloid RNA regulator of BCL2L11 induced cell death	lncRNA gene
+Gm14005:copy2		No associated gene			
+Gm14005:copy3		No associated gene			
+Gm14015	current symbol	MGI:3649269	Gm14015	predicted gene 14015	lncRNA gene
+Gm14023	current symbol	MGI:3650639	Gm14023	predicted gene 14023	lncRNA gene
+Gm14047	old symbol	MGI:3650458	Il1bos	interleukin 1 beta, opposite strand	antisense lncRNA gene
+Gm14057	current symbol	MGI:3705433	Gm14057	predicted gene 14057	pseudogene
+Gm14164	current symbol	MGI:3650730	Gm14164	predicted gene 14164	lncRNA gene
+Gm14169	current symbol	MGI:3651156	Gm14169	predicted gene 14169	lncRNA gene
+Gm14204	current symbol	MGI:3651576	Gm14204	predicted gene 14204	lncRNA gene
+Gm14207	current symbol	MGI:3649550	Gm14207	predicted gene 14207	lncRNA gene
+Gm14318	old symbol	MGI:3650386	Gata5os	GATA binding protein 5, opposite strand	antisense lncRNA gene
+Gm14327	current symbol	MGI:3652188	Gm14327	predicted gene 14327	protein coding gene
+Gm14403	current symbol	MGI:3649813	Gm14403	predicted gene 14403	protein coding gene
+Gm14405	current symbol	MGI:3649815	Gm14405	predicted gene 14405	pseudogene
+Gm14405:copy2		No associated gene			
+Gm14492	old symbol	MGI:3642289	Prr33	proline rich 33	protein coding gene
+Gm14634	current symbol	MGI:3705147	Gm14634	predicted gene 14634	lncRNA gene
+Gm14635	current symbol	MGI:3705138	Gm14635	predicted gene 14635	lncRNA gene
+Gm14718	current symbol	MGI:3705113	Gm14718	predicted gene 14718	lncRNA gene
+Gm14812	current symbol	MGI:3642165	Gm14812	predicted gene 14812	lncRNA gene
+Gm14872	old symbol	MGI:3705171	Tomm6os	translocase of outer mitochondrial membrane 6, opposite strand	antisense lncRNA gene
+Gm15217	current symbol	MGI:3705233	Gm15217	predicted gene 15217	protein coding gene
+Gm15348	current symbol	MGI:3642533	Gm15348	predicted gene 15348	lncRNA gene
+Gm15401	current symbol	MGI:3642201	Gm15401	predicted gene 15401	lncRNA gene
+Gm15413	current symbol	MGI:3642665	Gm15413	predicted gene 15413	lncRNA gene
+Gm15417	current symbol	MGI:3642531	Gm15417	predicted gene 15417	lncRNA gene
+Gm15441	current symbol	MGI:3641753	Gm15441	predicted gene 15441	lncRNA gene
+Gm15545	current symbol	MGI:3782994	Gm15545	predicted gene 15545	lncRNA gene
+Gm15612	current symbol	MGI:3641714	Gm15612	predicted gene 15612	lncRNA gene
+Gm15663	current symbol	MGI:3783105	Gm15663	predicted gene 15663	lncRNA gene
+Gm15708	current symbol	MGI:3783149	Gm15708	predicted gene 15708	lncRNA gene
+Gm15713	current symbol	MGI:3783155	Gm15713	predicted gene 15713	lncRNA gene
+Gm15787	current symbol	MGI:3783229	Gm15787	predicted gene 15787	lncRNA gene
+Gm15880	current symbol	MGI:3802014	Gm15880	predicted gene 15880	lncRNA gene
+Gm15915	current symbol	MGI:3801763	Gm15915	predicted gene 15915	lncRNA gene
+Gm15941	current symbol	MGI:3802081	Gm15941	predicted gene 15941	lncRNA gene
+Gm15987	current symbol	MGI:3801849	Gm15987	predicted gene 15987	lncRNA gene
+Gm15997	current symbol	MGI:3805557	Gm15997	predicted gene 15997	lncRNA gene
+Gm16023	current symbol	MGI:3802146	Gm16023	predicted gene 16023	lncRNA gene
+Gm16039	old symbol	MGI:3840148	Umad1	UMAP1-MVP12 associated (UMA) domain containing 1	protein coding gene
+Gm16062	current symbol	MGI:3802162	Gm16062	predicted gene 16062	lncRNA gene
+Gm16063	current symbol	MGI:3801955	Gm16063	predicted gene 16063	lncRNA gene
+Gm16065	old symbol	MGI:3801954	Tbx3os2	T-box 3, opposite strand 2	lncRNA gene
+Gm16157	current symbol	MGI:3801721	Gm16157	predicted gene 16157	lncRNA gene
+Gm16197	old symbol	MGI:3801771	Trp53cor1	tumor protein p53 pathway corepressor 1	lncRNA gene
+Gm16287	current symbol	MGI:3650322	Gm16287	predicted gene 16287	lncRNA gene
+Gm16291	current symbol	MGI:3826548	Gm16291	predicted gene 16291	lncRNA gene
+Gm16294	current symbol	MGI:3645121	Gm16294	predicted gene 16294	lncRNA gene
+Gm1631	old symbol	MGI:2686477	Platr26	pluripotency associated transcript 26	lncRNA gene
+Gm16325	current symbol	MGI:3826549	Gm16325	predicted gene 16325	lncRNA gene
+Gm16386	current symbol	MGI:3646848	Gm16386	predicted gene 16386	pseudogene
+Gm16497	current symbol	MGI:3642481	Gm16497	predicted gene 16497	lncRNA gene
+Gm16516	old symbol	MGI:1344334	Map2k3os	mitogen-activated protein kinase kinase 3, opposite strand	antisense lncRNA gene
+Gm16523	current symbol	MGI:4360990	Gm16523	predicted gene, 16523	pseudogene
+Gm16548	current symbol	MGI:4414968	Gm16548	predicted gene 16548	lncRNA gene
+Gm16551	current symbol	MGI:4414971	Gm16551	predicted gene 16551	lncRNA gene
+Gm16576	current symbol	MGI:4414996	Gm16576	predicted gene 16576	lncRNA gene
+Gm16596	current symbol	MGI:4439520	Gm16596	predicted gene, 16596	lncRNA gene
+Gm16675	current symbol	MGI:4439599	Gm16675	predicted gene, 16675	lncRNA gene
+Gm16701	current symbol	MGI:4439625	Gm16701	predicted gene, 16701	lncRNA gene
+Gm16702	current symbol	MGI:4439626	Gm16702	predicted gene, 16702	lncRNA gene
+Gm16793	current symbol	MGI:4439717	Gm16793	predicted gene, 16793	lncRNA gene
+Gm16796	current symbol	MGI:4439720	Gm16796	predicted gene, 16796	lncRNA gene
+Gm16833	current symbol	MGI:4439757	Gm16833	predicted gene, 16833	lncRNA gene
+Gm16845	current symbol	MGI:4439769	Gm16845	predicted gene, 16845	lncRNA gene
+Gm16863	current symbol	MGI:4439787	Gm16863	predicted gene, 16863	lncRNA gene
+Gm16880	old symbol	MGI:4439804	Platr22	pluripotency associated transcript 22	lncRNA gene
+Gm16894	current symbol	MGI:4439818	Gm16894	predicted gene, 16894	lncRNA gene
+Gm16897	current symbol	MGI:4439821	Gm16897	predicted gene, 16897	lncRNA gene
+Gm16907	current symbol	MGI:4439831	Gm16907	predicted gene, 16907	lncRNA gene
+Gm16973	current symbol	MGI:4439897	Gm16973	predicted gene, 16973	lncRNA gene
+Gm16998	current symbol	MGI:4439922	Gm16998	predicted gene, 16998	lncRNA gene
+Gm17066	current symbol	MGI:4937893	Gm17066	predicted gene 17066	lncRNA gene
+Gm1715	current symbol	MGI:2686561	Gm1715	predicted gene 1715	lncRNA gene
+Gm1720	current symbol	MGI:2686566	Gm1720	predicted gene 1720	lncRNA gene
+Gm17745	current symbol	MGI:5009823	Gm17745	predicted gene, 17745	lncRNA gene
+Gm17746	current symbol	MGI:5009824	Gm17746	predicted gene, 17746	lncRNA gene
+Gm17751	current symbol	MGI:5009832	Gm17751	predicted gene, 17751	lncRNA gene
+Gm17762	current symbol	MGI:5009925	Gm17762	predicted gene, 17762	lncRNA gene
+Gm17801	current symbol	MGI:5009987	Gm17801	predicted gene, 17801	lncRNA gene
+Gm17821	current symbol	MGI:5010006	Gm17821	predicted gene, 17821	pseudogene
+Gm17830	current symbol	MGI:5010015	Gm17830	predicted gene, 17830	lncRNA gene
+Gm1821	old symbol	MGI:3037679	Ubb-ps	ubiquitin B, pseudogene	pseudogene
+Gm1821:copy2		No associated gene			
+Gm18409	current symbol	MGI:5010594	Gm18409	predicted gene, 18409	pseudogene
+Gm19277	current symbol	MGI:5011462	Gm19277	predicted gene, 19277	lncRNA gene
+Gm19299	current symbol	MGI:5011484	Gm19299	predicted gene, 19299	lncRNA gene
+Gm19303	current symbol	MGI:5011488	Gm19303	predicted gene, 19303	lncRNA gene
+Gm1943	current symbol	MGI:3037801	Gm1943	predicted gene 1943	pseudogene
+Gm19434	current symbol	MGI:5011619	Gm19434	predicted gene, 19434	lncRNA gene
+Gm19461	current symbol	MGI:5011646	Gm19461	predicted gene, 19461	lncRNA gene
+Gm19466	current symbol	MGI:5011651	Gm19466	predicted gene, 19466	lncRNA gene
+Gm19510	current symbol	MGI:5011695	Gm19510	predicted gene, 19510	lncRNA gene
+Gm19522	current symbol	MGI:5011707	Gm19522	predicted gene, 19522	lncRNA gene
+Gm19583	current symbol	MGI:5011768	Gm19583	predicted gene, 19583	lncRNA gene
+Gm19589	current symbol	MGI:5011774	Gm19589	predicted gene, 19589	lncRNA gene
+Gm19619	current symbol	MGI:5011804	Gm19619	predicted gene, 19619	lncRNA gene
+Gm1968	current symbol	MGI:3584525	Gm1968	predicted gene 1968	lncRNA gene
+Gm19689	current symbol	MGI:5011874	Gm19689	predicted gene, 19689	lncRNA gene
+Gm19757	current symbol	MGI:5011942	Gm19757	predicted gene, 19757	lncRNA gene
+Gm1976	current symbol	MGI:3780145	Gm1976	predicted gene 1976	lncRNA gene
+Gm19782	current symbol	MGI:5011967	Gm19782	predicted gene, 19782	lncRNA gene
+Gm19784	current symbol	MGI:5011969	Gm19784	predicted gene, 19784	lncRNA gene
+Gm19897	current symbol	MGI:5012082	Gm19897	predicted gene, 19897	lncRNA gene
+Gm19990	current symbol	MGI:5012175	Gm19990	predicted gene, 19990	lncRNA gene
+Gm20063	current symbol	MGI:5012248	Gm20063	predicted gene, 20063	lncRNA gene
+Gm20098	current symbol	MGI:5012283	Gm20098	predicted gene, 20098	lncRNA gene
+Gm2011	current symbol	MGI:3780180	Gm2011	predicted gene 2011	pseudogene
+Gm20110	current symbol	MGI:5012295	Gm20110	predicted gene, 20110	lncRNA gene
+Gm20125	current symbol	MGI:5012310	Gm20125	predicted gene, 20125	lncRNA gene
+Gm20139	current symbol	MGI:5012324	Gm20139	predicted gene, 20139	lncRNA gene
+Gm20139:copy2		No associated gene			
+Gm20187	current symbol	MGI:5012372	Gm20187	predicted gene, 20187	lncRNA gene
+Gm20257	current symbol	MGI:5012442	Gm20257	predicted gene, 20257	pseudogene
+Gm20268	current symbol	MGI:5012453	Gm20268	predicted gene, 20268	lncRNA gene
+Gm2027	current symbol	MGI:3780196	Gm2027	predicted gene 2027	pseudogene
+Gm20324	current symbol	MGI:5012509	Gm20324	predicted gene, 20324	lncRNA gene
+Gm20337	current symbol	MGI:5012522	Gm20337	predicted gene, 20337	lncRNA gene
+Gm20356	current symbol	MGI:5012541	Gm20356	predicted gene, 20356	lncRNA gene
+Gm20554	current symbol	MGI:5295661	Gm20554	predicted gene, 20554	lncRNA gene
+Gm20556	current symbol	MGI:5295663	Gm20556	predicted gene, 20556	lncRNA gene
+Gm20597	current symbol	MGI:5295703	Gm20597	predicted gene, 20597	lncRNA gene
+Gm2061	current symbol	MGI:3780228	Gm2061	predicted gene 2061	lncRNA gene
+Gm20611	current symbol	MGI:5313058	Gm20611	predicted gene 20611	lncRNA gene
+Gm20735	current symbol	MGI:5434091	Gm20735	predicted gene, 20735	lncRNA gene
+Gm20740	current symbol	MGI:5434096	Gm20740	predicted gene, 20740	lncRNA gene
+Gm20743	current symbol	MGI:5434099	Gm20743	predicted gene, 20743	lncRNA gene
+Gm20744	current symbol	MGI:5434100	Gm20744	predicted gene, 20744	lncRNA gene
+Gm20745	current symbol	MGI:5434101	Gm20745	predicted gene, 20745	lncRNA gene
+Gm20748	old symbol	MGI:5434104	Bvht	braveheart long non-coding RNA	lncRNA gene
+Gm20750	current symbol	MGI:5434106	Gm20750	predicted gene, 20750	lncRNA gene
+Gm20752	current symbol	MGI:5434108	Gm20752	predicted gene, 20752	lncRNA gene
+Gm20753	current symbol	MGI:5434109	Gm20753	predicted gene, 20753	lncRNA gene
+Gm20754	current symbol	MGI:5434110	Gm20754	predicted gene, 20754	lncRNA gene
+Gm20755	current symbol	MGI:5434111	Gm20755	predicted gene, 20755	lncRNA gene
+Gm20756	current symbol	MGI:5434112	Gm20756	predicted gene, 20756	lncRNA gene
+Gm20757	current symbol	MGI:5434113	Gm20757	predicted gene, 20757	lncRNA gene
+Gm20758	current symbol	MGI:5434114	Gm20758	predicted gene, 20758	lncRNA gene
+Gm20759	current symbol	MGI:5434115	Gm20759	predicted gene, 20759	lncRNA gene
+Gm20858	current symbol	MGI:5434214	Gm20858	predicted gene, 20858	pseudogene
+Gm20858:copy2		No associated gene			
+Gm20858:copy3		No associated gene			
+Gm20858:copy4		No associated gene			
+Gm20858:copy5		No associated gene			
+Gm20871	current symbol	MGI:5434227	Gm20871	predicted gene, 20871	pseudogene
+Gm20871:copy2		No associated gene			
+Gm20871:copy3		No associated gene			
+Gm20871:copy4		No associated gene			
+Gm21057	current symbol	MGI:5434414	Gm21057	predicted gene, 21057	lncRNA gene
+Gm2115	old symbol	MGI:3780284	Ctxnd1	cortexin domain containing 1	protein coding gene
+Gm21221	current symbol	MGI:5434576	Gm21221	predicted gene, 21221	lncRNA gene
+Gm21269	current symbol	MGI:5434624	Gm21269	predicted gene, 21269	lncRNA gene
+Gm21284	current symbol	MGI:5434639	Gm21284	predicted gene, 21284	lncRNA gene
+Gm21944	current symbol	MGI:5439395	Gm21944	predicted gene, 21944	pseudogene
+Gm2381	current symbol	MGI:3780549	Gm2381	predicted gene 2381	protein coding gene
+Gm2447	current symbol	MGI:3780614	Gm2447	predicted gene 2447	lncRNA gene
+Gm2516	current symbol	MGI:3780683	Gm2516	predicted gene 2516	lncRNA gene
+Gm2518	current symbol	MGI:3780685	Gm2518	predicted gene 2518	pseudogene
+Gm2694	current symbol	MGI:3780864	Gm2694	predicted gene 2694	lncRNA gene
+Gm2721	current symbol	MGI:3780890	Gm2721	predicted gene 2721	lncRNA gene
+Gm2762	current symbol	MGI:3780931	Gm2762	predicted gene 2762	lncRNA gene
+Gm2848	current symbol	MGI:3781020	Gm2848	predicted gene 2848	lncRNA gene
+Gm3002	current symbol	MGI:3781180	Gm3002	predicted gene 3002	protein coding gene
+Gm3020	current symbol	MGI:3781198	Gm3020	predicted gene 3020	protein coding gene
+Gm3020:copy2		No associated gene			
+Gm3086	current symbol	MGI:3781262	Gm3086	predicted gene 3086	pseudogene
+Gm3143	current symbol	MGI:3781322	Gm3143	predicted gene 3143	lncRNA gene
+Gm3143:copy2		No associated gene			
+Gm3230	current symbol	MGI:3781408	Gm3230	predicted gene 3230	lncRNA gene
+Gm3279	current symbol	MGI:3781457	Gm3279	predicted gene 3279	lncRNA gene
+Gm3414	current symbol	MGI:3781592	Gm3414	predicted gene 3414	protein coding gene
+Gm3716	current symbol	MGI:3781892	Gm3716	predicted gene 3716	lncRNA gene
+Gm3833	old symbol	MGI:3782005	Mnd1-ps	Mnd1 retrotransposed pseudogene	pseudogene
+Gm3893	current symbol	MGI:3782066	Gm3893	predicted gene 3893	protein coding gene
+Gm41	current symbol	MGI:2684887	Gm41	predicted pseudogene 41	pseudogene
+Gm4224	current symbol	MGI:3782400	Gm4224	predicted gene 4224	lncRNA gene
+Gm4251	current symbol	MGI:3782428	Gm4251	predicted gene 4251	lncRNA gene
+Gm4265	current symbol	MGI:3782442	Gm4265	predicted gene 4265	lncRNA gene
+Gm4278	current symbol	MGI:3782455	Gm4278	predicted gene 4278	lncRNA gene
+Gm4285	current symbol	MGI:3782463	Gm4285	predicted gene 4285	lncRNA gene
+Gm4371	current symbol	MGI:3782556	Gm4371	predicted gene 4371	pseudogene
+Gm4489	current symbol	MGI:3782674	Gm4489	predicted gene 4489	lncRNA gene
+Gm4541	current symbol	MGI:3782725	Gm4541	predicted gene 4541	pseudogene
+Gm4541:copy2		No associated gene			
+Gm4541:copy3		No associated gene			
+Gm4541:copy4		No associated gene			
+Gm4541:copy5		No associated gene			
+Gm4710	current symbol	MGI:3782890	Gm4710	predicted gene 4710	lncRNA gene
+Gm4719	current symbol	MGI:3782899	Gm4719	predicted gene 4719	lncRNA gene
+Gm4776	old symbol	MGI:3643324	Stk-ps2	serine/threonine kinase 2	pseudogene
+Gm4827	current symbol	MGI:3646707	Gm4827	predicted gene 4827	lncRNA gene
+Gm4872	current symbol	MGI:3779443	Gm4872	predicted gene 4872	lncRNA gene
+Gm4890	current symbol	MGI:3779445	Gm4890	predicted gene 4890	lncRNA gene
+Gm4926	current symbol	MGI:3646427	Gm4926	predicted gene 4926	lncRNA gene
+Gm4956	current symbol	MGI:3647976	Gm4956	predicted gene 4956	pseudogene
+Gm5	current symbol	MGI:2684851	Gm5	predicted gene 5	lncRNA gene
+Gm5065	current symbol	MGI:3643170	Gm5065	predicted gene 5065	protein coding gene
+Gm5084	current symbol	MGI:3647835	Gm5084	predicted gene 5084	lncRNA gene
+Gm5086	current symbol	MGI:3644417	Gm5086	predicted gene 5086	lncRNA gene
+Gm5088	current symbol	MGI:3644528	Gm5088	predicted gene 5088	pseudogene
+Gm5089	current symbol	MGI:3644731	Gm5089	predicted gene 5089	lncRNA gene
+Gm5089:copy2		No associated gene			
+Gm5091	current symbol	MGI:3779456	Gm5091	predicted gene 5091	lncRNA gene
+Gm5095	current symbol	MGI:3779458	Gm5095	predicted gene 5095	lncRNA gene
+Gm5105	current symbol	MGI:3645344	Gm5105	predicted gene 5105	protein coding gene
+Gm5126	current symbol	MGI:3649150	Gm5126	predicted pseudogene 5126	lncRNA gene
+Gm5129	current symbol	MGI:3648499	Gm5129	predicted gene 5129	lncRNA gene
+Gm5166	current symbol	MGI:3648097	Gm5166	predicted pseudogene 5166	pseudogene
+Gm5176	current symbol	MGI:3644450	Gm5176	predicted gene 5176	pseudogene
+Gm5177	current symbol	MGI:3646657	Gm5177	predicted pseudogene 5177	pseudogene
+Gm53	current symbol	MGI:2684899	Gm53	predicted gene 53	lncRNA gene
+Gm53	synonym	MGI:3836786	Tg(Chat-cre)GM53Gsat	transgene insertion GM53, GENSAT Project at Rockefeller University	transgene
+Gm5441	current symbol	MGI:3779489	Gm5441	predicted gene 5441	lncRNA gene
+Gm5468	current symbol	MGI:3648948	Gm5468	predicted gene 5468	lncRNA gene
+Gm5475	current symbol	MGI:3646320	Gm5475	predicted gene 5475	protein coding gene
+Gm5478	current symbol	MGI:3646318	Gm5478	predicted pseudogene 5478	protein coding gene
+Gm5485	current symbol	MGI:3647875	Gm5485	predicted gene 5485	protein coding gene
+Gm5512	current symbol	MGI:3645436	Gm5512	predicted gene 5512	pseudogene
+Gm5607	old symbol	MGI:3645522	Sox1ot	Sox1 overlapping transcript	sense overlapping lncRNA gene
+Gm5627	current symbol	MGI:3645308	Gm5627	predicted gene 5627	lncRNA gene
+Gm5833	current symbol	MGI:3779530	Gm5833	predicted gene 5833	lncRNA gene
+Gm5860	current symbol	MGI:3646172	Gm5860	predicted gene 5860	lncRNA gene
+Gm6116	current symbol	MGI:3644088	Gm6116	predicted gene 6116	lncRNA gene
+Gm6150	current symbol	MGI:3779560	Gm6150	predicted gene 6150	lncRNA gene
+Gm6194	current symbol	MGI:3704094	Gm6194	predicted gene 6194	pseudogene
+Gm6213	current symbol	MGI:3646754	Gm6213	predicted gene 6213	lncRNA gene
+Gm6225	current symbol	MGI:3643252	Gm6225	predicted gene 6225	lncRNA gene
+Gm6249	current symbol	MGI:3644248	Gm6249	predicted gene 6249	lncRNA gene
+Gm6260	current symbol	MGI:3645891	Gm6260	predicted gene 6260	lncRNA gene
+Gm6277	current symbol	MGI:3779583	Gm6277	predicted gene 6277	lncRNA gene
+Gm6297	current symbol	MGI:3779584	Gm6297	predicted gene 6297	lncRNA gene
+Gm6300	current symbol	MGI:3648364	Gm6300	predicted gene 6300	pseudogene
+Gm6307	old symbol	MGI:3649026	Mir1a-1hg	Mir1a-1 and Mir133a-2 host gene	lncRNA gene
+Gm6313	current symbol	MGI:3644722	Gm6313	predicted gene 6313	lncRNA gene
+Gm6329	current symbol	MGI:3646898	Gm6329	predicted gene 6329	lncRNA gene
+Gm6367:copy2		No associated gene			
+Gm6402	current symbol	MGI:3645740	Gm6402	predicted pseudogene 6402	pseudogene
+Gm6416	current symbol	MGI:3779595	Gm6416	predicted gene 6416	lncRNA gene
+Gm6455	current symbol	MGI:3648736	Gm6455	predicted gene 6455	lncRNA gene
+Gm6498	current symbol	MGI:3647773	Gm6498	predicted gene 6498	pseudogene
+Gm6578	current symbol	MGI:3643037	Gm6578	predicted gene 6578	pseudogene
+Gm6602	current symbol	MGI:3779614	Gm6602	predicted gene 6602	lncRNA gene
+Gm6634	current symbol	MGI:3643829	Gm6634	predicted gene 6634	lncRNA gene
+Gm6639	current symbol	MGI:3779620	Gm6639	predicted gene 6639	lncRNA gene
+Gm6787	current symbol	MGI:3646481	Gm6787	predicted gene 6787	lncRNA gene
+Gm6936	current symbol	MGI:3779642	Gm6936	predicted gene 6936	lncRNA gene
+Gm6938	current symbol	MGI:3648987	Gm6938	predicted gene 6938	lncRNA gene
+Gm6981	current symbol	MGI:3646966	Gm6981	predicted pseudogene 6981	pseudogene
+Gm6994	current symbol	MGI:3647788	Gm6994	predicted gene 6994	lncRNA gene
+Gm7008	current symbol	MGI:3647211	Gm7008	predicted gene 7008	lncRNA gene
+Gm7104	current symbol	MGI:3779672	Gm7104	predicted gene 7104	pseudogene
+Gm7134	current symbol	MGI:3647708	Gm7134	predicted gene 7134	pseudogene
+Gm7271	old symbol	MGI:3647743	Exoc1l	exocyst complex component 1 like	protein coding gene
+Gm7337	current symbol	MGI:3646689	Gm7337	predicted gene 7337	pseudogene
+Gm7457	current symbol	MGI:3648132	Gm7457	predicted gene 7457	lncRNA gene
+Gm7854	current symbol	MGI:3648234	Gm7854	predicted gene 7854	lncRNA gene
+Gm805	current symbol	MGI:2685651	Gm805	predicted gene 805	lncRNA gene
+Gm8179	current symbol	MGI:3646474	Gm8179	predicted gene 8179	lncRNA gene
+Gm8221	current symbol	MGI:3779789	Gm8221	predicted gene 8221	pseudogene
+Gm8579	current symbol	MGI:3647057	Gm8579	predicted gene 8579	lncRNA gene
+Gm8633	current symbol	MGI:3647678	Gm8633	predicted gene 8633	lncRNA gene
+Gm8709	current symbol	MGI:3646360	Gm8709	predicted gene 8709	pseudogene
+Gm872	old symbol	MGI:1922208	Cfap54	cilia and flagella associated protein 54	protein coding gene
+Gm8773	current symbol	MGI:3646213	Gm8773	predicted gene 8773	protein coding gene
+Gm8801	current symbol	MGI:3779813	Gm8801	predicted gene 8801	pseudogene
+Gm9199	current symbol	MGI:3647592	Gm9199	predicted gene 9199	pseudogene
+Gm9696	current symbol	MGI:3819177	Gm9696	predicted gene 9696	pseudogene
+Gm9767	current symbol	MGI:3704352	Gm9767	predicted gene 9767	lncRNA gene
+Gm9833	old symbol	MGI:3641855	Myef2l	myelin expression factor 2 like	protein coding gene
+Gm9866	old symbol	MGI:3643118	Silc1	sciatic injury induced lincRNA upregulator of SOX11	lncRNA gene
+Gm9871	current symbol	MGI:3647145	Gm9871	predicted gene 9871	lncRNA gene
+Gm9899	current symbol	MGI:3708711	Gm9899	predicted gene 9899	lncRNA gene
+Gm9920	current symbol	MGI:3642228	Gm9920	predicted gene 9920	lncRNA gene
+Gm9926	current symbol	MGI:3642582	Gm9926	predicted gene 9926	lncRNA gene
+Gm9961	current symbol	MGI:3642444	Gm9961	predicted gene 9961	lncRNA gene
+Gm9962	current symbol	MGI:3642695	Gm9962	predicted gene 9962	lncRNA gene
+Gm9999	old symbol	MGI:3642801	Misfa	mitochondrial sheath formation associated	protein coding gene
+Gnb5:copy2		No associated gene			
+Gpr137b-ps	current symbol	MGI:3710533	Gpr137b-ps	G protein-coupled receptor 137B, pseudogene	pseudogene
+Gpr19	current symbol	MGI:892973	Gpr19	G protein-coupled receptor 19	protein coding gene
+Gsdmcl-ps	current symbol	MGI:1921710	Gsdmcl-ps	gasdermin C-like, pseudogene	pseudogene
+Gt(ROSA)26Sor	current symbol	MGI:104735	Gt(ROSA)26Sor	gene trap ROSA 26, Philippe Soriano	lncRNA gene
+H19	current symbol	MGI:95891	H19	H19, imprinted maternally expressed transcript	lncRNA gene
+H19	synonym	MGI:6715930	Igs40	intergenic site 40	unclassified other genome feature
+H19	synonym	MGI:1355333	Nckap1	NCK-associated protein 1	protein coding gene
+H2-K2	current symbol	MGI:95906	H2-K2	histocompatibility 2, K region locus 2	pseudogene
+H2-Q5	current symbol	MGI:95934	H2-Q5	histocompatibility 2, Q region locus 5	polymorphic pseudogene
+H2-T10	current symbol	MGI:95942	H2-T10	histocompatibility 2, T region locus 10	polymorphic pseudogene
+Has2as	old symbol	MGI:3643465	Has2os	hyaluronan synthase 2, opposite strand	lncRNA gene
+Hdac10	current symbol	MGI:2158340	Hdac10	histone deacetylase 10	protein coding gene
+Hgd	current symbol	MGI:96078	Hgd	homogentisate 1, 2-dioxygenase	protein coding gene
+Hhatl	current symbol	MGI:1922020	Hhatl	hedgehog acyltransferase-like	protein coding gene
+Hmga2-ps1	current symbol	MGI:106023	Hmga2-ps1	high mobility group AT-hook 2, pseudogene 1	pseudogene
+Hmgb1-rs17	current symbol	MGI:104764	Hmgb1-rs17	high mobility group box 1, related sequence 17	pseudogene
+Hotair	current symbol	MGI:3826586	Hotair	HOX transcript antisense RNA (non-protein coding)	lncRNA gene
+Hoxa11as	old symbol	MGI:107208	Hoxa11os	homeobox A11, opposite strand	lncRNA gene
+Hoxd11	current symbol	MGI:96203	Hoxd11	homeobox D11	protein coding gene
+Hrh3	current symbol	MGI:2139279	Hrh3	histamine receptor H3	protein coding gene
+Hspa14:copy2		No associated gene			
+I730030J21Rik	current symbol	MGI:3588279	I730030J21Rik	RIKEN cDNA I730030J21 gene	lncRNA gene
+Igf2as	old symbol	MGI:1195257	Igf2os	insulin-like growth factor 2, opposite strand	antisense lncRNA gene
+Il15ra	current symbol	MGI:104644	Il15ra	interleukin 15 receptor, alpha chain	protein coding gene
+Il4	current symbol	MGI:96556	Il4	interleukin 4	protein coding gene
+Ipw	current symbol	MGI:892030	Ipw	imprinted gene in the Prader-Willi syndrome region	lncRNA gene
+Irf3	current symbol	MGI:1859179	Irf3	interferon regulatory factor 3	protein coding gene
+Jpx	current symbol	MGI:2180008	Jpx	Jpx transcript, Xist activator (non-protein coding)	lncRNA gene
+Kat5	current symbol	MGI:1932051	Kat5	K(lysine) acetyltransferase 5	protein coding gene
+Kcnq1ot1	current symbol	MGI:1926855	Kcnq1ot1	KCNQ1 overlapping transcript 1	lncRNA gene
+Kctd18	current symbol	MGI:3603813	Kctd18	potassium channel tetramerisation domain containing 18	protein coding gene
+Khdrbs1	current symbol	MGI:893579	Khdrbs1	KH domain containing, RNA binding, signal transduction associated 1	protein coding gene
+Kif4-ps	current symbol	MGI:1922197	Kif4-ps	kinesin family member 4, pseudogene	pseudogene
+Klc2	current symbol	MGI:107953	Klc2	kinesin light chain 2	protein coding gene
+Klc2	human synonym	MGI:1277971	Klc3	kinesin light chain 3	protein coding gene
+Klra13-ps	current symbol	MGI:1321090	Klra13-ps	killer cell lectin-like receptor subfamily A, member 13, pseudogene	pseudogene
+Krt74	current symbol	MGI:3629975	Krt74	keratin 74	pseudogene
+Ldha	current symbol	MGI:96759	Ldha	lactate dehydrogenase A	protein coding gene
+Lmf1	current symbol	MGI:1923733	Lmf1	lipase maturation factor 1	protein coding gene
+LOC100043315		No associated gene			
+LOC100503496		No associated gene			
+LOC100503676		No associated gene			
+LOC101243624		No associated gene			
+LOC101410165		No associated gene			
+Lrrc28	current symbol	MGI:1915689	Lrrc28	leucine rich repeat containing 28	protein coding gene
+Ly9	current symbol	MGI:96885	Ly9	lymphocyte antigen 9	protein coding gene
+Lypd6	current symbol	MGI:2443848	Lypd6	LY6/PLAUR domain containing 6	protein coding gene
+Malat1	current symbol	MGI:1919539	Malat1	metastasis associated lung adenocarcinoma transcript 1 (non-coding RNA)	lncRNA gene
+March2	old symbol	MGI:1925915	Marchf2	membrane associated ring-CH-type finger 2	protein coding gene
+Mcpt-ps1	current symbol	MGI:102769	Mcpt-ps1	mast cell protease, pseudogene 1	pseudogene
+Mdp1	current symbol	MGI:1915131	Mdp1	magnesium-dependent phosphatase 1	protein coding gene
+Mdp1	human synonym	MGI:1196389	Polg	polymerase (DNA directed), gamma	protein coding gene
+Meg3	current symbol	MGI:1202886	Meg3	maternally expressed 3	lncRNA gene
+Meg3:copy2		No associated gene			
+Meis3	current symbol	MGI:108519	Meis3	Meis homeobox 3	protein coding gene
+Mgarp	current symbol	MGI:1914999	Mgarp	mitochondria localized glutamic acid rich protein	protein coding gene
+Miat	current symbol	MGI:2444886	Miat	myocardial infarction associated transcript (non-protein coding)	lncRNA gene
+Minos1	old symbol	MGI:1913628	Micos10	mitochondrial contact site and cristae organizing system subunit 10	protein coding gene
+Mllt10:copy2		No associated gene			
+Mospd4	current symbol	MGI:1919326	Mospd4	motile sperm domain containing 4	pseudogene
+Mphosph9	current symbol	MGI:2443138	Mphosph9	M-phase phosphoprotein 9	protein coding gene
+Mtag2	current symbol	MGI:1860766	Mtag2	metastasis associated gene 2	lncRNA gene
+Mtmr2	current symbol	MGI:1924366	Mtmr2	myotubularin related protein 2	protein coding gene
+Mug-ps1	current symbol	MGI:99838	Mug-ps1	murinoglobulin, pseudogene 1	pseudogene
+Mvd	current symbol	MGI:2179327	Mvd	mevalonate (diphospho) decarboxylase	protein coding gene
+Mx1	current symbol	MGI:97243	Mx1	MX dynamin-like GTPase 1	polymorphic pseudogene
+Mx1	human symbol	MGI:97244	Mx2	MX dynamin-like GTPase 2	polymorphic pseudogene
+Mx2	human symbol	MGI:97243	Mx1	MX dynamin-like GTPase 1	polymorphic pseudogene
+Mx2	current symbol	MGI:97244	Mx2	MX dynamin-like GTPase 2	polymorphic pseudogene
+Myeov2	old symbol	MGI:1914165	Cops9	COP9 signalosome subunit 9	protein coding gene
+Nagpa	current symbol	MGI:1351598	Nagpa	N-acetylglucosamine-1-phosphodiester alpha-N-acetylglucosaminidase	protein coding gene
+Ncrna00086	old symbol	MGI:2443645	Smim10l2a	small integral membrane protein 10 like 2A	protein coding gene
+Nctc1	current symbol	MGI:1306816	Nctc1	non-coding transcript 1	lncRNA gene
+Ndufa7	current symbol	MGI:1913666	Ndufa7	NADH:ubiquinone oxidoreductase subunit A7	protein coding gene
+Ndufs6	current symbol	MGI:107932	Ndufs6	NADH:ubiquinone oxidoreductase core subunit S6	protein coding gene
+Ndufs6	human symbol	MGI:3648526	Ndufs6b	NADH:ubiquinone oxidoreductase subunit S6B	pseudogene
+Neat1	current symbol	MGI:1914211	Neat1	nuclear paraspeckle assembly transcript 1 (non-protein coding)	lncRNA gene
+Nespas	old symbol	MGI:1861674	Gnasas1	GNAS antisense RNA 1	antisense lncRNA gene
+Ngrn	current symbol	MGI:1933212	Ngrn	neugrin, neurite outgrowth associated	protein coding gene
+Nkx2-2as	old symbol	MGI:3652259	Nkx2-2os	NK2 homeobox 2, opposite strand	antisense lncRNA gene
+Nkx6-2	current symbol	MGI:1352738	Nkx6-2	NK6 homeobox 2	protein coding gene
+Nlrp1c-ps	current symbol	MGI:3582962	Nlrp1c-ps	NLR family, pyrin domain containing 1C, pseudogene	pseudogene
+Nlrp5-ps	current symbol	MGI:5010941	Nlrp5-ps	NLR family, pyrin domain containing 5, pseudogene	pseudogene
+Nlrp5-ps:copy2		No associated gene			
+Nol8	current symbol	MGI:1918180	Nol8	nucleolar protein 8	protein coding gene
+Nphs1as	old symbol	MGI:2675468	Nphs1os	nephrosis 1 homolog, nephrin, opposite strand	antisense lncRNA gene
+Nron	current symbol	MGI:2444126	Nron	non-protein coding RNA, repressor of NFAT	lncRNA gene
+Nt5c2	current symbol	MGI:2178563	Nt5c2	5'-nucleotidase, cytosolic II	protein coding gene
+Oas1b	current symbol	MGI:97430	Oas1b	2'-5' oligoadenylate synthetase 1B	polymorphic pseudogene
+Olfr1300-ps1	old symbol	MGI:3031134	Or4k50-ps1	olfactory receptor family 4 subfamily K member 50, pseudogene 1	polymorphic pseudogene
+Olfr75-ps1	old symbol	MGI:2153204	Or1e36-ps1	olfactory receptor family 1 subfamily E member 36, pseudogene 1	pseudogene
+Olfr947-ps1	old symbol	MGI:3030781	Or8g29-ps1	olfactory receptor family 8 subfamily G member 29, pseudogene 1	polymorphic pseudogene
+Oprl1	current symbol	MGI:97440	Oprl1	opioid receptor-like 1	protein coding gene
+Orc4	current symbol	MGI:1347043	Orc4	origin recognition complex, subunit 4	protein coding gene
+Orc6	current symbol	MGI:1929285	Orc6	origin recognition complex, subunit 6	protein coding gene
+Osbpl1a	current symbol	MGI:1927551	Osbpl1a	oxysterol binding protein-like 1A	protein coding gene
+Otub2	current symbol	MGI:1915399	Otub2	OTU domain, ubiquitin aldehyde binding 2	protein coding gene
+Otx2os1	current symbol	MGI:3583292	Otx2os1	orthodenticle homeobox 2 opposite strand 1	lncRNA gene
+Pafah1b1	current symbol	MGI:109520	Pafah1b1	platelet-activating factor acetylhydrolase, isoform 1b, subunit 1	protein coding gene
+Parp6	current symbol	MGI:1914537	Parp6	poly (ADP-ribose) polymerase family, member 6	protein coding gene
+Patz1	current symbol	MGI:1891832	Patz1	POZ (BTB) and AT hook containing zinc finger 1	protein coding gene
+Pax6os1	current symbol	MGI:3028033	Pax6os1	paired box 6 opposite strand 1	antisense lncRNA gene
+Pcdh11x	current symbol	MGI:2442849	Pcdh11x	protocadherin 11 X-linked	protein coding gene
+Pdxk-ps	current symbol	MGI:1933201	Pdxk-ps	pyridoxal (pyridoxine, vitamin B6) kinase, pseudogene	pseudogene
+Pex11b	current symbol	MGI:1338882	Pex11b	peroxisomal biogenesis factor 11 beta	protein coding gene
+Pex16	current symbol	MGI:1338829	Pex16	peroxisomal biogenesis factor 16	protein coding gene
+Pfkfb2	current symbol	MGI:107815	Pfkfb2	6-phosphofructo-2-kinase/fructose-2,6-biphosphatase 2	protein coding gene
+Pglyrp2	current symbol	MGI:1928099	Pglyrp2	peptidoglycan recognition protein 2	protein coding gene
+Phc1	current symbol	MGI:103248	Phc1	polyhomeotic 1	protein coding gene
+Pisd-ps1	current symbol	MGI:3842428	Pisd-ps1	phosphatidylserine decarboxylase, pseudogene 1	pseudogene
+Pisd-ps2	current symbol	MGI:3612472	Pisd-ps2	phosphatidylserine decarboxylase, pseudogene 2	pseudogene
+Pitpnm1	current symbol	MGI:1197524	Pitpnm1	phosphatidylinositol transfer protein, membrane-associated 1	protein coding gene
+Pknox1	current symbol	MGI:1201409	Pknox1	Pbx/knotted 1 homeobox	protein coding gene
+Pldi	current symbol	MGI:1920866	Pldi	polymorphic derived intron containing	lncRNA gene
+Plk4	current symbol	MGI:101783	Plk4	polo like kinase 4	protein coding gene
+Polg2	current symbol	MGI:1354947	Polg2	polymerase (DNA directed), gamma 2, accessory subunit	protein coding gene
+Ppargc1a	current symbol	MGI:1342774	Ppargc1a	peroxisome proliferative activated receptor, gamma, coactivator 1 alpha	protein coding gene
+Ppifos	current symbol	MGI:1915423	Ppifos	peptidylprolyl isomerase F, opposite strand	antisense lncRNA gene
+Ppp2r2b	current symbol	MGI:1920180	Ppp2r2b	protein phosphatase 2, regulatory subunit B, beta	protein coding gene
+Ppp4r1l-ps	current symbol	MGI:1924560	Ppp4r1l-ps	protein phosphatase 4, regulatory subunit 1-like, pseudogene	pseudogene
+Prmt1	current symbol	MGI:107846	Prmt1	protein arginine N-methyltransferase 1	protein coding gene
+Prmt6	current symbol	MGI:2139971	Prmt6	protein arginine N-methyltransferase 6	protein coding gene
+Proc	current symbol	MGI:97771	Proc	protein C	protein coding gene
+Prr18	current symbol	MGI:2443403	Prr18	proline rich 18	protein coding gene
+Prr3	human synonym	MGI:1930171	Nectin3	nectin cell adhesion molecule 3	protein coding gene
+Prr3	current symbol	MGI:1922460	Prr3	proline-rich polypeptide 3	protein coding gene
+Psg-ps1	current symbol	MGI:1347253	Psg-ps1	pregnancy specific beta-1-glycoprotein, pseudogene 1	pseudogene
+Psmd2	current symbol	MGI:1096584	Psmd2	proteasome (prosome, macropain) 26S subunit, non-ATPase, 2	protein coding gene
+Pvt1	current symbol	MGI:97824	Pvt1	Pvt1 oncogene	lncRNA gene
+R74862	current symbol	MGI:2142382	R74862	expressed sequence R74862	lncRNA gene
+Rabggtb	current symbol	MGI:99537	Rabggtb	Rab geranylgeranyl transferase, b subunit	protein coding gene
+Rasgrp4	current symbol	MGI:2386851	Rasgrp4	RAS guanyl releasing protein 4	protein coding gene
+Raver1-fdx1l		No associated gene			
+Rbbp8	current symbol	MGI:2442995	Rbbp8	retinoblastoma binding protein 8, endonuclease	protein coding gene
+Rbm7	current symbol	MGI:1914260	Rbm7	RNA binding motif protein 7	protein coding gene
+Rbmx	rat synonym	MGI:3646999	Gm7324	predicted gene 7324	protein coding gene
+Rbmx	current symbol	MGI:1343044	Rbmx	RNA binding motif protein, X chromosome	protein coding gene
+Rbmx	rat synonym	MGI:1343045	Rbmxl1	RNA binding motif protein, X-linked like-1	protein coding gene
+Rbmx	zebrafish symbol	MGI:1923822	Rbmxl2	RNA binding motif protein, X-linked-like 2	protein coding gene
+Rchy1	current symbol	MGI:1915348	Rchy1	ring finger and CHY zinc finger domain containing 1	protein coding gene
+Rdh18-ps	current symbol	MGI:2687008	Rdh18-ps	retinol dehydrogenase 18, pseudogene	pseudogene
+Rhno1	current symbol	MGI:1915315	Rhno1	RAD9-HUS1-RAD1 interacting nuclear orphan 1	protein coding gene
+Rian	current symbol	MGI:1922995	Rian	RNA imprinted and accumulated in nucleus	lncRNA gene
+Rit1	synonym	MGI:1929913	Bcl11b	B cell leukemia/lymphoma 11B	protein coding gene
+Rit1	current symbol	MGI:108053	Rit1	Ras-like without CAAX 1	protein coding gene
+Rit1	rat synonym	MGI:108054	Rit2	Ras-like without CAAX 2	protein coding gene
+Rmi1	current symbol	MGI:1921636	Rmi1	RecQ mediated genome instability 1	protein coding gene
+Rmrp	current symbol	MGI:97937	Rmrp	RNA component of mitochondrial RNAase P	RNase MRP RNA gene
+Rmst	current symbol	MGI:1099806	Rmst	rhabdomyosarcoma 2 associated transcript (non-coding RNA)	lncRNA gene
+Rn4.5s	current symbol	MGI:97946	Rn4.5s	4.5S RNA	rRNA gene
+Rn4.5s:copy10		No associated gene			
+Rn4.5s:copy2		No associated gene			
+Rn4.5s:copy3		No associated gene			
+Rn4.5s:copy4		No associated gene			
+Rn4.5s:copy5		No associated gene			
+Rn4.5s:copy6		No associated gene			
+Rn4.5s:copy7		No associated gene			
+Rn4.5s:copy8		No associated gene			
+Rn4.5s:copy9		No associated gene			
+Rn45s		No associated gene			
+Rnu11	current symbol	MGI:2148804	Rnu11	U11 small nuclear RNA	snRNA gene
+Rnu12	current symbol	MGI:1336893	Rnu12	RNA U12, small nuclear	snRNA gene
+Rpph1	current symbol	MGI:1934664	Rpph1	ribonuclease P RNA component H1	RNase P RNA gene
+Rprl2	current symbol	MGI:105104	Rprl2	ribonuclease P RNA-like 2	RNase P RNA gene
+Rprl3	current symbol	MGI:105103	Rprl3	ribonuclease P RNA-like 3	RNase P RNA gene
+Rps15a-ps4	current symbol	MGI:3652187	Rps15a-ps4	ribosomal protein S15A, pseudogene 4	pseudogene
+Rps4y2	rat symbol	MGI:3644991	Gm15013	predicted gene 15013	pseudogene
+Rps4y2	old symbol	MGI:1913434	Rps4l	ribosomal protein S4-like	pseudogene
+Rreb1:copy3		No associated gene			
+Rubie	current symbol	MGI:5568573	Rubie	RNA upstream of Bmp4 expressed in inner ear	lncRNA gene
+Runx2	current symbol	MGI:99829	Runx2	runt related transcription factor 2	protein coding gene
+Samd7	current symbol	MGI:1923203	Samd7	sterile alpha motif domain containing 7	protein coding gene
+Scgb2b23-ps	current symbol	MGI:2655747	Scgb2b23-ps	secretoglobin, family 2B, member 23, pseudogene	pseudogene
+Schip1:copy2		No associated gene			
+Scnn1b	current symbol	MGI:104696	Scnn1b	sodium channel, nonvoltage-gated 1 beta	protein coding gene
+Sec14l1	current symbol	MGI:1921386	Sec14l1	SEC14-like lipid binding 1	protein coding gene
+Sema6c	current symbol	MGI:1338032	Sema6c	sema domain, transmembrane domain (TM), and cytoplasmic domain, (semaphorin) 6C	protein coding gene
+Senp2	zebrafish symbol	MGI:3644687	Semp2l1	SUMO/sentrin specific peptidase 2-like 1	protein coding gene
+Senp2	zebrafish symbol	MGI:2667157	Semp2l2a	SUMO/sentrin specific peptidase 2-like 2A	protein coding gene
+Senp2	zebrafish symbol	MGI:2149738	Semp2l2b	SUMO/sentrin specific peptidase 2-like 2B	protein coding gene
+Senp2	current symbol	MGI:1923076	Senp2	SUMO/sentrin specific peptidase 2	protein coding gene
+Senp2	human synonym	MGI:1197010	Sumo1	small ubiquitin-like modifier 1	protein coding gene
+Serpina3h	current symbol	MGI:2182839	Serpina3h	serine (or cysteine) peptidase inhibitor, clade A, member 3H	pseudogene
+Serpina4-ps1	current symbol	MGI:2448363	Serpina4-ps1	serine (or cysteine) peptidase inhibitor, clade A, member 4, pseudogene 1	pseudogene
+Sgsm1	current symbol	MGI:107320	Sgsm1	small G protein signaling modulator 1	protein coding gene
+Sgsm1:copy2		No associated gene			
+Sh2d3c	current symbol	MGI:1351631	Sh2d3c	SH2 domain containing 3C	protein coding gene
+Six3os1	current symbol	MGI:1925118	Six3os1	SIX homeobox 3, opposite strand 1	lncRNA gene
+Six3os1:copy2		No associated gene			
+Slc22a13b-ps	old symbol	MGI:1924762	Slc22a13b	solute carrier family 22 (organic cation transporter), member 13b	polymorphic pseudogene
+Slc25a43	current symbol	MGI:2684854	Slc25a43	solute carrier family 25, member 43	protein coding gene
+Slfn10-ps	current symbol	MGI:3512288	Slfn10-ps	schlafen 10, pseudogene	pseudogene
+Slx1b	current symbol	MGI:1915220	Slx1b	SLX1 structure-specific endonuclease subunit homolog B (S. cerevisiae)	protein coding gene
+Smarca5-ps	current symbol	MGI:2443330	Smarca5-ps	SWI/SNF related, matrix associated, actin depenent ragulator of chromatin, subfamily a, member 5, pseudogene	pseudogene
+Smim4	old symbol	MGI:1913737	Uqcc5	ubiquinol-cytochrome c reductase complex assembly factor 5	protein coding gene
+Smok4a	current symbol	MGI:3036233	Smok4a	sperm motility kinase 4A	pseudogene
+Snhg12	current symbol	MGI:1916721	Snhg12	small nucleolar RNA host gene 12	lncRNA gene
+Snhg3	current symbol	MGI:2684817	Snhg3	small nucleolar RNA host gene 3	lncRNA gene
+Snhg4	rat synonym	MGI:1298379	Matr3	matrin 3	protein coding gene
+Snhg4	current symbol	MGI:4937091	Snhg4	small nucleolar RNA host gene 4	lncRNA gene
+Snhg5	current symbol	MGI:1919905	Snhg5	small nucleolar RNA host gene 5	lncRNA gene
+Snhg6	current symbol	MGI:1921074	Snhg6	small nucleolar RNA host gene 6	lncRNA gene
+Snhg7	current symbol	MGI:1919341	Snhg7	small nucleolar RNA host gene 7	lncRNA gene
+Sox2ot	current symbol	MGI:2444112	Sox2ot	SOX2 overlapping transcript (non-protein coding)	lncRNA gene
+Speer5-ps1	current symbol	MGI:1917615	Speer5-ps1	spermatogenesis associated glutamate (E)-rich protein 5, pseudogene 1	pseudogene
+Speer6-ps1	current symbol	MGI:1920516	Speer6-ps1	spermatogenesis associated glutamate (E)-rich protein 6, pseudogene 1	pseudogene
+Speer7-ps1	old symbol	MGI:1923108	Speer4cos	spermatogenesis associated glutamate (E)-rich protein 4C, opposite strand transcript	antisense lncRNA gene
+Speer8-ps1	current symbol	MGI:1921312	Speer8-ps1	spermatogenesis associated glutamate (E)-rich protein 8, pseudogene 1	pseudogene
+Speer9-ps1	current symbol	MGI:1921199	Speer9-ps1	spermatogenesis associated glutamate (E)-rich protein 9, pseudogene 1	pseudogene
+Spns1	current symbol	MGI:1920908	Spns1	SPNS lysolipid transporter 1, lysophospholipid	protein coding gene
+Sra1	human synonym	MGI:106417	Cherp	calcium homeostasis endoplasmic reticulum protein	protein coding gene
+Sra1	human synonym	MGI:1338801	Cyfip1	cytoplasmic FMR1 interacting protein 1	protein coding gene
+Sra1	human synonym	MGI:2141980	Scaf1	SR-related CTD-associated factor 1	protein coding gene
+Sra1	human synonym	MGI:98371	Sox9	SRY (sex determining region Y)-box 9	protein coding gene
+Sra1	current symbol	MGI:1344414	Sra1	steroid receptor RNA activator 1	protein coding gene
+Srsf3	current symbol	MGI:98285	Srsf3	serine and arginine-rich splicing factor 3	protein coding gene
+Srsf7	current symbol	MGI:1926232	Srsf7	serine and arginine-rich splicing factor 7	protein coding gene
+St18:copy2		No associated gene			
+St5	old symbol	MGI:108517	Dennd2b	DENN domain containing 2B	protein coding gene
+Stap2	current symbol	MGI:2147039	Stap2	signal transducing adaptor family member 2	protein coding gene
+Stk16	current symbol	MGI:1313271	Stk16	serine/threonine kinase 16	protein coding gene
+Stoml1	current symbol	MGI:1916356	Stoml1	stomatin-like 1	protein coding gene
+Stxbp3b	old symbol	MGI:3586869	Stxbp3-ps	syntaxin-binding protein 3, pseudogene	pseudogene
+Svip	current symbol	MGI:1922994	Svip	small VCP/p97-interacting protein	protein coding gene
+Szrd1	current symbol	MGI:1098672	Szrd1	SUZ RNA binding domain containing 1	protein coding gene
+Taf1b	current symbol	MGI:109577	Taf1b	TATA-box binding protein associated factor, RNA polymerase I, B	protein coding gene
+Tbrg3	current symbol	MGI:1100876	Tbrg3	transforming growth factor beta regulated gene 3	lncRNA gene
+Tcp10a	current symbol	MGI:98541	Tcp10a	t-complex protein 10a	protein coding gene
+Thap6	current symbol	MGI:1922436	Thap6	THAP domain containing 6	pseudogene
+Tk2	human synonym	MGI:98763	Tk1	thymidine kinase 1	protein coding gene
+Tk2	current symbol	MGI:1913266	Tk2	thymidine kinase 2, mitochondrial	protein coding gene
+Tmem179b	current symbol	MGI:1914956	Tmem179b	transmembrane protein 179B	protein coding gene
+Tmem181b-ps	current symbol	MGI:3779544	Tmem181b-ps	transmembrane protein 181B, pseudogene	pseudogene
+Tmem181c-ps	current symbol	MGI:3780993	Tmem181c-ps	transmembrane protein 181C, pseudogene	pseudogene
+Tmem194b	old symbol	MGI:2444113	Nemp2	nuclear envelope integral membrane protein 2	protein coding gene
+Tmem51as1	old symbol	MGI:3642733	Tmem51os1	Tmem51 opposite strand 1	antisense lncRNA gene
+Tmem80	current symbol	MGI:1918698	Tmem80	transmembrane protein 80	protein coding gene
+Tor2a	current symbol	MGI:1353596	Tor2a	torsin family 2, member A	protein coding gene
+Tpsab1	current symbol	MGI:96943	Tpsab1	tryptase alpha/beta 1	protein coding gene
+Tpsab1	human symbol	MGI:96942	Tpsb2	tryptase beta 2	protein coding gene
+Trmt61b	current symbol	MGI:1916039	Trmt61b	tRNA methyltransferase 61B	lncRNA gene
+Tsix	current symbol	MGI:1336196	Tsix	X (inactive)-specific transcript, opposite strand	antisense lncRNA gene
+Tspy-ps	current symbol	MGI:1201688	Tspy-ps	testis specific protein-Y encoded, pseudogene	pseudogene
+Tsr2	current symbol	MGI:1916749	Tsr2	TSR2 20S rRNA accumulation	protein coding gene
+Tug1	current symbol	MGI:2144114	Tug1	taurine upregulated gene 1	lncRNA gene
+Tyms	current symbol	MGI:98878	Tyms	thymidylate synthase	protein coding gene
+Tyw5	current symbol	MGI:1915986	Tyw5	tRNA-yW synthesizing protein 5	protein coding gene
+Ubl4	human synonym	MGI:5621304	Gm44504	predicted readthrough transcript (NMD candidate), 44504	protein coding gene
+Ubl4	old symbol	MGI:95049	Ubl4a	ubiquitin-like 4A	protein coding gene
+Ubxn11	current symbol	MGI:1914836	Ubxn11	UBX domain protein 11	protein coding gene
+Uchl1as	old symbol	MGI:5446771	Uchl1os	ubiquitin carboxy-terminal hydrolase L1, opposite strand	antisense lncRNA gene
+Uqcc	old symbol	MGI:1929472	Uqcc1	ubiquinol-cytochrome c reductase complex assembly factor 1	protein coding gene
+Vaultrc5	current symbol	MGI:2673990	Vaultrc5	vault RNA component 5	lncRNA gene
+Vax2os	current symbol	MGI:3583301	Vax2os	ventral anterior homeobox 2, opposite strand	antisense lncRNA gene
+Vmn2r-ps11	current symbol	MGI:2441682	Vmn2r-ps11	vomeronasal 2, receptor, pseudogene 11	pseudogene
+Vmn2r-ps54	old symbol	MGI:3645134	Cd9-ps	Cd9 antigen, pseudogene	pseudogene
+Vmn2r-ps54	current symbol	MGI:1351350	Vmn2r-ps54	vomeronasal 2, receptor, pseudogene 54	pseudogene
+Vmn2r29	current symbol	MGI:1923479	Vmn2r29	vomeronasal 2, receptor 29	protein coding gene
+Wac	current symbol	MGI:2387357	Wac	WW domain containing adaptor with coiled-coil	protein coding gene
+Wbscr25	current symbol	MGI:1918554	Wbscr25	Williams Beuren syndrome chromosome region 25 (human)	antisense lncRNA gene
+Wdr13	current symbol	MGI:1914661	Wdr13	WD repeat domain 13	protein coding gene
+Wdr73	current symbol	MGI:1919218	Wdr73	WD repeat domain 73	protein coding gene
+Wls	current symbol	MGI:1915401	Wls	wntless WNT ligand secretion mediator	protein coding gene
+Xist	current symbol	MGI:98974	Xist	inactive X specific transcripts	lncRNA gene
+Yaf2	current symbol	MGI:1914307	Yaf2	YY1 associated factor 2	protein coding gene
+Yars2	current symbol	MGI:1917370	Yars2	tyrosyl-tRNA synthetase 2 (mitochondrial)	protein coding gene
+Yipf2	current symbol	MGI:1922016	Yipf2	Yip1 domain family, member 2	protein coding gene
+Zfhx2as	old symbol	MGI:3620246	Zfhx2os	zinc finger homeobox 2, opposite strand	antisense lncRNA gene
+Zfp133-ps	current symbol	MGI:2176612	Zfp133-ps	zinc finger protein 133, pseudogene	pseudogene
+Zfp572	current symbol	MGI:1922170	Zfp572	zinc finger protein 572	pseudogene
+Zfp783	current symbol	MGI:3040704	Zfp783	zinc finger protein 783	pseudogene
+Zfp809	current symbol	MGI:2143362	Zfp809	zinc finger protein 809	protein coding gene
+Zfp862	old symbol	MGI:1889827	Zfp862-ps	zinc finger protein 862, pseudogene	pseudogene
+Zim3	current symbol	MGI:2151058	Zim3	zinc finger, imprinted 3	lncRNA gene
+Znf41-ps	current symbol	MGI:1917255	Znf41-ps	ZNF41, pseudogene	pseudogene
+Zp4-ps	current symbol	MGI:3690088	Zp4-ps	zona pellucida glycoprotein 4, pseudogene	pseudogene
+Zxda	current symbol	MGI:1921689	Zxda	zinc finger, X-linked, duplicated A	pseudogene
+Zxda	human symbol	MGI:3694898	Zxdb	zinc finger, X-linked, duplicated B	protein coding gene

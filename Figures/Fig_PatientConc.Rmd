@@ -1,0 +1,130 @@
+---
+title: "Patient Exosome Analysis"
+author: "Alina Kline-Schoder"
+date: "05/19/2022"
+output:
+  html_document:
+    df_print: paged
+---
+# Libraries
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+remove(list=ls())
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(scales)
+library(dplyr)
+library(tidyr)
+library(rstatix)
+library(ggpubr)
+library(tidyverse)
+library(ggsignif)
+library(broom)
+library(rstatix)
+library(ggpmisc)
+library(viridis)
+library(RColorBrewer)
+library(cowplot)
+library(reshape2)
+library(gtools)
+
+Colors<-hue_pal()(6)
+
+Stat_Summary_Size<-1
+stat_compare_means_star_size<-4
+stat_compare_means_text_size<-3
+Geom_size<-0.75
+Geom_size_line<-1
+Geom_size_bp<-0.5
+Colors<-hue_pal()(6)
+Colors_NoP3<-Colors[c(1:2,4:6)]
+LogFC_Cols<-viridis(3)
+EVPaperTheme<-theme_classic()+
+  theme(legend.position="none",
+        axis.text = element_text(size=8),
+        axis.title = element_text(size=8),
+        panel.grid = element_blank(),
+        strip.text = element_text(size=8),
+        plot.margin = margin(0.25,0.25,0.25,0.5,"cm"),
+        strip.background =element_rect(fill="white",color="white"),
+        axis.line = element_line(size=0.5))
+ComplexHeatmap_AnnoLabel<-gpar(fontfamily="Arial",fontsize=8,col="gray30")
+ComplexHeatmap_RowLabel<-gpar(fontfamily="Arial",fontsize=6,col="gray30")
+
+LegendTheme<-EVPaperTheme+theme(legend.position = "bottom",legend.title = element_blank(),legend.key.size = unit(0.5,"mm"),legend.text = element_text(size=8))
+
+```
+
+# Human EV concentration 
+```{r}
+Exo<-read.csv('/Users/alinakline-schoder/Documents/Papers/Blood/Blood Paper/BloodPaper_FinalResults/Humans_FinalEVConcentration/Short-Table 1.csv')
+Exo$Timepoint<-factor(Exo$Timepoint,levels = c("0d pre","0d post","3d"))
+Exo_wide<-Exo[,c(1:2,4)]
+Exo_wide<-pivot_wider(Exo_wide,names_from = "Timepoint",values_from = "Concentration")
+Exo_wide$Norm_1h<-100*(Exo_wide$`0d post`-Exo_wide$`0d pre`)/Exo_wide$`0d pre`
+Exo_wide$Norm_3d<-100*(Exo_wide$`3d`-Exo_wide$`0d pre`)/Exo_wide$`0d pre`
+
+Stats<-read.csv('/Users/alinakline-schoder/Documents/Papers/Blood/Blood Paper/BloodPaper_FinalResults/Humans_FinalEVConcentration/PatientStats-Table 1.csv')
+
+```
+
+```{r}
+DF<-pivot_longer(Exo_wide,cols = c('Norm_1h','Norm_3d'),names_to = "Time")
+DF$Time<-recode(DF$Time,
+                "Norm_1h"="1h",
+                "Norm_3d"="3d")
+DF<-DF[!(DF$Patient%in%c("P3")),]
+Colors_NoP3<-Colors[c(1:2,4:6)]
+PerDifPlot<-ggplot(DF,aes(x=Time,y=value))+
+  geom_boxplot(aes(group=Time),outlier.shape = NA,size=Geom_size_bp)+
+  geom_point(aes(color=Patient),size=Geom_size)+
+  stat_compare_means(method="t.test",label.x.npc = 0.45,label = "p.format",size=stat_compare_means_text_size,label.y = 150)+
+  ylab("EV Concentration Change (%)")+
+  scale_color_manual(values=Colors_NoP3)+
+  EVPaperTheme + coord_cartesian(ylim=c(-100,200))
+
+
+# Raw values (not % change)
+DF<-pivot_longer(Exo_wide,cols = c('0d pre','0d post'),names_to = "Time")
+DF$Time<-recode(DF$Time,
+                "0d pre"="Baseline",
+                "0d post"="1h")
+DF<-DF[!(DF$Patient%in%c("P1","P2","P3")),]
+DF$Time<-factor(DF$Time,levels=c("Baseline","1h"))
+PairedPlot<-ggplot(DF,aes(x=Time,y=value))+
+  geom_point(aes(color=Patient,group=Patient),size=Geom_size)+
+  geom_line(aes(color=Patient,group=Patient),size=Geom_size_bp)+
+  stat_compare_means(paired=TRUE,method="t.test",label = "p.signif",size=stat_compare_means_star_size,label.x.npc = 0.45,label.y = 4e10)+
+  ylab("EV Concentration (EVs/mL)")+
+  scale_color_manual(values=Colors[4:6])+
+  EVPaperTheme+
+  coord_cartesian(ylim=c(0,5e10))
+```
+
+# comparing with BBBO
+```{r}
+library(ggpmisc)
+rownames(Stats)<-Stats$Patient.
+Exo_wide$Volume<-Stats[Exo_wide$Patient,]$Opening.Volume..mm3.
+
+formula <- y~x
+Exo_wide<-Exo_wide[!(Exo_wide$Patient=="P3"),]
+Exo_wide_1<-Exo_wide[!is.na(Exo_wide$Norm_1h),]
+
+
+Plot_Volv3d<-ggplot(Exo_wide,aes(x=Volume,y=Norm_3d))+geom_point(aes(color=Patient,group=Patient),size=Geom_size)+geom_smooth(method="lm",se=FALSE,color="gray",size=Geom_size_bp,fullrange=TRUE) + 
+  stat_poly_eq(aes(label = paste(..rr.label..)), label.x = c(0.1,0.25), label.y = 0.95, formula = formula, parse = TRUE, size = stat_compare_means_text_size) + 
+  stat_fit_glance(method = 'lm', method.args = list(formula = formula),geom = 'text_npc', aes(label = paste("P = ", signif(..p.value.., digits = 2), sep = "")),label.x = c(0.1,0.25), label.y = 0.75, size = stat_compare_means_text_size)+
+  scale_color_manual(values=Colors_NoP3)+
+  ylab("3d EV Concentration Change (%)")+
+  xlab(bquote('BBB Opening Volume '(mm^3)))+EVPaperTheme + scale_x_continuous(limits=c(0,1500))
+```
+
+
+# Putting it together
+```{r}
+Blank<-ggplot()+theme_void()
+Together<-plot_grid(Blank,PairedPlot,PerDifPlot,nrow=1,align = "h",axis = "tb",labels = c("b","c","d"),rel_widths = c(0.75,1,1))
+Full<-plot_grid(Blank,Together,Plot_Volv3d,nrow=3,labels = c("a","","e"),rel_heights = c(1,1,1))
+ggsave("HumanEVConc1.png",width = 5.5,height = 7,units = "in",bg="white")
+
+```
